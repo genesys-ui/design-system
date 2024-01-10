@@ -1,0 +1,29 @@
+// ---------------------- TOC - COMPONENTS ---------------------- //
+
+#storybook-docs .sbdocs .toc-wrapper {
+  font-family: var(--dds-font-family-base);
+  font-size: var(--dds-font-size-sm);
+  line-height: var(--dds-line-height-sm);
+
+  .toc-list-item {
+    > a {
+      color: var(--dds-color-body-strong);
+      font-weight: 300;
+
+      &:not(.is-active-li > a):hover {
+        text-decoration: underline;
+        font-weight: 400;
+      }
+
+      &.node-name--H2 {
+        color: var(--dds-color-heading);
+        font-weight: 400;
+      }
+    }
+
+    &.is-active-li > a {
+      color: #029cfd;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+import { Meta, Story } from '@storybook/blocks';
+
+import * as Stories from './ElevationHierarchy.stories';
+
+<Meta title="Foundations/Elevation hierarchy" />
+
+# Elevation hierarchy
+
+It’s used to bring the content closer or further to the user
+
+Elevation marks the distance of elements from the background and arranges them along the z-axis. To do this,
+each elevation level is defined by a specific shadow that simulates the way in which natural light is projected on
+objects depending on the distance to them.
+
+The different elevation levels available correspond to the different levels of importance with which we want to organize
+the components throughout the UI.
+
+Elevation levels with higher numbers are usually visually closer to the user and have typically larger
+and more spread shadow.
+
+<img
+  src="img/foundation-elevation.jpg"
+  alt="Elevation scheme example"
+  className="sbdocs-img--centered w-80"
+/>
+
+## Ground (level 0)
+
+This level is used for the background, cases where you want to lower content that isn’t so important or draw attention
+to components that should have better visibility on a depressed background. It's used for App/Dashboard background.
+
+<Story of={Stories.ElevationBoxGroundLevel} />
+
+<img src="img/foundation-elevation-ground.jpg" alt="Ground level example" />
+
+## Raised (level 1)
+
+This level is used to position those components that act as containers for others on the Ground. The most representative
+are the Panels, Widgets, etc.
+
+<Story of={Stories.ElevationBoxRaisedLevel} />
+
+<img src="img/foundation-elevation-raised.jpg" alt="Raised level example" />
+
+## Sticky (level 1.5)
+
+This level is applied only to elements that are fixed in position at the top or left while the page is scrolled.
+It’s divided into 4 use cases (top, bottom, left and right), depending on the direction where the shadow should be cast.
+It's used for the App Bar, Side menu, Panel header, Rolling panel, Table header... etc.
+
+<img src="img/foundation-elevation-sticky.jpg" alt="Sticky level example" />
+
+### Sticky bottom
+
+<Story of={Stories.ElevationBoxStickyBottomLevel} />
+
+### Sticky top
+
+<Story of={Stories.ElevationBoxStickyTopLevel} />
+
+### Sticky left
+
+<Story of={Stories.ElevationBoxStickyLeftLevel} />
+
+### Sticky right
+
+<Story of={Stories.ElevationBoxStickyRightLevel} />
+
+## Activated (level 2)
+
+This level is used for those actionable components that appear immediately after a specific interaction, and are usually
+positioned next to its trigger. It's used in the popper blocks as Dropdown, Inline Message, Select menu, Calendar... etc.
+
+<Story of={Stories.ElevationBoxActivatedLevel} />
+
+<img
+  src="img/foundation-elevation-activated.jpg"
+  alt="Activated level example"
+  className="sbdocs-img--centered w-80"
+/>
+
+## Draggable (level 3)
+
+This level is used in those Panels and Windows that can be moved or repositioned across the screen.
+
+<Story of={Stories.ElevationBoxDraggableLevel} />
+
+## Overlay (level 4)
+
+This level is used basically only in connection with Modals/Dialogs, which also has a background overlay with opacity.
+It can also be used if we want to reinforce the 'hover' event in those panels/windows that are previously at the
+'Draggable' level.
+
+<Story of={Stories.ElevationBoxOverlayLevel} />
+
+<img src="img/foundation-elevation-overlay.jpg" alt="Overlay level example" />
+
+## Pop-out (level 5)
+
+This level determines the closest proximity to the user. It will be used mainly
+for notifications (Toast).
+
+<Story of={Stories.ElevationBoxPopOutLevel} />
+
+<img src="img/foundation-elevation-pop-out.jpg" alt="Pop-out level example" />

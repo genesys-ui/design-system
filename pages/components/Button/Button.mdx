@@ -1,0 +1,556 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+
+import * as Stories from './Button.stories';
+
+import {
+  CardHtml,
+  CardReact,
+  DesignTokensList,
+  Figma,
+  Figure,
+} from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
+
+<Meta title="Components/Button" />
+
+# Button
+
+Buttons allow users to take actions, navigate to another pages and make choices, with a single tap
+
+## Overview
+
+### Variants
+
+Each button variant has a particular function and its design signals that function to the user. It is therefore very
+important that the different variants are implemented consistently across products,
+so that they message the correct actions.
+
+<Figure>
+  <Figma
+    aspectRatio="4x3"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys---Doc---assets?type=design&node-id=1445%3A5179&mode=design&t=GVJn8eLWFprXJtsp-1"
+  />
+</Figure>
+
+| Variant &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; | Emphasis | Usage                                                                                                                                                                                                                                                                |
+| -------------------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Accent high**                                                      | 4        | This is the most emphasized action. Typically, there can only be at most one button of this variant on each page. Usually they are actions which affect to all the page or functionality, create some new entities... etc.                                           |
+| **Accent**                                                           | 3        | This is the secondary action. There can be more than one of this variant in each page, but not in the same context (modal, toolbar, rolling panel... etc.). They are usually used for the main action of the context: save changes, confirm, create, apply... etc.   |
+| **Neutral**                                                          | 2        | A less important action which even can be isolated (e.g. a reload button). These buttons usually are in pair with an 'accent' button as the 'cancel' one. They can also belong to a group of actions or act as a filter applier in toolbars.                         |
+| **Blend base**                                                       | 2        | This variant is used as the 'neutral' button, but when they are rendered over a colored light background.                                                                                                                                                            |
+| **Blend inverse**                                                    | 2        | This variant is used as the 'neutral' button, but when they are rendered over a colored dark background.                                                                                                                                                             |
+| **Quiet**                                                            | 1        | This is the least important action. It's used usually in a group when there are already an accent-high/accent and a neutral or blend one. E.g. we have an accent 'Create' action, a neutral 'Optimize' and a 'Cancel' one, this last one would be the quiet variant. |
+| **Error**                                                            | 3        | This action has the same usage as 'accent' one, but in error, danger, destructive... etc. contexts.                                                                                                                                                                  |
+| **Success**                                                          | 3        | This action has the same usage as 'accent' one, but in success, added, new, available... etc. contexts.                                                                                                                                                              |
+| **Warning**                                                          | 3        | This action has the same usage as 'accent' one, but in warning, pending, creating... etc. contexts.                                                                                                                                                                  |
+| **Help**                                                             | 3        | This action has the same usage as 'accent' one, but in help contexts.                                                                                                                                                                                                |
+| **Info**                                                             | 3        | This action has the same usage as 'accent' one, but in info and usual contexts.                                                                                                                                                                                      |
+
+### Emphasis
+
+<Figure spaceToTop>
+  <Figma url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys---Doc---assets?type=design&node-id=1445%3A5200&mode=design&t=w2L6EPXjlqcjNbrV-1" />
+</Figure>
+
+As a general rule, a layout should contain a single accent-high button that makes it clear that other buttons have
+less importance in the hierarchy. This high-emphasis button should be placed in the most prominent place of the page.
+
+In the same way, when we talk about contexts (Modals, Notifications, Panels... etc.) instead of pages, then we have
+to use the 'accent' variant.
+
+A high-emphasis button can be accompanied by medium- and low-emphasis buttons that perform less important actions (but related).
+Keep in mind that you should only group together actions when they are related.
+
+When we have a group of buttons, we have always to order them from right to left based in the emphasis of the button, so
+the more emphasis it has, more to the right in the group it's located.
+
+<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+  <div className="col">
+    <Figure
+      caption="Don´t use two 'accent' type buttons in a group."
+      type="dont"
+    >
+      <img src="img/cmp-button-dont-01.jpg" alt="Dont - emphasis 01" />
+    </Figure>
+  </div>
+  <div className="col">
+    <Figure
+      type="dont"
+      caption="Don´t use the accent-high button in a reduced context as a Modal, Notification, Panel... etc. It has to be in a prominet location of the page."
+    >
+      <img
+        src="img/component-button-emphasis-dont-02.png"
+        alt="Dont - emphasis 01"
+      />
+    </Figure>
+  </div>
+</section>
+
+<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+  <div className="col">
+    <Figure type="do" caption="Use the buttons following the emphasis order.">
+      <img
+        src="img/component-button-emphasis-do-01.png"
+        alt="Do - emphasis 01"
+      />
+    </Figure>
+  </div>
+  <div className="col">
+    <Figure
+      type="do"
+      caption="When there are only two actions, then the less important (cancel, close... etc.) should be a quiet variant."
+    >
+      <img
+        src="img/component-button-emphasis-do-02.png"
+        alt="Do - emphasis 02"
+      />
+    </Figure>
+  </div>
+</section>
+
+### Location
+
+It depends usually on the emphasis and the importance of the button. More emphasis you want, more prominent location will
+need the button.
+
+#### Accent high
+
+The 'accent-high' button must be located in the PanelSection header, always to the right. Anyway, we can have it located
+in other places, but in very specific cases when we want to feature some action because of circumstances of the context.
+
+We can also have the 'accent-high' button in a group, always decreasing emphasis in the sibling actions.
+
+<Figure caption="Common location of the 'accent-high' button.">
+  <img
+    alt="Common location of the 'accent-high' button"
+    src="img/component-button-location-accent-high.png"
+  />
+</Figure>
+<Figure caption="Location of the 'accent' button combined with the 'accent-high' one.">
+  <img
+    alt="Common location of the accent-high button grouped"
+    src="img/component-button-location-accent-high-grouped.png"
+  />
+</Figure>
+
+#### Accent
+
+The 'accent' button must be located in the most prominent location of a context: Modal, Panel, Popper, sidebar... etc.
+Usually it's the most important action of the specific context: create, delete, accept, save, update... etc.
+
+<Figure caption="Location of the 'accent' button in a Modal.">
+  <img
+    alt="Location of the 'accent' button in a Modal"
+    src="img/component-button-location-accent-modal.png"
+  />
+</Figure>
+<Figure caption="Location of the 'accent' button in a Popper floating block.">
+  <img
+    alt="Location of the 'accent' button in a Popper floating block"
+    src="img/component-button-location-accent-popper.png"
+  />
+</Figure>
+
+#### Status
+
+The 'status' buttons (error, success... etc.) are located in the same place of the 'accent' ones, but when there
+is a status context, usually in blocks of the message system as Dialogs, Toasts, Banners, Poppers... etc.
+
+<Figure caption="Location of the 'status' button in a Dialog.">
+  <img
+    alt="Location of the 'status' button in a Dialog"
+    src="img/component-button-location-status-dialog.png"
+  />
+</Figure>
+<Figure caption="Location of the 'status' button in a Popper floating block.">
+  <img
+    alt="Location of the 'status' button in a Popper floating block"
+    src="img/component-button-location-status-popper.png"
+  />
+</Figure>
+
+#### Neutral and blend
+
+The 'neutral' buttons are located as secondary actions in pair with a more emphasis one which acts as the primary,
+or in reduced contexts as toolbars, filters, combined fields... etc. The 'blend' buttons are located in the same
+place as the 'neutral' ones, but when they are over coloured backgrounds.
+
+<Figure caption="Location of a 'neutral' button in a editable list.">
+  <img
+    alt="Location of the 'neutral' button in a editable list"
+    src="img/component-button-location-neutral-01.png"
+  />
+</Figure>
+
+<Figure caption="Location of the 'neutral' button in a combined input field as a dropdown trigger.">
+  <img
+    alt="Location of the 'neutral' button in a combined input field as a dropdown trigger"
+    src="img/component-button-location-neutral-02.png"
+  />
+</Figure>
+
+<Figure caption="Location of the 'neutral' button as secondary action in pair with an 'accent' one.">
+  <img
+    alt="Location of the 'neutral' button as secondary action in pair with an 'accent' one"
+    src="img/component-button-location-neutral-03.png"
+  />
+</Figure>
+
+#### Quiet
+
+The 'quiet' buttons are located as secondary actions in pair with a more emphasis one which acts as the primary.
+Usually in reduced and/or boxed contexts as Modals, Panels, Toasts, Banners, Poppers... etc.
+
+Sometimes they are used instead of a neutral button, because of design reasons, such as when there are no other
+prominent elements in a page or context, so the 'neutral' variant would be too much eye-catching.
+
+<Figure caption="Location of the 'quiet' button as secondary action in pair with an 'accent' one.">
+  <img
+    alt="Location of the 'quiet' button as secondary action in pair with an 'accent' one"
+    src="img/component-button-location-quiet-01.png"
+  />
+</Figure>
+
+<Figure caption="Location of the 'quiet' button in a context where a more prominent button would be too flashy.">
+  <img
+    alt="Location of the 'quiet' button in a context where a more prominent button would be too flashy"
+    src="img/component-button-location-quiet-02.png"
+  />
+</Figure>
+
+## Live demo
+
+Preview the Button component with the React live demo. For detailed code usage
+documentation, see the Genesys UI or Genesys Styles version of the component.
+
+<Canvas of={Stories.Example} />
+<Controls of={Stories.Example} />
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-button-button--docs" />
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
+  </div>
+</section>
+
+## Anatomy
+
+The Button can be composed by four elements and three ones at the same time:
+
+- **Container**: This element manages sizing and spacing between these elements.
+- **Content**: the content element (usually a text).
+- **Icon**: to the left or to the right of the content.
+- **Spinner loader**: the loading symbol which replaces the icon in that cases in which there is or is added to the left.
+
+<Figure caption="The internal structure and specs of the Button component.">
+  <Figma
+    aspectRatio="3x4"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys---Doc---assets?type=design&node-id=1682%3A2115&mode=design&t=w2L6EPXjlqcjNbrV-1"
+  />
+</Figure>
+
+### Sizes
+
+We're using usually the 'md' size for our buttons, but in some circumstances or contexts we need to use some variants
+because of space and design reasons.
+
+| Size &nbsp; &nbsp; &nbsp; &nbsp; | Usage                                                                                                                                                                                                                                    |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **sm**                           | When we are including buttons in small toolbars inside Modals or Panels and the space is not enough to insert them or the remaining space breaks the white space balance. Also when they are combined with form controls with 'sm' size. |
+| **md**                           | This is the default size and the most common.                                                                                                                                                                                            |
+| **lg**                           | The expressive size. It is barely used in the App context, only in large or commercial contexts.                                                                                                                                         |
+
+### States
+
+The button has different states depending on the interaction with the user, with other blocks of the page or with
+processes of which he is the trigger.
+
+- **Hovered**: when the user interacts with an element with a pointing device, but does not necessarily activate it.
+  It is generally triggered when the user hovers over an element with the cursor (mouse pointer). Sometimes we can use
+  this state to highlight an action over other ones. The styles bound to this state are equivalent to pseudo-class
+  `:hover` ones.
+- **Focused**: when the button has received focus. It is generally triggered when the user clicks or taps on an element
+  or selects it with the keyboard's Tab key. The styles bound to this state are equivalent to pseudo-class
+  `:focus` or `:focus-visible` ones.
+- **Pressed**: when the button is being activated by the user. When using a mouse, "activation" typically starts when
+  the user presses down the primary mouse button. The styles bound to this state are equivalent to pseudo-class
+  `:active` ones.
+- **Expanded**: to indicate if a button is expanded or collapsed, and whether the controlled elements by the button
+  are displayed or hidden. This state should be accompanied of `aria-expanded` and `aria-controls` attributes.
+- **Selected**: this state is used to indicate which buttons within multi-selection composite widgets are selected.
+  This state should be accompanied of `aria-selected` attribute. With this state the HTML tag rendered should not be
+  a `button` but a `label`, because a checkbox should be rendered inside, but not visible. Other alternative is to
+  use the role `checkbox` accompanied of the attributes `aria-checked` and `tabindex`.
+- **Activated**: this state is used to indicate which button within single-selection composite widgets is selected.
+  This state should be accompanied of `aria-selected` attribute. With this state the HTML tag rendered should not
+  be a `button` but a `label`, because a radio should be rendered inside, but not visible. Other alternative is to
+  use the role `radio` accompanied of the attributes `aria-checked` and `tabindex`.
+- **Disabled**: this state is used to indicate the button is disabled, so no action or operation is available for
+  the button. We should add the `disabled` attribute. However, there can be instances where elements need to be exposed
+  as disabled, but are still available for users to find when navigating via the Tab key. In these cases we should use
+  the `aria-disabled` attribute, but it's important to block any action bounded to the button, because this aria
+  attribute does not have the native behavior of the `disabled` one.
+- **Loading**: this state is used when the process or the action triggered by the button is not immediate,
+  and it's still running. To denote this context we add a spinner loader to the left of the text; we modify the text of
+  the button to transmit the state of the process, and we add ellipsis points to its end. E.g. from 'Save changes' to
+  'Saving changes...'. In addition, we add a spinner loader to the left of the text.
+- **Loading error**: this state is used when the process or the action triggered by the button is not immediate,
+  and it's finished with errors. To denote this context we add an error icon to the left of the text, and we replace
+  temporary the text of the button with the error message of the process. This state is not permanent, because after a
+  few moments the button has to return to its default state. In addition, to get to this state, we always need
+  previously a 'loading' state in the button.
+- **Loading success**: this state is used when the process or the action triggered by the button is not immediate,
+  and it's finished successfully. To denote this context we add a success icon to the left of the text, and we replace
+  temporary the text of the button with the success message of the process. This state is not permanent, because after a
+  few moments the button has to return to its default state. In addition, to get to this state, we always need
+  previously a 'loading' state in the button.
+
+<Figure>
+  <Figma
+    title="Button states"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys---Doc---assets?type=design&node-id=4504%3A13969&mode=design&t=LkXTRD79fp304i4a-1"
+  />
+</Figure>
+
+### Alignment
+
+Alignment refers to whether the buttons are aligned to the right or the left of a window, container, or layout.
+
+In general, on full-page designs or not contained forms, the buttons are on the left side of the page.
+
+<Figure caption="Buttons in a form and in a full page layout aligned to the left.">
+  <img
+    alt="Buttons aligned to the left"
+    src="img/component-button-align-left.png"
+  />
+</Figure>
+
+Whereas we use right-alignment if the button is inside a boxed or highlighted context.
+Typical nested button contexts are:
+
+- Panels.
+- Modals and Dialogs.
+- Wizards.
+- Toolbars.
+- Headers.
+- Footers.
+- Notifications.
+- Poppers.
+
+<Figure caption="Buttons in a Modal footer (boxed and highlighted context) aligned to the right.">
+  <img
+    alt="Buttons aligned to the right"
+    src="img/component-button-align-right.png"
+  />
+</Figure>
+
+### Content
+
+The text content of the button must indicate which is the triggered action. We have several recommendations defined for
+the button texts:
+
+- The text must be **clear and predictable**. Keep it simple. The text has to be precise and explain as much as possible
+  with the minimum of words.
+- We use **capitalization**: writing the text with its first letter as a capital letter (uppercase letter) and the remaining
+  letters in lower case. E.g. 'Save changes', 'Add new entity'... etc.
+- It's recommended to **use verbs**, specially in some cases is useful to add also a noun at the end to clarify to the user
+  which is the triggered action. There are some exceptions as the most common actions as 'Close', 'Cancel', 'Add'... etc.
+  or the stepper buttons whose texts usually are simply 'Back', 'Next', 'Last'... etc.
+- **Personalize**: using the words “You”, “Your”, “Me” or “My” creates a sense of ownership.
+- Maintain the **consistency** along the App: number of words, structure, capitalize... etc.
+
+<section className="mrow margin-top--lg">
+  <div className="mcol-12 mcol-sm-6">
+    <Figure type="dont" caption="Try not to use button texts without verbs.">
+      <img
+        src="img/component-button-content-dont-01.png"
+        alt="Dialog with two buttons"
+      />
+    </Figure>
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <Figure type="do" caption="Use verbs in button texts whenever possible.">
+      <img
+        src="img/component-button-content-do-01.png"
+        alt="Dialog with two buttons"
+      />
+    </Figure>
+  </div>
+</section>
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <Figure
+      type="dont"
+      caption="Don't use too long sentences for button texts."
+    >
+      <img
+        src="img/component-button-content-dont-02.png"
+        alt="Detail of Modal with two buttons"
+      />
+    </Figure>
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <Figure
+      type="do"
+      caption="Keep it simple: use short sentences and the minimum number of words."
+    >
+      <img
+        src="img/component-button-content-do-02.png"
+        alt="Detail of Modal with two buttons"
+      />
+    </Figure>
+  </div>
+</section>
+
+## Accessibility
+
+### Disabled
+
+We should add the `disabled` attribute. However, there can be instances where elements need to be exposed
+as disabled, but are still available for users to find when navigating via the Tab key. In these cases we should use
+the `aria-disabled` attribute, but it's important to block any action bounded to the button, because this aria
+attribute does not have the native behavior of the `disabled` one.
+
+<Source code={`<button aria-disabled="true">Button text</button>`} />
+
+<Source code={`<button disabled>Button text</button>`} />
+
+### Selected
+
+When the buttons within multi-selection composite widgets are selected. This state should be accompanied of
+`aria-selected` attribute. With this state the HTML tag rendered should not be a `button` but a `label`,
+because a checkbox should be rendered inside, but not visible. Other alternative is to use the role `checkbox`
+accompanied of the attributes `aria-checked` and `tabindex`.
+
+<Source
+  code={`
+<label class="button button--selected">
+    <input type="checkbox" class="sr-only" aria-labelledby="button-text"/>
+    <span id="button-text">Button text</span>
+</label>
+`}
+/>
+
+<Source
+  code={`
+<label class="button button--selected">
+    <input type="radio" class="sr-only" aria-labelledby="button-text"/>
+    <span id="button-text">Button text</span>
+</label>
+`}
+/>
+
+### Activated
+
+When the button within single-selection composite widgets is selected. This state should be accompanied of
+`aria-selected` attribute. With this state the HTML tag rendered should not be a `button` but a `label`, because
+a radio should be rendered inside, but not visible. Other alternative is to use the role `radio` accompanied of
+the attributes `aria-checked` and `tabindex`.
+
+<Source
+  code={`
+<fieldset>
+    <legend>What is your favourite color?</legend>
+    <label class="button">
+        <input type="radio" value="blue" name="button-radio" class="sr-only" aria-labelledby="button-text-01"/>
+        <span id="button-text-01">Blue</span>
+    </label>
+    <label class="button">
+        <input type="radio" value="green" name="button-radio" class="sr-only" aria-labelledby="button-text-02"/>
+        <span id="button-text-02">Green</span>
+    </label>
+</fieldset>
+`}
+/>
+
+<Source
+  code={`
+<div role="radiogroup" aria-labelledby="radio-group-id">
+    <div id="radio-group-id">What is your favourite color?</div>
+    <span class="button" role="radio" data-value="blue" aria-checked="false" tabindex="0">
+        Blue
+    </span>
+    <span class="button" role="radio" data-value="green" aria-checked="false" tabindex="-1">
+        Green
+    </span>
+</div>
+`}
+/>
+
+### Control
+
+The `aria-haspopup` attribute indicates the availability and type of interactive popup element that can be triggered by
+the button on which the attribute is set. E.g. when the button triggers a Modal.
+
+The `aria-controls` attribute identifies the element (or elements) whose contents or presence are controlled by the
+button on which this attribute is set. E.g. if the button opens a Modal, this attribute should be the `id` attribute
+of the Modal container.
+
+<Source
+  code={`<button aria-haspopup="true" aria-controls="content-id">Button text</button>`}
+/>
+
+### Expanded
+
+The `aria-expanded` attribute is set on the button to indicate if a control is expanded or collapsed, and whether
+its child or controlled elements are displayed or hidden.
+
+<Source
+  code={`<button aria-expanded="true" aria-controls="content-id">Button text</button>`}
+/>
+
+## Design tokens
+
+### Size, space and typographic design tokens
+
+Some of the tokens are based in the size of the button.
+There are three pre-defined sizes: `sm`, `md` and `lg`.
+
+| Element &nbsp; &nbsp; &nbsp; | Property &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; | Token                                                                                                               |
+| ---------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Container                    | height                                                                | `cmp-button-size-height-sm`<br/>`cmp-button-size-height-md`<br/>`cmp-button-size-height-lg`                         |
+| Container                    | min-width                                                             | `cmp-button-size-minWidth-sm`<br/>`cmp-button-size-minWidth-md`<br/>`cmp-button-size-minWidth-lg`                   |
+| Container                    | padding hor.                                                          | `cmp-button-space-padding-sm`<br/>`cmp-button-space-padding-md`<br/>`cmp-button-space-padding-lg`                   |
+| Container                    | border-radius                                                         | `cmp-button-shape-borderRadius-medium`                                                                              |
+| Content                      | font-size                                                             | `cmp-button-label-typo-fontSize-sm`<br/>`cmp-button-label-typo-fontSize-md`<br/>`cmp-button-label-typo-fontSize-lg` |
+| Content                      | line-height                                                           | `alias-typo-lineHeight-action-sm`<br/>`alias-typo-lineHeight-action-md`<br/>`alias-typo-lineHeight-action-lg`       |
+| Content                      | font-weight                                                           | `alias-typo-fontWeight-action`                                                                                      |
+| Content                      | letter-spacing                                                        | `alias-typo-letterSpacing-action`                                                                                   |
+| Icon                         | font-size / width-height                                              | `cmp-button-icon-typo-fontSize-sm`<br/>`cmp-button-icon-typo-fontSize-md`<br/>`cmp-button-icon-typo-fontSize-lg`    |
+| Icon                         | margin-left/right                                                     | `cmp-button-icon-space-margin-sm`<br/>`cmp-button-icon-space-margin-md`<br/>`cmp-button-icon-space-margin-lg`       |
+| Icon                         | margin-left/right                                                     | `cmp-button-icon-space-offset-sm`<br/>`cmp-button-icon-space-offset-md`<br/>`cmp-button-icon-space-offset-lg`       |
+| Spinner                      | width-height                                                          | `cmp-button-loader-size-width-sm`<br/>`cmp-button-loader-size-width-md`<br/>`cmp-button-loader-size-width-lg`       |
+| Spinner                      | margin-left/right                                                     | `cmp-button-icon-space-margin-sm`<br/>`cmp-button-icon-space-margin-md`<br/>`cmp-button-icon-space-margin-lg`       |
+
+### Color design tokens
+
+The color tokens are based in the color scheme and the state of the button. So each token usually is a combination of a
+color scheme and state (except the backdrop tokens).
+
+There are several pre-defined color schemes: `accent-hight`, `accent`, `neutral`, `blend-base`, `blend-inverse`, `quiet`,
+`error`, `success`, `warning`, `help` and `info`.
+
+There are several pre-defined states: `enabled`, `hovered`, `focused`, `pressed`, `expanded`, `selected`, `activated`
+`loading`, `loading-error`, `loading-success` and `disabled`.
+
+| Element &nbsp; &nbsp; &nbsp; | Property &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Token                                                                                                                                                                                                                                                                                                                       |
+| ---------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Container                    | background-color                                                                           | `cmp-button-color-background-accentHigh-enabled`<br/>`cmp-button-color-background-accent-enabled`<br/>`cmp-button-color-background-neutral-enabled`<br/>`...`<br/>`cmp-button-color-background-accentHigh-activated`<br/>`cmp-button-color-background-accent-activated`<br/>`cmp-button-color-background-neutral-activated` |
+| Backdrop                     | background-color                                                                           | `cmp-button-color-backdrop-hovered`<br/>`cmp-button-color-backdrop-focused`<br/>`cmp-button-color-backdrop-pressed`                                                                                                                                                                                                         |
+| Content                      | color                                                                                      | `cmp-button-color-text-accentHigh-enabled`<br/>`cmp-button-color-text-accent-enabled`<br/>`cmp-button-color-text-neutral-enabled`<br/>`...`<br/>`cmp-button-color-text-accentHigh-activated`<br/>`cmp-button-color-text-accent-activated`<br/>`cmp-button-color-text-neutral-activated`                                     |
+
+### Complete list
+
+<DesignTokensList
+  tokens={getCmpTokensJson('button')}
+  intro={
+    <p style={{ margin: '1.6rem 0' }}>
+      There are {getCmpTokensJson('button').length} Button design tokens. The
+      units in rem are not based in browser, but in base 10, so{' '}
+      <code>1rem = 10px</code>.
+    </p>
+  }
+/>

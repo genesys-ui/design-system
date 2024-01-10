@@ -1,0 +1,84 @@
+import { Meta } from '@storybook/blocks';
+
+import { Card } from '../blocks';
+
+<Meta
+  title="Home"
+  parameters={{
+    docs: {
+      toc: {
+        disable: true, // 👈 Disables the table of contents
+      },
+    },
+  }}
+/>
+
+# Genesys Design System
+
+Genesys is Devo's design system for products and digital ecosystems and home
+to the foundations, human interface guidelines, design tools, UI components and
+interaction patterns that we use to build great experiences.
+
+(PENDING): The TOC menu has to be removed from this story.
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-4">
+    <Card
+      description="Foundations are the basic visual elements needed to create components and patterns."
+      heading="Foundations"
+      image="img/card-foundation.png"
+      url="/?path=/docs/foundations-overview--page"
+    />
+  </div>
+  <div className="mcol-12 mcol-sm-4">
+    <Card
+      description="Components are the intuitive building blocks of our design system."
+      heading="Components"
+      image="img/card-components.png"
+      url="/?path=/docs/components-overview--page"
+    />
+  </div>
+  <div className="mcol-12 mcol-sm-4">
+    <Card
+      description="Patterns are the solutions for users to achieve a goal in the most optimized and easy way."
+      heading="Patterns"
+      image="img/card-patterns.png"
+      url="/?path=/docs/patterns-overview--page"
+    />
+  </div>
+</section>
+
+A design system is a collection of pre-built, reusable assets—components,
+patterns, guidance, and code—that allows its users to build consistent digital
+experiences faster. By using the pre-built and universal assets of Dalí, the
+time teams spend designing and building is minimized. Instead of building and
+re-building basic elements, they can spend that time customizing their products
+to address specific client use cases.
+
+## Resources
+
+Devo maintains this design kit in Figma, containing Dalí components. We support
+React framework implementation through the component library called Coco.
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <Card
+      description="The figma library to help our UX/UI designers."
+      direction="horizontal"
+      heading="Figma library"
+      image="img/figma-logo.png"
+      target="_blank"
+      url="https://www.figma.com/community/file/1077910035665847768"
+    />
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <Card
+      description="The React components library to help our frontend developers."
+      direction="horizontal"
+      heading="React library"
+      image="img/react-logo.png"
+      target="_blank"
+      url="https://engineering.pages.devotools.com/libraries/coco/"
+    />
+  </div>
+</section>

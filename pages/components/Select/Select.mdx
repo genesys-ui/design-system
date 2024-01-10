@@ -1,0 +1,261 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+
+import * as Stories from './Select.stories';
+
+import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
+
+<Meta of={Stories} />
+
+# Select
+
+(PENDING)
+
+## Overview
+
+(PENDING) Variants, sizes, alignment, location... etc.
+
+## Live demo
+
+Preview the Select component with the React live demo. For detailed code usage
+documentation, see the Genesys UI or Genesys Styles version of the component.
+
+<Canvas of={Stories.Example} />
+<Controls of={Stories.Example} />
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-form-select--docs" />
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
+  </div>
+</section>
+
+## Anatomy
+
+(PENDING)
+
+## Accessibility
+
+### Label
+
+We recommend use the html tag `label` with the `for` attribute to connect it with the input control.
+
+<Source
+  code={`
+  <div class="form__field">
+    <label for="select-id-base" class="label">
+      Select label
+    </label>
+    <select id="select-id-base" class="select">
+      <option value="" disabled selected>
+        Select your option
+      </option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
+  </div>
+  `}
+/>
+
+#### Wrapping with label
+
+Other accessible alternative (but not recommended) is wrapping the field with a `label` and replace that with an `span`.
+It's an option when it's not possible to assign an `id` to the input to use in the attribute `for` of the `label`.
+
+<Source
+  code={`
+  <label class="form__field">
+    <span class="label">Select label</span>
+    <select class="select" multiple>
+      <option value="" disabled selected>
+        Select your option
+      </option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
+  </label>
+  `}
+/>
+
+#### Hiding label
+
+We always recommend use a visible label connected with the input control, but sometimes we need to hide it because
+of space or design reasons. In these cases we maintain the label text, but hiding it by styles, remaining accessible
+for assistive technologies.
+
+<Source
+  code={`
+  <div class="form__field">
+    <label for="select-id-base" class="label label--hide">
+      Select label
+    </label>
+    <select id="select-id-base" class="select">
+      <option value="" disabled selected>
+        Select your option
+      </option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
+  </div>
+  `}
+/>
+
+#### aria-label or aria-labelledby
+
+If it's not possible to add a label text we can use the attributes `aria-label`, `aria-labelledby` or `title`
+in the input control, but it's not 100% supported by all the assistive technologies.
+
+<Source
+  code={`
+  <div class="form__field">
+    <select id="select-id-base" class="select" aria-label="Select label">
+      <option value="" disabled selected>
+        Select your option
+      </option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
+  </div>
+  `}
+/>
+
+Finally, do not use placeholders as a replacement for a label. There are various accessibility issues with this approach.
+
+### Required
+
+We recommend inform about which are the required fields in a form with a visual or textual mark.
+Moreover, you must add the attribute `required` to the input control. You can add
+`aria-required=true` too, but in many cases, the assistive technology information will be redundant.
+
+<Source
+  code={`
+  <div class="form__field form__field--required">
+    <label for="select-id-required" class="label">
+      Required field
+    </label>
+    <select class="select" id="select-id-required" required>
+      <option value="" disabled selected>
+        Select your option
+      </option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
+  </div>
+  `}
+/>
+
+### Connecting help and validation messages
+
+To connect our inputs with the helper and validation messages we recommend use the `aria-describedby` attribute.
+
+<Source
+  code={`
+  <div class="form">
+    <div class="form__field">
+      <label for="select-id-helper" class="label">
+        Select label
+      </label>
+      <select
+        aria-describedby="select-id-helper-message"
+        id="select-id-helper"
+        class="select"
+      >
+        <option value="" disabled selected>
+          Select your option
+        </option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+      </select>
+      <div class="form__helper" id="select-id-helper-message">
+        Bits of moving fluff Drake Equation descended from astronomers cosmic
+        fugue Vangelis
+      </div>
+    </div>
+    <div class="form__field form__field--error">
+      <label for="select-id-error" class="label">
+        Options
+      </label>
+      <select
+        aria-describedby="select-id-error-message"
+        aria-invalid="true"
+        id="select-id-error"
+        class="select"
+      >
+        <option value="" disabled>
+          Select your option
+        </option>
+        <option value="1" selected>
+          Option 1
+        </option>
+        <option value="2">Option 2</option>
+      </select>
+      <div role="alert" class="form__validation" id="select-id-error-message">
+        This option can not be selected with the current configuration.
+      </div>
+    </div>
+  </div>
+  `}
+/>
+
+### Validation
+
+We recommend add the `aria-invalid` attribute to the input controls which don't match with the desire pattern
+or they are required, but not filled.
+
+Moreover, we should add the role `alert` to the validation message, which identifies the element as
+the container where alert content will be added or updated. You don't need to add `aria-live=assertive` and
+`aria-atomic=true` because they are implicit in the role.
+
+`aria-live=assertive` tells assistive technologies to interrupt other processes to provide users with
+immediate notification of relevant alert container changes.
+
+`aria-atomic=true` tells assistive technologies to use the entire content of the alert element as the alert messag
+even if only a portion of it has changed.
+
+<Source
+  code={`
+  <div class="form__field form__field--error">
+    <label for="select-id-error" class="label">
+      Options
+    </label>
+    <select
+      aria-describedby="select-id-error-message"
+      aria-invalid="true"
+      id="select-id-error"
+      class="select"
+    >
+      <option value="" disabled>
+        Select your option
+      </option>
+      <option value="1" selected>
+        Option 1
+      </option>
+      <option value="2">Option 2</option>
+    </select>
+    <div role="alert" class="form__validation" id="select-id-error-message">
+      This option can not be selected with the current configuration.
+    </div>
+  </div>
+  `}
+/>
+
+## Design tokens
+
+(PENDING)
+
+### Complete list
+
+⚠️ It is necessary to create the rest of specific component tokens, or at least add the alias tokens to the list.
+
+<DesignTokensList
+  tokens={getCmpTokensJson('select')}
+  intro={
+    <p style={{ margin: '1.6rem 0' }}>
+      There are {getCmpTokensJson('select').length} Select design tokens. The
+      units in rem are not based in browser, but in base 10, so{' '}
+      <code>1rem = 10px</code>.
+    </p>
+  }
+/>

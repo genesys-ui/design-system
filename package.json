@@ -1,0 +1,64 @@
+{
+  "name": "@devoinc/genesys-design-system",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "eslint pages tokens blocks",
+    "storybook": "storybook dev -p 6006 --docs",
+    "start": "npm run storybook",
+    "build-storybook": "storybook build --docs"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-a11y": "^7.6.7",
+    "@storybook/addon-actions": "^7.6.7",
+    "@storybook/addon-controls": "^7.6.7",
+    "@storybook/addon-docs": "^7.6.7",
+    "@storybook/addon-links": "^7.6.7",
+    "@storybook/addon-toolbars": "^7.6.7",
+    "@storybook/addon-viewport": "^7.6.7",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react-vite": "^7.6.7",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-mdx": "^2.3.2",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "prettier": "^3.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remark-gfm": "^4.0.0",
+    "sass": "^1.69.7",
+    "storybook": "^7.6.7",
+    "style-loader": "^3.3.3",
+    "styled-components": "^5.3.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11"
+  },
+  "dependencies": {
+    "@devoinc/genesys-base-styles": "^1.2.1",
+    "@devoinc/genesys-brand-devo": "^6.2.0",
+    "@devoinc/genesys-icons": "^3.6.0",
+    "@devoinc/genesys-ui": "^2.4.0",
+    "@devoinc/genesys-ui-form": "^2.4.0"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevoInc/genesys-design-system.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

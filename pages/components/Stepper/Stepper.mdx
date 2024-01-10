@@ -1,0 +1,78 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+
+import * as Stories from './Stepper.stories';
+
+import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
+
+<Meta of={Stories} />
+
+# Stepper
+
+(PENDING)
+
+## Overview
+
+(PENDING) Variants, sizes, alignment, location... etc.
+
+## Live demo
+
+Preview the Stepper component with the React live demo. For detailed code usage
+documentation, see the Genesys UI or Genesys Styles version of the component.
+
+<Canvas of={Stories.Example} />
+<Controls of={Stories.Example} />
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-navigation-stepper--docs" />
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
+  </div>
+</section>
+
+## Anatomy
+
+(PENDING)
+
+## Accessibility
+
+Recommended attributes to be included:
+
+### aria-label
+
+The [aria-label](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+on the container with the value "progress" helps provide important context to screen readers.
+
+### aria-current
+
+The [aria-current](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current)
+indicates the current step on the list items.
+
+### aria-hidden
+
+The [aria-hidden](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+excludes the separators elements from the screen readers.
+
+### role="img" + aria-label="steps separator"
+
+Using [ARIA: img role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/img_role#using_roleimg_to_confer_meaning_that_is_obscured_or_implied)
+in combination with `aria-label` will confer meaning to the arrow icons between items.
+
+## Design tokens
+
+(PENDING)
+
+#### Complete list
+
+<DesignTokensList
+  tokens={getCmpTokensJson('stepper')}
+  intro={
+    <p style={{ margin: '1.6rem 0' }}>
+      There are {getCmpTokensJson('stepper').length} Stepper design tokens. The
+      units in rem are not based in browser, but in base 10, so{' '}
+      <code>1rem = 10px</code>.
+    </p>
+  }
+/>

@@ -1,0 +1,12 @@
+node_modules
+storybook-static
+public
+
+*.iml
+.cache
+.nyc_output
+.history
+.idea
+.vscode
+.DS_Store
+lib_old

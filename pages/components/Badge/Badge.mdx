@@ -1,0 +1,89 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+
+import * as Stories from './Badge.stories';
+
+import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
+
+<Meta title="Components/Badge" />
+
+# Badge
+
+(PENDING)
+
+## Overview
+
+(PENDING) Variants, sizes, alignment, location... etc.
+
+## Live demo
+
+Preview the Badge component with the React live demo. For detailed code usage
+documentation, see the Genesys UI or Genesys Styles version of the component.
+
+<Canvas of={Stories.Example} />
+<Controls of={Stories.Example} />
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-feedback-badge--docs" />
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
+  </div>
+</section>
+
+## Anatomy
+
+(PENDING)
+
+## Accessibility
+
+Recommended attributes to be included:
+
+### aria-label
+
+A more descriptive explanation for screen readers.
+
+### aria-relevant
+
+Used in ARIA live regions, the global [aria-relevant](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
+attribute indicates what notifications the user agent will trigger when the [accessibility tree](https://developer.mozilla.org/en-US/docs/Glossary/Accessibility_tree)
+within a live region is modified.
+
+### aria-atomic
+
+In ARIA live regions, the global [aria-atomic](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
+attribute indicates whether assistive technologies such as a screen reader
+will present all, or only parts of, the changed region based on the change
+notifications defined by the [aria-relevant](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
+attribute.
+
+### aria-live
+
+The global [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
+attribute indicates that an element will be updated, and describes the types of
+updates the user agents, assistive technologies, and user can expect from the
+live region.
+
+### role
+
+The status role defines an advisory that is not important enough to be an alert.
+
+<Canvas of={Stories.Role} />
+
+## Design tokens
+
+(PENDING)
+
+### Complete list
+
+<DesignTokensList
+  tokens={getCmpTokensJson('badge')}
+  intro={
+    <p style={{ margin: '1.6rem 0' }}>
+      There are {getCmpTokensJson('badge').length} Badge design tokens. The
+      units in rem are not based in browser, but in base 10, so{' '}
+      <code>1rem = 10px</code>.
+    </p>
+  }
+/>

@@ -1,0 +1,203 @@
+// ---------------------- TYPOGRAPHY - BASE ---------------------- //
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(../../fonts/poppins/poppins-300.woff2) format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(../../fonts/poppins/poppins-regular.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(../../fonts/poppins/poppins-600.woff2) format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url(../../fonts/poppins/poppins-700.woff2) format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mono Font';
+  src: url(../../fonts/jet-brains-mono-font/JetBrainsMono-Regular.woff2),
+    url(../../fonts/jet-brains-mono-font/JetBrainsMono-Regular.ttf)
+      format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mono Font';
+  src: url(../../fonts/jet-brains-mono-font/JetBrainsMono-Medium.woff2),
+    url(../../fonts/jet-brains-mono-font/JetBrainsMono-Medium.ttf)
+      format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mono Font';
+  src: url(../../fonts/jet-brains-mono-font/JetBrainsMono-Bold.woff2),
+    url(../../fonts/jet-brains-mono-font/JetBrainsMono-Bold.ttf)
+      format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+$doc-base-class-name: sbdocs;
+
+#storybook-docs {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+
+  .sbdocs {
+    $parent: &;
+    color: var(--dds-color-body-base);
+    font-family: 'Poppins', sans-serif;
+
+    [class*='#{$doc-base-class-name}-h']:not(.#{$doc-base-class-name}-hr) {
+      border: none;
+      max-width: var(--dds-max-width-md);
+      font-weight: bold;
+      letter-spacing: -0.01925em;
+      color: var(--dds-color-heading);
+      line-height: 1.2;
+    }
+
+    .#{$doc-base-class-name} {
+      &-table,
+      &-pre,
+      &-p {
+        font-size: var(--dds-font-size-base);
+        line-height: 2.8rem;
+      }
+
+      &-p {
+        margin: 2.4rem 0;
+      }
+
+      &-li {
+        font-size: $font-size-base;
+        line-height: 2.8rem;
+      }
+
+      &-h1 {
+        margin-bottom: 4rem;
+        font-size: 3.2rem;
+
+        + .#{$doc-base-class-name}-p {
+          font-size: 2rem;
+          line-height: 2.8rem;
+          font-weight: 300;
+          margin-top: -2.4rem;
+          margin-bottom: 4rem;
+        }
+
+        + .#{$doc-base-class-name}-p + .#{$doc-base-class-name}-h2 {
+          margin-top: 5.2rem;
+        }
+      }
+
+      &-h2 {
+        border: none;
+        margin-top: 8.2rem;
+        font-size: 2.8rem;
+
+        + #{$parent}-h3 {
+          margin-top: 1.8rem;
+        }
+      }
+
+      &-h3 {
+        margin-top: 3.2rem;
+        font-size: 2.4rem;
+
+        + #{$parent}-h4 {
+          font-size: 1.6rem;
+          margin-top: 0.4rem;
+        }
+      }
+
+      &-h4 {
+        margin-top: 2.8rem;
+        font-size: 2rem;
+      }
+
+      &-h5 {
+        margin-top: 2rem;
+        font-size: 1.8rem;
+      }
+
+      &-h6 {
+        margin-top: 1.6rem;
+        font-size: 1.6rem;
+      }
+
+      em {
+        font-style: italic;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      &-small {
+        font-size: 80%;
+      }
+
+      div + .#{$doc-base-class-name}-img,
+      [class*='#{$doc-base-class-name}-h'] + .#{$doc-base-class-name}-img,
+      .#{$doc-base-class-name}-img + div,
+      [class*='#{$doc-base-class-name}-h'] + div,
+      [id*='story'] + [id*='story'] {
+        margin-top: 2.4rem;
+      }
+
+      &-a:hover,
+      &-a:focus,
+      &-a:active {
+        text-decoration: underline;
+      }
+
+      pre {
+        font-size: 1em;
+      }
+
+      &-ul,
+      &-ul:first-of-type,
+      &-ul:last-child {
+        margin: 2.4rem 0;
+      }
+
+      &-ul .#{$doc-base-class-name}-li + .#{$doc-base-class-name}-li {
+        margin-top: 0.8rem;
+      }
+    }
+
+    code,
+    pre {
+      font-family: 'Mono Font', monospace;
+      font-size: 1.4rem;
+    }
+
+    code {
+      color: #d63384;
+      word-wrap: break-word;
+      background-color: #f6f6f6;
+      border-radius: 2px;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+  }
+}

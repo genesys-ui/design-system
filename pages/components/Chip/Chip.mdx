@@ -1,0 +1,60 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+
+import * as Stories from './Chip.stories';
+
+import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
+
+<Meta of={Stories} />
+
+# Chip
+
+(PENDING)
+
+## Overview
+
+(PENDING) Variants, sizes, alignment, location... etc.
+
+## Live demo
+
+Preview the Chip component with the React live demo. For detailed code usage
+documentation, see the Genesys UI or Genesys Styles version of the component.
+
+<Canvas of={Stories.Example} />
+<Controls of={Stories.Example} />
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-form-chip--docs" />
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
+  </div>
+</section>
+
+## Anatomy
+
+(PENDING)
+
+## Accessibility
+
+(PENDING)
+
+## Design tokens
+
+(PENDING)
+
+### Complete list
+
+⚠️ It is necessary to check if there are component tokens to create the rest of specific component tokens, or at least add the alias tokens to the list.
+
+<DesignTokensList
+  tokens={getCmpTokensJson('chip')}
+  intro={
+    <p style={{ margin: '1.6rem 0' }}>
+      There are {getCmpTokensJson('chip').length} Chip design tokens. The units
+      in rem are not based in browser, but in base 10, so{' '}
+      <code>1rem = 10px</code>.
+    </p>
+  }
+/>

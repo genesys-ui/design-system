@@ -1,0 +1,99 @@
+// ---------------------- BASE - BASE ---------------------- //
+
+:root {
+  --dds-bg-base: #fff;
+  --dds-bg-raised: #f5f8fa;
+  --dds-br-surface: 0.6rem;
+  --dds-br-pill: 999rem;
+  --dds-br-circle: 50%;
+  --dds-color-border-base: #d3e0e8;
+  --dds-color-border-form: #ced4da;
+  --dds-color-bg-form: #fff;
+  --dds-color-text-form-placeholder: #6c757d;
+  --dds-color-body-base: #5b6870;
+  --dds-color-body-weak: #81919c;
+  --dds-color-body-strong: #3c4952;
+  --dds-color-heading: #1f282e;
+  --dds-color-blue-05: #5893db;
+  --dds-color-blue-07: #1d5bbf;
+  --dds-color-warning-04: #f7b94f;
+  --dds-color-magenta-06: #d6246e;
+  --dds-color-success-04: #1ec990;
+  --dds-color-success-05: #0aa672;
+  --dds-color-error-05: #ed5353;
+  --dds-color-error-06: #d62433;
+  --dds-max-width-md: 72rem;
+  --dds-max-width-lg: 120rem;
+  --dds-size-icon-xxxxs: 1rem;
+  --dds-size-icon-xxxs: 1.2rem;
+  --dds-size-icon-xxs: 1.4rem;
+  --dds-size-icon-xs: 1.6rem;
+  --dds-size-icon-sm: 1.8rem;
+  --dds-size-icon-md: 2rem;
+  --dds-size-icon-lg: 2.4rem;
+  --dds-size-icon-xl: 2.8rem;
+  --dds-size-icon-xxl: 3.2rem;
+  --dds-size-icon-xxxl: 4.8rem;
+  --dds-size-icon-xxxxl: 6.4rem;
+  --dds-font-family-base: 'Poppins', sans-serif;
+  --dds-font-size-base: 1.6rem;
+  --dds-font-size-sm: 1.4rem;
+  --dds-font-size-xs: 1.3rem;
+  --dds-line-height-base: 2.8rem;
+  --dds-line-height-sm: 2.4rem;
+  --dds-line-height-xs: 2rem;
+  --spacing-xxxs: 0.4rem;
+  --spacing-xxs: 0.8rem;
+  --spacing-xs: 1.2rem;
+  --spacing-sm: 1.6rem;
+  --spacing-md: 2.4rem;
+  --spacing-lg: 3.2rem;
+  --spacing-xl: 4rem;
+  --spacing-xxl: 4.8rem;
+  --spacing-xxxl: 6.4rem;
+  --spacing-xxxxl: 9.6rem;
+}
+
+a {
+  cursor: pointer;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-100 {
+  width: 100%;
+}

@@ -1,0 +1,79 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+
+import * as Stories from './Helper.stories';
+import * as FloatingStories from './FloatingHelper.stories';
+
+import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
+
+<Meta of={Stories} />
+
+# Helper
+
+(PENDING)
+
+## Overview
+
+(PENDING) Variants, sizes, alignment, location... etc.
+
+## Live demo
+
+Preview the Helper component with the React live demo. For detailed code usage
+documentation, see the Genesys UI or Genesys Styles version of the component.
+
+### Helper
+
+<Canvas of={Stories.Example} />
+<Controls of={Stories.Example} />
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-feedback-helper--docs" />
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
+  </div>
+</section>
+
+### FloatingHelper
+
+<Canvas of={FloatingStories.Example} />
+<Controls of={FloatingStories.Example} />
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-feedback-floatinghelper--docs" />
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
+  </div>
+</section>
+
+## Anatomy
+
+(PENDING)
+
+## Accessibility
+
+(PENDING)
+
+## Design tokens
+
+(PENDING)
+
+### Complete list
+
+(PENDING)
+
+⚠️ It is necessary to check if there are component tokens and if not, create the rest, or at least add the alias tokens to the list.
+
+<DesignTokensList
+  tokens={getCmpTokensJson('helper')}
+  intro={
+    <p style={{ margin: '1.6rem 0' }}>
+      There are {getCmpTokensJson('helper').length} Helper design tokens. The
+      units in rem are not based in browser, but in base 10, so{' '}
+      <code>1rem = 10px</code>.
+    </p>
+  }
+/>

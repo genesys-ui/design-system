@@ -1,0 +1,115 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+
+import * as Stories from './Link.stories';
+
+import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
+
+<Meta of={Stories} />
+
+# Link
+
+(PENDING)
+
+## Overview
+
+(PENDING) Variants, sizes, alignment, location... etc.
+
+## Live demo
+
+Preview the Link component with the React live demo. For detailed code usage
+documentation, see the Genesys UI or Genesys Styles version of the component.
+
+<Canvas of={Stories.Example} />
+<Controls of={Stories.Example} />
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-navigation-link--docs" />
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
+  </div>
+</section>
+
+## Anatomy
+
+(PENDING)
+
+## Accessibility
+
+Recommended attributes to be included:
+
+### aria-disabled
+
+Indicates that the element is perceivable but disabled, so it is not editable or
+otherwise operable. It is necessary to add it when the component is disabled.
+With the 'aria-disabled' attribute the assistive technologies are capable of informing the user
+that the link is disabled, but the click is not blocked, so it's necessary to avoid adding the
+'href' attribute, specifying that it's still a link by the 'role' attribute.
+
+<Source
+  code={`
+<a class="link" role="link" tabindex="0" aria-disabled="true">
+    Disabled Link
+</a>
+  `}
+/>
+
+### tabindex
+
+Users who do not or cannot use pointing devices can tab through links and, as
+such, links should be in a logical tabbing order. The tabindex attribute allows
+you to define this order although if the HTML is linear, as it should be, a
+logical tabbing order should automatically fall into place.
+
+<Source
+  code={`
+<a class="link" href="https://www.devo.com/" rel="noreferrer" target="_blank" tabindex="1">
+    Link
+</a>
+<a class="link" href="https://www.devo.com/" rel="noreferrer" target="_blank" tabindex="3">
+    Link
+</a>
+<a class="link" href="https://www.devo.com/" rel="noreferrer" target="_blank" tabindex="2">
+    Link
+</a>
+  `}
+/>
+
+### title
+
+If you have a link that isn’t self-descriptive, or the link destination could
+benefit from being explained in more detail, you can add information to a link
+using the title attribute.
+
+<Source
+  code={`
+<a
+  class="link"
+  href="https://www.devo.com/"
+  rel="noreferrer"
+  target="_blank"
+  title="Enim eu turpis egestas pretium aenean pharetra magna ac placerat."
+>
+  Link
+</a>
+  `}
+/>
+
+## Design tokens
+
+(PENDING)
+
+### Complete list
+
+<DesignTokensList
+  tokens={getCmpTokensJson('link')}
+  intro={
+    <p style={{ margin: '1.6rem 0' }}>
+      There are {getCmpTokensJson('link').length} Link design tokens. The units
+      in rem are not based in browser, but in base 10, so{' '}
+      <code>1rem = 10px</code>.
+    </p>
+  }
+/>

@@ -1,0 +1,78 @@
+import { Meta, Canvas } from "@storybook/blocks";
+
+import * as Stories from "./LoadingStates.stories";
+
+<Meta title="Patterns/Loading states" />
+
+# Loading states
+
+Nos podemos encontrar con diferentes situaciones en las que la página en la que
+nos encontramos, un componente o un área concreta puede pasar a un ‘loading
+state’ mientras se devuelven los datos o se realizan cambios en base de datos.
+
+En cada caso particular se informará al usuario de que esto está sucediendo y al
+mismo tiempo se evitará que interactúe con los elementos que estén implicados en
+el ‘loading state’.
+
+## Page
+
+Si el elemento que pasa a ‘loading’ es la página completa entonces se recurrirá
+a una capa de overlay semitransparente con el símbolo de ‘loading’ tipo ‘Brand’:
+
+{/*<img src='img/pattern-loading-page.jpg' alt='Page Loading behavior example'/>*/}
+
+<video controls>
+  <source src="video/pattern-loading-page.webm" type="video/webm" />
+  <img
+    src="img/pattern-loading-page.jpg"
+    alt="Page Loading behavior example"
+    title="Your brwser doesn't support HTML5 video"
+  />
+</video>
+
+## Area or container type component
+
+Para este caso también se recurrirá a una capa de overlay semi-transparente pero
+con base de color blanco y usando el símbolo de ‘loading’ tipo ‘spinner’:
+
+{/*<img src='img/pattern-loading-container.jpg' alt='Container Loading behavior example'/>*/}
+
+<video controls>
+  <source src="video/pattern-loading-container.webm" type="video/webm" />
+  <img
+    src="img/pattern-loading-container.jpg"
+    alt="Container Loading behavior example"
+    title="Your brwser doesn't support HTML5 video"
+  />
+</video>
+
+## Interactive elements
+
+Cuando se trate de un botón, chip... etc. el que pase a ‘loading state’ mientras
+se realiza su acción asociada, el button dejará de permitir el click y el cursor
+pasará a ‘not-allowed’, además se modificará su contenido en función de su tipo
+y acción asociada. El loading state implica también el blocked state.
+
+### Solo icono
+
+Cuando el button sólo tenga como contenido un icono, mientras dure el ‘loading
+state’, se sustituirá por el svg animado tipo ‘spinner’.
+
+<Canvas of={Stories.IconButtonLoading} />
+
+### Solo texto
+
+Se añadirá siempre el svg con el spinner animado a la izquierda del texto. Se
+sustituirá el texto por la acción que se está realizando y puntos suspensivos.
+Siempre que sea posible se intentará mantener el ancho previo del button.
+
+<Canvas of={Stories.ButtonTextLoading} />
+
+### Texto e icono
+
+En este caso se sustituye el icono por el svg con el spinner animado. Se
+sustituirá el texto por la acción que se está realizando y puntos suspensivos.
+Siempre que sea posible se intentará mantener el ancho previo del button.
+
+<Canvas of={Stories.ButtonIconTextLoading} />
+

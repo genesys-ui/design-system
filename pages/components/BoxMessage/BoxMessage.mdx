@@ -1,0 +1,90 @@
+import { Meta, Canvas, Controls } from '@storybook/blocks';
+
+import * as Stories from './BoxMessage.stories';
+
+import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
+
+<Meta of={Stories} />
+
+# BoxMessage
+
+(PENDING)
+
+## Overview
+
+(PENDING) Variants, sizes, alignment, location... etc.
+
+## Live demo
+
+Preview the BoxMessage component with the React live demo. For detailed code usage
+documentation, see the Genesys UI or Genesys Styles version of the component.
+
+<Canvas of={Stories.Example} />
+<Controls of={Stories.Example} />
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-feedback-boxmessage--docs" />
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
+  </div>
+</section>
+
+## Anatomy
+
+(PENDING)
+
+## Accessibility
+
+Recommended attributes to be included:
+
+### aria-live
+
+Dynamic content which updates without a page reload.
+Live regions need to exist in the HTML at time of page-load, but they will only
+be announced when the content within the container changes.
+Used in the `.box-message` block.
+
+### role
+
+The status role defines an advisory that is not important enough to be an alert.
+Used in the `.box-message` block.
+
+Only one of the two attributes (aria-label or role) can be used at the same time:
+
+- `<div aria-live="polite">` is analogous to `<div role="status">`.
+- `<div aria-live="assertive" aria-atomic="true">` is analogous to `<div role="alert">`.
+
+Used in the `.box-message` block as:
+
+- `aria-live="polite"` or `role="status"`: It is used to display a message to
+  the user in a way that does not interrupt the user’s current task and queues the
+  notification until whatever task the user is currently working on is complete.
+- `aria-live="assertive"` or `role="alert"`: If the notification contains an
+  urgent message. It is used to display a message to the user that interrupts the
+  user’s current task. These are considerably more disruptive to users than the
+  `role="status"`.
+
+### aria-label
+
+A more descriptive explanation for screen readers.
+Used in the `.box-message__remove-button` button element as `aria-label="close"`.
+
+## Design tokens
+
+(PENDING)
+
+### Complete list
+
+<DesignTokensList
+  tokens={getCmpTokensJson('boxMessage')}
+  intro={
+    <p style={{ margin: '1.6rem 0' }}>
+      There are {getCmpTokensJson('boxMessage').length} BoxMessage design
+      tokens. The units in rem are not based in browser, but in base 10, so{' '}
+      <code>1rem = 10px</code>.
+    </p>
+  }
+/>
