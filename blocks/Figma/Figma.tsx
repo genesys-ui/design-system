@@ -7,8 +7,8 @@ type Props = {
 };
 
 const isValidUrl = (url: string) =>
-  /https:\/\/([\w\.-]+\.)?figma.com\/(file|proto)\/([0-9a-zA-Z]{22,128})(?:\/.*)?$/.test(
-    url
+  /https:\/\/([\w.-]+\.)?figma.com\/(file|proto)\/([0-9a-zA-Z]{22,128})(?:\/.*)?$/.test(
+    url,
   );
 
 const getEmbededUrl = (url: string) =>

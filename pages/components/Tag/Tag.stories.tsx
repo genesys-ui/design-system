@@ -51,7 +51,8 @@ It's possible to use a custom color used for the background color and auto-gener
     },
     text: {
       control: 'text',
-      description: `Text for the component (it shouldn't be too long)`,
+      // prettier-ignore
+      description: 'Text for the component (it shouldn\'t be too long)',
     },
     quiet: {
       control: 'boolean',

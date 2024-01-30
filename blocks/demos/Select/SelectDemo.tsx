@@ -17,7 +17,7 @@ export interface SelectDemoProps {
   hideLabel?: boolean;
   inputWidth?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   isDisabled?: boolean;
-  options: any;
+  options: unknown;
   readOnly?: boolean;
   isRequired?: boolean;
   small?: boolean;

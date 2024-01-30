@@ -24,7 +24,8 @@ const meta: Meta<React.ComponentProps<typeof Label>> = {
         'help',
         'info',
       ],
-      description: `This property defines the color scheme for the Label. There are predefined types: base, error... etc.`,
+      description:
+        'This property defines the color scheme for the Label. There are predefined types: base, error... etc.',
       table: {
         defaultValue: { summary: 'strong' },
       },
@@ -44,7 +45,8 @@ const meta: Meta<React.ComponentProps<typeof Label>> = {
     truncated: {
       control: 'boolean',
       description:
-        "If the text of the label doesn't fit then there is a text ellipsis",
+        // prettier-ignore
+        'If the text of the label doesn\'t fit then there is a text ellipsis',
       table: {
         defaultValue: { summary: true },
       },
@@ -55,7 +57,7 @@ const meta: Meta<React.ComponentProps<typeof Label>> = {
         'The cursor CSS property sets the mouse cursor, if any, to show when the mouse pointer is over an element.',
     },
     children: {
-      description: `Content for the Label.`,
+      description: 'Content for the Label.',
     },
   },
 };

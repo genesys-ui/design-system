@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { IconButton } from '@devoinc/genesys-ui';
-import { GIReloadRefreshUpdate } from '@devoinc/genesys-icons';
 
 IconButton.displayName = 'IconButton';
 const meta: Meta<React.ComponentProps<typeof IconButton>> = {
@@ -54,7 +53,8 @@ There are predefined types: accent-high, accent... etc.`,
         'loading-success',
         'disabled',
       ],
-      description: `It Sets the color scheme adjustments according to component state.`,
+      description:
+        'It Sets the color scheme adjustments according to component state.',
       table: {
         defaultValue: { summary: 'enabled' },
       },

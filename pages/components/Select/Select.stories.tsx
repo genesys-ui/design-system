@@ -16,7 +16,7 @@ const meta: Meta<React.ComponentProps<typeof Select2>> = {
     labelPosition: {
       control: 'radio',
       options: ['top', 'left', 'between'],
-      description: `Position of the label text relative to the input control.`,
+      description: 'Position of the label text relative to the input control.',
       table: {
         defaultValue: { summary: 'top' },
       },
@@ -24,7 +24,8 @@ const meta: Meta<React.ComponentProps<typeof Select2>> = {
     status: {
       control: 'radio',
       options: ['base', 'success', 'error', 'warning'],
-      description: `This property defines the status color schema for the field.`,
+      description:
+        'This property defines the status color schema for the field.',
       table: {
         defaultValue: { summary: 'base' },
       },
@@ -46,7 +47,8 @@ const meta: Meta<React.ComponentProps<typeof Select2>> = {
     helper: {
       control: 'text',
       description:
-        "The message for the Helper: it's displayed as extra info to fill the form or the field or as status message if there are error, warning or success contexts.",
+        // prettier-ignore
+        'The message for the Helper: it\'s displayed as extra info to fill the form or the field or as status message if there are error, warning or success contexts.',
     },
     label: {
       control: 'text',

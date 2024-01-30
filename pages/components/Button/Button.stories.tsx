@@ -53,7 +53,8 @@ There are predefined types: accent-high, accent... etc.`,
         'loading-success',
         'disabled',
       ],
-      description: `It Sets the color scheme adjustments according to component state.`,
+      description:
+        'It Sets the color scheme adjustments according to component state.',
       table: {
         defaultValue: { summary: 'enabled' },
       },

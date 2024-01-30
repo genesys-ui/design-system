@@ -19,7 +19,8 @@ const meta: Meta<React.ComponentProps<typeof Link>> = {
         'help',
         'info',
       ],
-      description: `This property defines the color scheme. There are predefined types: base, error... etc.`,
+      description:
+        'This property defines the color scheme. There are predefined types: base, error... etc.',
       table: {
         defaultValue: { summary: 'base' },
       },
@@ -41,7 +42,7 @@ const meta: Meta<React.ComponentProps<typeof Link>> = {
       },
     },
     children: {
-      description: `Content for the component.`,
+      description: 'Content for the component.',
     },
   },
 };
