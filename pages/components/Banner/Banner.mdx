@@ -1,13 +1,13 @@
 import { Meta, Canvas, Controls } from '@storybook/blocks';
 
-import * as Stories from './BoxMessage.stories';
+import * as Stories from './Banner.stories';
 
 import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
 import { getCmpTokensJson } from '../../../tokens';
 
 <Meta of={Stories} />
 
-# BoxMessage
+# Banner
 
 (PENDING)
 
@@ -17,7 +17,7 @@ import { getCmpTokensJson } from '../../../tokens';
 
 ## Live demo
 
-Preview the BoxMessage component with the React live demo. For detailed code usage
+Preview the Banner component with the React live demo. For detailed code usage
 documentation, see the Genesys UI or Genesys Styles version of the component.
 
 <Canvas of={Stories.Example} />
@@ -79,10 +79,10 @@ Used in the `.box-message__remove-button` button element as `aria-label="close"`
 ### Complete list
 
 <DesignTokensList
-  tokens={getCmpTokensJson('boxMessage')}
+  tokens={getCmpTokensJson('banner')}
   intro={
     <p style={{ margin: '1.6rem 0' }}>
-      There are {getCmpTokensJson('boxMessage').length} BoxMessage design
+      There are {getCmpTokensJson('banner').length} Banner design
       tokens. The units in rem are not based in browser, but in base 10, so{' '}
       <code>1rem = 10px</code>.
     </p>

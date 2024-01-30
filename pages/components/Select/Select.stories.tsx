@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Select2 } from '@devoinc/genesys-ui-form';
+import { Select } from '@devoinc/genesys-ui-form';
 
-Select2.displayName = 'Select';
-const meta: Meta<React.ComponentProps<typeof Select2>> = {
+Select.displayName = 'Select';
+const meta: Meta<React.ComponentProps<typeof Select>> = {
   title: 'Components/Select',
-  component: Select2,
+  component: Select,
   argTypes: {
     disabled: {
       control: 'boolean',
@@ -58,7 +58,7 @@ const meta: Meta<React.ComponentProps<typeof Select2>> = {
 };
 
 export default meta;
-type Story = StoryObj<React.ComponentProps<typeof Select2>>;
+type Story = StoryObj<React.ComponentProps<typeof Select>>;
 
 export const Example: Story = {
   args: {

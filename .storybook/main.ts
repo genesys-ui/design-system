@@ -1,5 +1,4 @@
 import type { StorybookConfig } from '@storybook/react-vite';
-import remarkGfm from 'remark-gfm';
 
 const config: StorybookConfig = {
   core: {
@@ -15,16 +14,7 @@ const config: StorybookConfig = {
     '../pages/patterns/*.@(mdx|stories.tsx)',
   ],
   addons: [
-    {
-      name: '@storybook/addon-docs',
-      options: {
-        mdxPluginOptions: {
-          mdxCompileOptions: {
-            remarkPlugins: [remarkGfm],
-          },
-        },
-      },
-    },
+    '@storybook/addon-docs',
     '@storybook/addon-toolbars',
     '@storybook/addon-links',
     '@storybook/addon-viewport',
@@ -37,19 +27,6 @@ const config: StorybookConfig = {
   framework: '@storybook/react-vite',
   docs: {
     autodocs: 'tag',
-  },
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      shouldRemoveUndefinedFromOptional: true,
-      savePropValueAsString: true,
-      // Required to show values from type declarations coming from node_modules.
-      // Overrides the default value of `react-docgen-typescript` which is
-      // '(prop) => prop.parent ? !/node_modules/.test(prop.parent.fileName) : true'
-      propFilter: () => true,
-    },
-    check: true,
   },
 };
 

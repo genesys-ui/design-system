@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Button, FlexItem, HFlex, IconButton } from '@devoinc/genesys-ui';
+import { Button, HFlex, IconButton } from '@devoinc/genesys-ui';
 
 const Template: React.FC = () => null;
 
@@ -16,19 +16,19 @@ type Story = StoryObj<React.ComponentProps<typeof Template>>;
 export const IconButtonLoading: Story = {
   render: () => (
     <HFlex spacing="cmp-md">
-      <FlexItem>
+      <HFlex.Item>
         <IconButton
           title="Add to favorites"
           icon="like_heart_favorite_rating_love"
         />
-      </FlexItem>
-      <FlexItem>
+      </HFlex.Item>
+      <HFlex.Item>
         <IconButton
           title="Adding..."
           state="loading"
           icon="like_heart_favorite_rating_love"
         />
-      </FlexItem>
+      </HFlex.Item>
     </HFlex>
   ),
 };
@@ -36,12 +36,12 @@ export const IconButtonLoading: Story = {
 export const ButtonTextLoading: Story = {
   render: () => (
     <HFlex spacing="cmp-md">
-      <FlexItem>
+      <HFlex.Item>
         <Button>Add to favorites</Button>
-      </FlexItem>
-      <FlexItem>
+      </HFlex.Item>
+      <HFlex.Item>
         <Button state="loading">Adding to favorites...</Button>
-      </FlexItem>
+      </HFlex.Item>
     </HFlex>
   ),
 };
@@ -49,16 +49,16 @@ export const ButtonTextLoading: Story = {
 export const ButtonIconTextLoading: Story = {
   render: () => (
     <HFlex spacing="cmp-md">
-      <FlexItem>
+      <HFlex.Item>
         <Button icon="like_heart_favorite_rating_love">
           Add to favorites...
         </Button>
-      </FlexItem>
-      <FlexItem>
+      </HFlex.Item>
+      <HFlex.Item>
         <Button state="loading" icon="like_heart_favorite_rating_love">
           Adding to favorites...
         </Button>
-      </FlexItem>
+      </HFlex.Item>
     </HFlex>
   ),
 };

@@ -39,7 +39,7 @@ const preview: Preview = {
   decorators: [
     // Themes
     (Story, context) => (
-      <ThemeProvider theme={{ tokens: brand[context.globals.theme] ?? {} }}>
+      <ThemeProvider theme={brand[context.globals.theme] ?? {}}>
         <Story />
       </ThemeProvider>
     ),
