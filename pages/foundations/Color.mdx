@@ -1,5 +1,201 @@
-import { Meta } from '@storybook/blocks';
+
+
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+
+import {
+  CardHtml,
+  CardReact,
+  DesignTokensList,
+  Figma,
+  Figure,
+} from '../../blocks';
 
 <Meta title="Foundations/Color" />
 
 # Color
+
+Application of Color in Dalí is designed to be harmonious, ensure consistency, accessible text, and distinguish interface elements and components from one another.
+
+Color is also used to emphasize important information, to display different states or to add meaning and support design communication. 
+
+Dalí’s default palettes are derived from the Devo Style Guide to ensure we maintain our brand’s personality throughout the UI.
+
+## Palettes
+
+### Brand palettes
+
+The **primary palette** is used for the main action of the page. This means that there cannot be more than one action on the same page using this palette. It is used to mark active first-level navigation elements: active sections in the main menu and in the sub-section tabs located in the upper area. 
+
+Similarly, it is used to draw attention to certain elements or to add branding in certain contexts.
+
+<Figure spaceToTop>
+  <Figma aspectRatio='1x1' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A6641&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+The **secondary palette** is used for other important actions of which there might be more than one per page. This covers elements that give feedback to the user such as progress bars and ranges, as well as active and/or selected statuses of forms or menu items: checkboxes, radios, switches, dropdown items, and so forth.
+
+<Figure spaceToTop>
+  <Figma aspectRatio='1x1' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A7741&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+### UI palettes
+
+This palette is used to reflect the state or context of interface elements, such as an action or a user-feedback element.
+
+Typically, red represents danger or an error; orange represents a warning; and green represents normality or success. We also have information and help statuses in different shades of blue to give feedback or to define help blocks.
+
+#### Success
+
+<Figure spaceToTop>
+  <Figma aspectRatio='1x1' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A9518&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Warning
+
+<Figure spaceToTop>
+  <Figma aspectRatio='1x1' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A11039&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Error
+
+<Figure spaceToTop>
+  <Figma aspectRatio='1x1' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A14228&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Info
+
+<Figure spaceToTop>
+  <Figma aspectRatio='1x1' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A14244&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Help
+
+<Figure spaceToTop>
+  <Figma aspectRatio='1x1' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A17159&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+### Neutral palettes
+
+This is usually used for generic texts, field borders in forms, separators, subtle backgrounds, non-highlighted actions, and so on. It is a shade of gray that is tinged by the brand color, and thus seeks to highlight the elements with sufficient contrast on the surfaces of the app.
+
+It also includes the palettes (blend) based on grayscale and transparency, which allows you to darken or lighten the text, border, or background, depending on the color scheme.
+
+<Figure spaceToTop>
+  <Figma aspectRatio='1x1' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A13651&mode=design&t=RE4bbatEUXom8VAu-1" />
+</Figure>
+
+### Visualization palettes
+
+These palettes are aimed at data visualization (graphics) as well as feedback elements that are outside the scope of statuses (error, warning, success, etc.).
+
+#### Blue
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A19773&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Bronze
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A21699&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Green
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A22750&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Green
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A22750&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Teal
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A23801&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Sky
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A24848&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Slate
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A24862&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Indigo
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A24876&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Dusk
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A24890&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Purple
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A29559&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Magenta
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A29573&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+#### Red
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=7274%3A29587&mode=design&t=O0arjG0dxvDqArcm-1" />
+</Figure>
+
+### Miscellany palettes
+
+The miscellaneous palettes will be used for all elements associated with very specific colors, such as links to social media, rating elements, and so forth.
+
+#### Rating
+
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="https://img.freepik.com/free-photo/beautiful-aerial-shot-fronalpstock-mountains-switzerland-beautiful-pink-blue-sky_181624-9315.jpg?w=1380&t=st=1708008661~exp=1708009261~hmac=6709e70324b4ff7d38e25167f9f2887be86ce35b5adbf29040bdfa3e27eba099"
+  />
+</Figure>
+
+#### Social
+
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/Social-2.png"
+  />
+</Figure>
+
+#### Share
+
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/effect.jpg"
+  />
+</Figure>
+
+
+## Use of color by context
+
+The following table helps to decide which color palettes to use in the app, depending on the context of the element. Well-chosen colors help users to identify statuses, actions, and interactions. They also make it easy to locate help, differentiate between different types of information, and to understand which steps to take. A consistent use of color improves the user experience and requires less work on their part.
+
+<Figure spaceToTop>
+  <Figma aspectRatio='6x5' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=6980%3A6270&mode=design&t=RE4bbatEUXom8VAu-1" />
+</Figure>
