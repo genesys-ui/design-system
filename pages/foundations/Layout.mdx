@@ -1,5 +1,74 @@
 import { Meta } from '@storybook/blocks';
 
+import {
+  CardHtml,
+  CardReact,
+  DesignTokensList,
+  Figma,
+  Figure,
+} from '../../blocks';
+
 <Meta title="Foundations/Layout" />
 
 # Layout
+
+We use it to place everything on a screen within the Devo Platform.
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+It’s made up of different regions that define our Information Architecture. Each of them contains basic interaction, be it navigation, quick access to configurations, data sets, contents, etc.
+
+Dalí also offers different components when generating layouts, consistently and systematically. Each of them should be used according to the context of use.
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+   <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/layout-brand.png"
+  />
+</Figure>
+  </div>
+</section>
+
+## UI regions
+
+They represent the skeleton of the platform and the rest of the contents, components, navigations, etc. are placed on them. These areas are generated with the **“Grid”** component.
+
+<Figure spaceToTop>
+  <Figma aspectRatio='4x3' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=9887%3A38268&mode=design&t=RE4bbatEUXom8VAu-1" />
+</Figure>
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <div className="mcol-12 mcol-sm-6">
+        1. Global region
+    </div>
+   <div className="mcol-12 mcol-sm-6">
+2. App header
+  </div>
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+ <div className="mcol-12 mcol-sm-6">
+3. Leading region
+  </div>
+   <div className="mcol-12 mcol-sm-6">
+4. Main region
+  </div>
+  </div>
+</section>
+
+# Global region
+## Global region
+### Global region
+#### Global region
+##### Global region
+##### Global region
+The global region is reserved for the Devo sidebar and used as the main navigation within the platform.
+### App header
+The App header is reserved for the App bar and used as the first level navigation within a section. The App Bar can be replaced by specific Toolbars depending on the section (Data Search window, Activeboards, Flow). In these cases, the App bar options will be collapsed through a menu button on the right.
+### Leading region
+The leading region is primarily used for content navigation within a section that needs an additional level of depth.
+### Main region 
+The main region contains the main content of each section of the platform. Its internal structure is determined by a Fluid component.
+
+
