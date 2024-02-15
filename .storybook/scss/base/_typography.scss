@@ -183,6 +183,11 @@ $doc-base-class-name: sbdocs;
       &-ul .#{$doc-base-class-name}-li + .#{$doc-base-class-name}-li {
         margin-top: 0.8rem;
       }
+
+      &-a {
+        font-weight: 600;
+        color: $link-color;
+      }
     }
 
     code,
