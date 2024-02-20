@@ -1,5 +1,369 @@
 import { Meta } from '@storybook/blocks';
 
+import {
+  CardHtml,
+  CardReact,
+  DesignTokensList,
+  Figma,
+  Figure,
+} from '../../blocks';
+
 <Meta title="Foundations/Content, voice and tone" />
 
 # Content, voice and tone
+
+Technical documentation should be concise and grammatically correct. It is written on a specific topic and is aimed at a specific reader. The main purpose of this document is to provide guidelines on how to make technical writing clear, concise, consistent and understandable for end users.
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+Those with a background in journalism will be familiar with the [Chicago style manual](https://www.chicagomanualofstyle.org/home.html). This is an indispensable reference for all things  grammar and syntax related, and serves as our point of reference for all grammar-related pain points. However, it isn't specific to the needs of technical writing so this document will include Devo-specific style rules.
+ </div>
+  <div className="mcol-12 mcol-sm-6">
+   <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/Voice-tone.png"
+  />
+</Figure>
+  </div>
+</section>
+
+This guide covers the core principles of English writing, lists key grammar and punctuation rules, explains how to structure content to improve readability, and provides some useful pointers to make the process of technical writing easier.
+
+It is aimed at all those who write or review texts in the interfaces of Devo products in the areas:
+- Voice & Tone
+- Language and grammar
+- Glossary of action labels
+
+## Voice & Tone
+
+### 01. Introduction
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+Devo's voice is how we communicate with users. When creating content it's important to consider not just what we say, but how we say it.  Although our voice is consistent throughout all of our documentation, its tone adapts to each situation as well as the reader's expectations. 
+ </div>
+  <div className="mcol-12 mcol-sm-6">
+   <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/Voice-tone.png"
+  />
+</Figure>
+  </div>
+</section>
+Devo's voice is clear, informative, and relaxed.  We use an informal style to write content that is both simple and instructive. Check [this article](https://techwhirl.com/gender-neutral-technical-writing/) for more information on keeping your writing and tone gender neutral.
+
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+     **Be concise (Less is more)**
+    </div>
+    <div class="col-9">
+      Short sentences are better. Remove superfluous words. Consider splitting up your sentence if it is filled with commas or parentheses.
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+     **Be human**
+    </div>
+    <div class="col-9">
+      Even though this is technical documentation, avoid sounding like a robot. Read your text out loud and ask yourself if this is something a human would say. Also keep in mind that not all readers are experts on the given topic.
+<p>_Robotic: Invalid password._</p>
+<p>_Human: Your password must contain a mix of letters, numbers, and special characters._</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+     **Be present**
+    </div>
+    <div class="col-9">
+      Where possible, use the present tense and avoid using the past or future tense. This makes following procedures and instructions easier for readers and gives a sense of immediacy.
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+     **Be direct/ simple/clear**
+    </div>
+    <div class="col-9">
+      This is not creative writing, but rather informative writing. Lead with important actions. The user wants to find information quickly. This allows the reader to scan the page for keywords.
+    
+    Most of the time, start each statement with a verb. Avoid using "you can" and "there is", "there are", "there were". 
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+     **Be inclusive**
+    </div>
+    <div class="col-9">
+    - Use the second-person pronoun (you, your, yours).
+    - Do not use words that have gender-specific pairs (mankind, man hours).
+    - Avoid phrases or words that could be misinterpreted or offend (blacklist/whitelist).
+    - To avoid repetition it is acceptable to use the third-person pronoun they or replace he/she with the user.
+    - Use the imperative mood (Do this, Close the window, Open a new tab).
+    </div>
+  </div>
+</div>
+
+### 02. Abbreviations
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+   Avoid using abbreviations where possible in your writing. This includes common abbreviations such as etc., e.g., and i.e. Instead, write out full words or choose phrases that explicitly explain the message you want to convey.
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+   <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/abbreviations-1.png"
+  />
+</Figure>
+  </div>
+</section>
+
+### 03. Active and passive voice
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+Use the active voice to make your sentences direct and easy to read. The **active voice** conveys a strong and clear tone, while the **passive voice** is weaker.
+ </div>
+  <div className="mcol-12 mcol-sm-6">
+   <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/active-passive-voice.png"
+  />
+</Figure>
+  </div>
+</section>
+With the **active voice**, the subject of the sentence does the action. With the **passive voice**, the subject of the sentence has the action done to it.
+
+However, the **passive voice** is acceptable in the following situations:
+In an error message or troubleshooting content when the active subject is the user.
+The subject of the action is unknown, or you want to emphasize the object on which the action is performed.
+The sentence in active voice sounds unnatural or complicated.
+
+### 04. Messaging guidelines
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    <div className="mcol-12 mcol-sm-6">
+        1. Write the error in clear, concise, and simple language. Avoid long sentences or ambiguous phrases.
+    </div>
+   <div className="mcol-12 mcol-sm-6">
+ <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/messaging-1.png"
+  />
+</Figure>
+  </div>
+     <div className="mcol-12 mcol-sm-6">
+        2. Don’t blame the user.
+    </div>
+   <div className="mcol-12 mcol-sm-6">
+ <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/messaging-2.png"
+  />
+</Figure>
+  </div>
+     <div className="mcol-12 mcol-sm-6">
+       3. Avoid negative words that undermine the user’s ability to follow instructions.
+    </div>
+   <div className="mcol-12 mcol-sm-6">
+ <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/messaging-3.png"
+  />
+</Figure>
+  </div>
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+ <div className="mcol-12 mcol-sm-6">
+4. Guide the user and offer suggestions to help resolve the issue.
+  </div>
+   <div className="mcol-12 mcol-sm-6">
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/messaging-4.png"
+  />
+</Figure>
+  </div>
+   <div className="mcol-12 mcol-sm-6">
+5. Avoid using all caps or upper case. This gives the impression of shouting at the user and is difficult to read.
+  </div>
+   <div className="mcol-12 mcol-sm-6">
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/messaging-5.png"
+  />
+</Figure>
+  </div>
+  </div>
+</section>
+
+### 05. Modal verbs
+
+Use modal verbs to express ideas such as ability, uncertainty, necessity and permission. Use modal verbs sparingly and at your discretion, and always use the correct verb for the instruction.
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/modal-verbs-12.png"
+  />
+</Figure>
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/modal-verbs-22.png"
+  />
+</Figure>
+
+
+## Language and grammar
+
+The core function of the language and grammar used in technical and UX writing is to inform, as opposed to arguing or entertaining. Therefore, your writing should focus on providing straightforward and instructional statements that users can easily understand. 
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+Your writing should be consistent and concise, so that the user can follow prompts and steps without hesitation. Since the topic is instructional and often requires focused attention, longer sentences can lead to a higher potential for confusion. Short explanations are easier to understand. 
+</div>
+  <div className="mcol-12 mcol-sm-6">
+   <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/illustration-1.png"
+  />
+</Figure>
+  </div>
+</section>
+The same process applies to writing UI labels or commands. Remove superfluous words and keep a consistent grammatical style throughout. 
+
+### 01. Bold
+
+Use bold text formatting for static interface elements: buttons, tabs, links, options, check boxes, step names, and so forth. Do not use quotation marks to refer to these elements.
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/Bold-2x.png"
+  />
+</Figure>
+
+### 02. Capitalization	
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    **Use sentence case**. That means only capitalizing the first word of a sentence, heading, title, UI label, tab, or standalone phrase. Sentence case makes it easier to differentiate between common and proper nouns. 
+
+    Exceptions to the sentence case rule are products and trademarks, which are written according to their stylization.
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+<Figure>
+     <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/capitalization-15x.png"
+  />
+</Figure>
+  </div>
+</section>
+
+<section className="mrow mt-5">
+  <div className="mcol-12 mcol-sm-6">
+    Do not use all caps (all uppercase) as this makes it difficult for the reader to differentiate between common and proper nouns.  
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+<Figure>
+     <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/capitalization-15x-2.png"
+  />
+</Figure>
+  </div>
+</section>
+When writing about a UI element, always follow the same capitalization as used in the UI. For example, if referring to the **“Data search”** window you would be correct to write: “To run a search, you must access the data table where the events you need to work with are stored. You can do this via the **Data search** area in the navigation panel.”
+The above rule applies to all UI elements including input forms, drop-down menus, and action labels.
+
+### 03. Currency	
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+   Write the names of currencies in lowercase, but capitalize the reference to the country or region:
+
+Note that the euro is not capitalized and do not make it plural.
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+ <Figure>
+     <img
+    alt="Currency - Do"
+    src="img/currency-15x.png"
+  />
+</Figure>
+  </div>
+</section>
+
+<section className="mrow mt-5">
+  <div className="mcol-12 mcol-sm-6">
+    When referring to specific amounts of money in any currency, use the currency symbol on first reference followed by the amount with no spacing. Any further references use the currency symbol.
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+<Figure>
+     <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/currency2-15x.png"
+  />
+</Figure>
+  </div>
+</section>
+
+### 04. Date & time	
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+   **Dates** are written in the month–day–year order, with a comma before and after the year if it is not at the end of a sentence:
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+ <Figure>
+     <img
+    alt="Currency - Do"
+    src="img/date1-15x.png"
+  />
+</Figure>
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+   When describing a length of **time**, use abbreviations:
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+ <Figure>
+     <img
+    alt="Currency - Do"
+    src="img/date2-15x.png"
+  />
+</Figure>
+  </div>
+</section>
+
+<section className="mrow mt-5">
+  <div className="mcol-12 mcol-sm-6">
+   **Time** is written in 24-hour notation:
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+<Figure>
+     <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/date3-15x.png"
+  />
+</Figure>
+  </div>
+</section>
+
+
+## Glossary of action labels
+

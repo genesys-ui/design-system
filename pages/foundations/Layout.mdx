@@ -17,19 +17,18 @@ We use it to place everything on a screen within the Devo Platform.
 <section className="mrow">
   <div className="mcol-12 mcol-sm-6">
 It’s made up of different regions that define our Information Architecture. Each of them contains basic interaction, be it navigation, quick access to configurations, data sets, contents, etc.
-
-Dalí also offers different components when generating layouts, consistently and systematically. Each of them should be used according to the context of use.
   </div>
   <div className="mcol-12 mcol-sm-6">
+
    <Figure>
   <img
     alt="Location of the 'status' icon button in a widget header"
-    src="img/layout-brand.png"
+    src="img/layout.png"
   />
 </Figure>
   </div>
 </section>
-
+Dalí also offers different components when generating layouts, consistently and systematically. Each of them should be used according to the context of use.
 ## UI regions
 
 They represent the skeleton of the platform and the rest of the contents, components, navigations, etc. are placed on them. These areas are generated with the **“Grid”** component.
@@ -57,18 +56,143 @@ They represent the skeleton of the platform and the rest of the contents, compon
   </div>
 </section>
 
-# Global region
-## Global region
 ### Global region
-#### Global region
-##### Global region
-##### Global region
 The global region is reserved for the Devo sidebar and used as the main navigation within the platform.
 ### App header
 The App header is reserved for the App bar and used as the first level navigation within a section. The App Bar can be replaced by specific Toolbars depending on the section (Data Search window, Activeboards, Flow). In these cases, the App bar options will be collapsed through a menu button on the right.
 ### Leading region
 The leading region is primarily used for content navigation within a section that needs an additional level of depth.
 ### Main region 
-The main region contains the main content of each section of the platform. Its internal structure is determined by a Fluid component.
+The main region contains the main content of each section of the platform. It's internal structure is determined by a **Fluid** component.
 
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+     <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/layout-main-region.png"
+  />
+</Figure>
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+It houses the main content of each section of the platform. It’s generated with the **"Fluid"** component, which is based on the well-known twelve column system.
+  </div>
+</section>
+
+While the other regions remain stable throughout the user's journey, this region is the most dynamic and changing. Therefore, it’s the most important area and the one that should have the greatest number of options.
+
+Dalí offers three basic settings for the main region that should be used depending on the type of content that we should show the user.
+
+#### Predefined main region layouts
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+     <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/layout-main-region-full-width.png"
+  />
+</Figure>
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+1. **Full width:** Is a one-column layout with the same visibility no matter the screen size. It is the platform's default grid and should be used whenever we need to show the different parts of administration and data management.
+  </div>
+</section>
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+     <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/layout-main-region-limited-width.png"
+  />
+</Figure>
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+2. **Limited width:** This layout is used in settings pages where the main content is not organized within tables. For example, list of elements (cards, media, item list, etc.)
+  </div>
+</section>
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+     <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/layout-main-region-booking-grid.png"
+  />
+</Figure>
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+3. **Booking grid:** It’s a two-column layout on larger screens. On smaller screens, the second column is placed underneath the first.
+  </div>
+</section>
+
+## Layout components
+
+### 01. Fluid
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+ Their mission is to help us arrange the content into structured propositions. It’s based on a twelve column system.
+ They are also useful for restricting the width of a content to the current breakpoint, while keeping it fluid.
+ </div>
+    <div className="mcol-12 mcol-sm-6">
+     <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/layout-components-fluid.png"
+  />
+</Figure>
+  </div>
+</section>
+Fluids are made up of containers, rows, and columns. Containers provide a means to center and horizontally pad the content. Rows are wrappers for columns. Content must be placed within columns and only columns may be immediate children of rows.
+
+We use Fluid to create different predefined layouts, in addition to being able to create your own to display the content in the best way.
+ 
+### 02. Grid
+It helps us to design two-dimensional layouts based on CSS Grid Layout in an easy way. It provides us with a friendly interface to control all the intrinsic aspects of CSS Grid behavior.
+#### Grid item
+In addition to the parent component, which acts as a container for the group, we have the child component **"GridItem"** with which we can adjust the specific behaviors of each item in the group.
+### 03. Flex
+It’s used to easily arrange components in a column or row (single-direction). The space between them remains consistent. Based on CSS Flexbox Layout.
+#### Flex item
+Every flex based Container component must use as child a component  called "flexItem", which will be used to wrap our final components and which has a series of additional properties to generate specific behaviors of an element within the group.
+
+#### Use cases
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+**Hflex:** Used to stack elements together in horizontal direction, centering them and adding a constant space between between its children.
+
+**VFlex:** Used to stack elements together in a vertical direction, centering them and adding a constant space between its children.
+
+**Wrap:** It wraps its children automatically if there isn't enough space to fit any more in the same row, besides adding a defined space between its children.
+ </div>
+    <div className="mcol-12 mcol-sm-6">
+     <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/layout-components-flex.png"
+  />
+</Figure>
+  </div>
+</section>
+
+### 04. Box
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+It is our most versatile layout component.
+
+Our universal building block for layouts, which has a very wide range of properties that allow you to control size, positioning, spacing, distribution, etc.
+
+It serves as the basis for creating other layout components, which use it using only the properties they need for much more specific use cases.
+ </div>
+    <div className="mcol-12 mcol-sm-6">
+     <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/layout-components-box.png"
+  />
+</Figure>
+  </div>
+</section>
 
