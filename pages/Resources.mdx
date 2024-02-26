@@ -1,8 +1,39 @@
 import { Meta } from '@storybook/blocks';
 
+import { Card } from '../blocks';
+
 <Meta title="Resources" />
 
 # Resources
 
-Here there should be the direct access to the projects: Figma, Genesys UI, Genesys styles, Genesys icons,
+Get started with a collection of tools and guides to assist in the development process for users.
+
+Figma, Genesys UI, Genesys styles, Genesys icons,
 Genesys tokens... maybe with a grid of Cards.
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-4">
+    <Card
+      description="Foundations are the basic visual elements needed to create components and patterns."
+      heading="Foundations"
+      image="img/card-foundation.png"
+      url="/?path=/docs/foundations-overview--page"
+    />
+  </div>
+  <div className="mcol-12 mcol-sm-4">
+    <Card
+      description="Components are the intuitive building blocks of our design system."
+      heading="Components"
+      image="img/card-components.png"
+      url="/?path=/docs/components-overview--page"
+    />
+  </div>
+  <div className="mcol-12 mcol-sm-4">
+    <Card
+      description="Patterns are the solutions for users to achieve a goal in the most optimized and easy way."
+      heading="Patterns"
+      image="img/card-patterns.png"
+      url="/?path=/docs/patterns-overview--page"
+    />
+  </div>
+</section>
