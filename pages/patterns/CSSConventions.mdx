@@ -1,0 +1,115 @@
+import { Meta } from '@storybook/blocks';
+
+import {
+  CardHtml,
+  CardReact,
+  DesignTokensList,
+  Figma,
+  Figure,
+} from '../../blocks';
+
+<Meta title="Patterns/CSS conventions" />
+
+# CSS naming conventions
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+The goal is to understand the essence of the styles by reading few declarations. Most of the time, the essence is how the element is laid out and its size is determined. 
+ </div>
+  <div className="mcol-12 mcol-sm-6 mt-4">
+   <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/css-conventions-15x.png"
+  />
+</Figure>
+  </div>
+</section>
+A proper ordering of rules allows to “scan” the declaration block for properties quickly.
+## General Rules
+From most important to less important: 
+
+1 - Rules that affect the layout and the box size. What happens inside of the box and does not affect the layout/size is less important.
+
+2 - Group properties that belong together in terms of the CSS specification: Positioning, ```float/clear, font-*, text-*```
+
+3 - Order of CSS layouting as defined in the CSS specification:
+```position: absolute``` may override ```float: left/right. float: left/right``` may override ```display```, with the exception of ```display: none```. So the order is: ```position, float, display.```
+
+Text is laid out in line boxes, then words, then glyphs. So properties for font-size and line-height come first, then text-*, then word-*.
+
+4 - Order by box model, start at the outer edge and move inward
+
+5 - Clockwise longhand order: ```*-top, *-right, *-bottom, *-left```
+
+*Source: **9elements**
+
+**SASS INHERITANCE**
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/css-sass-15x.png"
+  />
+</Figure>
+**GENERATED CONTENT**
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/css-generated-content-15x.png"
+  />
+</Figure>
+**POSITION AND LAYOUT**
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/css-position-layout-15x.png"
+  />
+</Figure>
+**DISPLAY AND VISIBILITY**
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/css-display-visibility-15x.png"
+  />
+</Figure>
+**CLIPPING**
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/css-clipping-15x.png"
+  />
+</Figure>
+**ANIMATION**
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/css-animation-15x.png"
+  />
+</Figure>
+**BOX MODEL (FROM OUTSIDE IN)**
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/css-box-model-15x.png"
+  />
+</Figure>
+**BACKGROUND**
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/css-background-15x.png"
+  />
+</Figure>
+**TYPOGRAPHY**
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/css-typography-15x.png"
+  />
+</Figure>
+**PSEUDO-CLASSES & PSEUDO-ELEMENTS (NESTED RULES)**
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/css-pseudo-classes-15x.png"
+  />
+</Figure>

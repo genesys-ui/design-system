@@ -1,5 +1,72 @@
 import { Meta } from '@storybook/blocks';
 
+import {
+  CardHtml,
+  CardReact,
+  DesignTokensList,
+  Figma,
+  Figure,
+} from '../../blocks';
+
 <Meta title="Foundations/Spatial system" />
 
 # Spatial system
+Our spatial system is a set of rules for how we measure, size, and space our user interface.
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/spatial-system.png"
+  />
+</Figure>
+
+It allows us to be more consistent, communicate better, and reduce the number of decisions we have to make. When we use the same spatial system to design our UI, the rhythm becomes predictable and visually pleasing.  
+
+Dalí has two different spacing scales; one for spacing inside of components and simple molecules, and the other for layout spacing. 
+
+The two scales have certain overlapping values that serve two different roles, so keep that in mind when using them. Both the spacing and the layout scales can be applied to margin or padding properties, in addition to controlling with them the line height and even the fixed heights of the components that need it.
+
+The idea behind this is to create uniformity on a spatial level. 
+## Spatial scales
+
+### 01. Component scale (4pt based)
+
+This scale should be used when designing individual components. It has small increments that facilitate the correct spatial relationship between the different elements within a component.
+ <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/Spatial-scale1.png"
+  />
+</Figure>
+
+### 02. Layout scale (8pt based)
+
+The layout scale will be used to organize the components and surfaces along the platform layout. The increments in this scale are higher than those of the component scale, which allows us to have more control over the white space, the density of the content and the relationship between sections.
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/Spatial-scale-2.png"
+  />
+</Figure>
+
+### 03. Baseline system for typography (4pt based)
+
+It’s based on a 4pt baseline grid. We scale line-heights with increments of 4. When applied, the baseline grid system has the ability to align the component scale (4pt based) and the layout scale (8pt based) with the typography system to create a compelling vertical rhythm in the design.
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=12692%3A48089&mode=design&t=ZORpEd5HGFgZymkm-1" />
+</Figure>
+
+### 04. Component sizing system (4pt based)
+
+In those elements whose content is predictable, we use the "Element first" approach, which means that the sizing of solid elements takes priority when matched to your our spatial system.
+
+This includes components like buttons, Inputs, Actions, etc. These elements are more likely to have predictable content and are key to creating rhythm in the overall composition.
+
+To achieve this, the height of these components must be adjusted based on a scale based on 8pt harmonized with the rest of those we have in the spatial system.
+
+On the other hand, when the content is less predictable and we care about its display, we enforce strict internal padding and allow element sizes to be dictated by their content. These element’s sizes may still fall into our spatial system’s rules but that is secondary to the spacing around the content.
+
+<Figure spaceToTop>
+  <Figma aspectRatio='16x9' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=12692%3A48234&mode=design&t=ZORpEd5HGFgZymkm-1" />
+</Figure>
+

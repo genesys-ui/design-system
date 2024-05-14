@@ -1,5 +1,111 @@
 import { Meta } from '@storybook/blocks';
 
+import {
+  CardHtml,
+  CardReact,
+  DesignTokensList,
+  Figma,
+  Figure,
+} from '../../blocks';
+
 <Meta title="Foundations/Typography" />
 
 # Typography
+Typography helps us to correctly establish the visual hierarchy of a page, in addition to organizing information and serving as a guide for users while browsing the platform. Its correct use also generates a more powerful brand presence.
+
+We use typo design tokens and themes to manage our typography. We have specific groups of typo tokens (font-size, font-weight, line-height, letter-spacing... etc.) to define our different typographic styles: headings, heros, caps, body... etc.
+
+The different typographic styles will be used in each area depending on our layout structure, hierarchy of contents and needed emphasis.
+
+We are a data application so we don’t need a too much expressive typography, because we give more importance to clarity and exploitation of available space.  Therefore our main components usually use a range of our type scale between 11px and 18px, although our type scale raises 48px. Anyway, in some parts of our App might be necessary use more expressive typographic styles as On-boarding or user feedback.
+
+## Devo’s font stack
+**Branded Product typography**
+
+We use a sans-serif font which represents our design principles, where the sobriety is important, but being bold and giving an original touch to our data applications. With four font weights available: regular (500) for body and caps text, 300 for lead text and 700 for heros and headings. 
+   <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/Museo-15x.png"
+  />
+</Figure>
+
+**Data visualization typography**
+
+Our data visualization font is another example of our design principles because it’s not merely another monospace font. It’s a typeface created for developers with increased letter height for better reading experience, a pattern more clear-cut... etc. More info in [jetbrains](https://www.jetbrains.com/lp/mono/).
+   <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/Jetbrains-15x.png"
+  />
+</Figure>
+
+## Type Scale
+Our type scale is defined from 10 to 48px. In smallest sizes we don’t use a mathematical formula because we need very close values to cover all the small contexts needed in a data App. From 14px onwards we use the same formula as Carbon Design System.
+   <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/Type-scale-2x.png"
+  />
+</Figure>
+## Type color
+For body text we must use only the body color scheme (except in status contexts). There are different values based in neutral gray palette which should be used in specific situations. 
+
+
+   <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/Type-color-2x.png"
+  />
+</Figure>
+
+<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+  <div className="col">
+    <Figure
+      type="dont"
+      caption="Don’t use for heading amd body text any color not included in body color scheme or status one."
+    >
+      <img
+        src="img/Type-color-2-15x.png"
+        alt="Do - emphasis 01"
+      />
+    </Figure>
+  </div>
+  <div className="col">
+    <Figure
+      type="do"
+      caption=""
+    >
+      <img
+        src="img/Type-color-3-15x.png"
+        alt="Do - emphasis 02"
+      />
+    </Figure>
+  </div>
+</section>
+<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+  <div className="col">
+    <Figure
+      type="do"
+    >
+      <img
+        src="img/Type-color-4-15x.png"
+        alt="Do - emphasis 01"
+      />
+    </Figure>
+  </div>
+  <div className="col">
+  </div>
+</section>
+
+## Text line length
+
+When we use body text (paragraphs, labels... etc.) we should try always each line contains between 50  and 80 characters (if the text block has more tha one line). This is the appropiate measure for easy reading. If we use less than 50 characters, it can cause tiredness because of jumping from one to another line too much often, and if we use more than 80 characters, it can cause lost of reading focus with each jump. Anyway, we shouldn’t use more than 100 characters per each text lines.
+
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/text-line-length-1-1x.png"
+  />
+</Figure>
+
