@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Textarea } from '@devoinc/genesys-ui-form';
+import { Textarea } from '@devoinc/genesys-ui';
 
 Textarea.displayName = 'Textarea';
 const meta: Meta<React.ComponentProps<typeof Textarea>> = {

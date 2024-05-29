@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Input } from '@devoinc/genesys-ui-form';
+import { Input } from '@devoinc/genesys-ui';
 
 Input.displayName = 'Input';
 const meta: Meta<React.ComponentProps<typeof Input>> = {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Select } from '@devoinc/genesys-ui-form';
+import { Select } from '@devoinc/genesys-ui';
 
 Select.displayName = 'Select';
 const meta: Meta<React.ComponentProps<typeof Select>> = {

@@ -38,6 +38,23 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+    async viteFinal(config) {
+    const { mergeConfig } = await import('vite');
+    // Merge custom configuration into the default config
+    return mergeConfig(config, {
+      // Add dependencies to pre-optimization
+      optimizeDeps: {
+        include: [
+          'styled-components',
+          '@devoinc/genesys-brand-devo',
+          '@storybook/theming',
+          '@devoinc/genesys-icons',
+          '@devoinc/genesys-ui',
+          '@storybook/blocks',
+        ],
+      },
+    });
+  },
 };
 
 export default config;

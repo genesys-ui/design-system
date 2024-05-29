@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Switch } from '@devoinc/genesys-ui-form';
+import { Switch } from '@devoinc/genesys-ui';
 
 Switch.displayName = 'Switch';
 

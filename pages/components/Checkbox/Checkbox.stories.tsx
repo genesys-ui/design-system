@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Checkbox } from '@devoinc/genesys-ui-form';
+import { Checkbox } from '@devoinc/genesys-ui';
 
 Checkbox.displayName = 'Checkbox';
 const meta: Meta<React.ComponentProps<typeof Checkbox>> = {

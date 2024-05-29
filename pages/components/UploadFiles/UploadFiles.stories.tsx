@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { UploadFiles } from '@devoinc/genesys-ui-form';
+import { UploadFiles } from '@devoinc/genesys-ui-upload';
 
 UploadFiles.displayName = 'UploadFiles';
 

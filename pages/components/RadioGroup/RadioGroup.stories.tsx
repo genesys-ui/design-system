@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { RadioGroup } from '@devoinc/genesys-ui-form';
+import { RadioGroup } from '@devoinc/genesys-ui';
 
 RadioGroup.displayName = 'RadioGroup';
 

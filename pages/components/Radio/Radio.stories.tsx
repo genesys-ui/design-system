@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Radio } from '@devoinc/genesys-ui-form';
+import { Radio } from '@devoinc/genesys-ui';
 
 Radio.displayName = 'Radio';
 
