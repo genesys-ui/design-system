@@ -5,7 +5,9 @@ import { ComponentBanners, ComponentBannersProps } from '../ComponentBanners';
 
 export interface LiveDemoProps {
   canvasHeight?: string;
-  story: StoryObj<React.ComponentProps<any>>;
+  story: StoryObj<
+    React.ComponentProps<React.JSXElementConstructor<HTMLElement>>
+  >;
   urlHtml: ComponentBannersProps['urlHtml'];
   urlReact: ComponentBannersProps['urlReact'];
 }

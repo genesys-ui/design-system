@@ -24,8 +24,8 @@ export const Example: Story = {
     colorScheme: 'neutral',
     size: 'md',
     children: [
-      <ButtonGroup.Button>Button one</ButtonGroup.Button>,
-      <ButtonGroup.Button>Button two</ButtonGroup.Button>,
+      <ButtonGroup.Button key={1}>Button one</ButtonGroup.Button>,
+      <ButtonGroup.Button key={2}>Button two</ButtonGroup.Button>,
     ],
   },
   tags: ['isHidden'],

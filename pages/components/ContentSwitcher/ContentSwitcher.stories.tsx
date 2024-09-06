@@ -24,8 +24,10 @@ export const Example: Story = {
   // PENDING
   args: {
     children: [
-      <ContentSwitcher.Item state="selected">Content one</ContentSwitcher.Item>,
-      <ContentSwitcher.Item>Content two</ContentSwitcher.Item>,
+      <ContentSwitcher.Item key={1} state="selected">
+        Content one
+      </ContentSwitcher.Item>,
+      <ContentSwitcher.Item key={2}>Content two</ContentSwitcher.Item>,
     ],
     size: 'md',
   },

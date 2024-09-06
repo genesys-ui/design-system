@@ -23,10 +23,10 @@ type Story = StoryObj<React.ComponentProps<typeof TagGroup>>;
 export const Example: Story = {
   args: {
     children: [
-      <TagGroup.Tag text="Category one" />,
-      <TagGroup.Tag colorScheme="secondary" text="Category two" />,
-      <TagGroup.Tag colorScheme="data-dusk" text="Category three" />,
-      <TagGroup.Tag colorScheme="warning" text="Category four" />,
+      <TagGroup.Tag key={1} text="Category one" />,
+      <TagGroup.Tag key={2} colorScheme="secondary" text="Category two" />,
+      <TagGroup.Tag key={3} colorScheme="data-dusk" text="Category three" />,
+      <TagGroup.Tag key={4} colorScheme="warning" text="Category four" />,
     ],
     label: 'TagGroup label',
     labelPosition: 'left',

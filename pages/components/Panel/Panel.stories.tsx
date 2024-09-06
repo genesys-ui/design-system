@@ -28,11 +28,12 @@ export const Example: Story = {
     elevation: 'raised',
     children: [
       <Panel.Header
+        key={1}
         bordered
         title="Header tittle"
         closeSettings={{ onClick: () => true }}
       />,
-      <Panel.Body>
+      <Panel.Body key={2}>
         <Typography.Paragraph gutterBottom="cmp-md">
           {lorem}
         </Typography.Paragraph>
