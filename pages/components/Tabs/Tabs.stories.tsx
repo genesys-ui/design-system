@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Tabs } from '@devoinc/genesys-ui';
+import { Tabs, useTabsAccessibility } from '@devoinc/genesys-ui';
+import { GIChart, GICheckThick } from '@devoinc/genesys-icons';
 
 Tabs.displayName = 'Tabs';
 const meta: Meta<React.ComponentProps<typeof Tabs>> = {
@@ -10,11 +11,11 @@ const meta: Meta<React.ComponentProps<typeof Tabs>> = {
   argTypes: {
     colorScheme: {
       control: 'radio',
-      options: ['default', 'primary'],
+      options: ['base', 'primary'],
       description:
         'ColorScheme to define the color of the marker, text... etc.',
       table: {
-        defaultValue: { summary: 'default' },
+        defaultValue: { summary: 'base' },
       },
     },
     contained: {
@@ -29,41 +30,47 @@ type Story = StoryObj<React.ComponentProps<typeof Tabs>>;
 
 export const Example: Story = {
   args: {
-    colorScheme: 'default',
+    colorScheme: 'base',
+    size: 'md',
   },
   render: (args) =>
     ((args) => {
+      const tabsRef = React.useRef<HTMLDivElement>();
       const [activeTab, setActiveTab] = React.useState(0);
+      useTabsAccessibility({ activeTab, tabsRef });
       return (
         <Tabs {...args}>
-          <Tabs.Item
-            icon="gi-check_thick"
-            label="Tiny"
-            onTabClick={() => setActiveTab(0)}
-            state={activeTab === 0 ? 'selected' : undefined}
-            wide={false}
-          />
-          <Tabs.Item
-            icon="gi-check_thick"
-            label="Tab with a very very long title"
-            onTabClick={() => setActiveTab(1)}
-            state={activeTab === 1 ? 'selected' : undefined}
-            wide={false}
-          />
-          <Tabs.Item
-            label="Normal tab"
-            onTabClick={() => setActiveTab(2)}
-            state={activeTab === 2 ? 'selected' : undefined}
-            wide={false}
-          />
+          <Tabs.List activeTabIndex={activeTab} ref={tabsRef}>
+            <Tabs.Item
+              icon={<GIChart />}
+              label="Tiny"
+              onClick={() => setActiveTab(0)}
+              state={activeTab === 0 ? 'selected' : undefined}
+              wide={false}
+            />
+            <Tabs.Item
+              icon={<GICheckThick />}
+              label="Tab with a very very long title"
+              onClick={() => setActiveTab(1)}
+              state={activeTab === 1 ? 'selected' : undefined}
+              wide={false}
+            />
+            <Tabs.Item
+              label="Normal tab"
+              onClick={() => setActiveTab(2)}
+              state={activeTab === 2 ? 'selected' : undefined}
+              wide={false}
+            />
 
-          <Tabs.Item
-            label="Disabled tab"
-            onTabClick={() => setActiveTab(3)}
-            state="disabled"
-            wide={false}
-          />
+            <Tabs.Item
+              label="Disabled tab"
+              onClick={() => setActiveTab(3)}
+              state="disabled"
+              wide={false}
+            />
+          </Tabs.List>
         </Tabs>
       );
     })(args),
+  tags: ['isHidden'],
 };

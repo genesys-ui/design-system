@@ -63,7 +63,7 @@ const meta: Meta<React.ComponentProps<typeof Textarea>> = {
       control: 'number',
       description: 'The number of visible text lines in the textarea.',
       table: {
-        defaultValue: { summary: 4 },
+        defaultValue: { summary: '4' },
       },
     },
   },
@@ -81,4 +81,5 @@ export const Example: Story = {
     size: 'md',
     status: 'base',
   },
+  tags: ['isHidden'],
 };

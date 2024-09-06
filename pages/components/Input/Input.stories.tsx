@@ -81,4 +81,5 @@ export const Example: Story = {
     status: 'base',
     type: 'text',
   },
+  tags: ['isHidden'],
 };

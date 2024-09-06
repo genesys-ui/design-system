@@ -8,14 +8,24 @@ Loader.displayName = 'Loader';
 const meta: Meta<React.ComponentProps<typeof Loader>> = {
   title: 'Components/Loader',
   component: Loader,
-  // PENDING
-  argTypes: {},
+  argTypes: {
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<React.ComponentProps<typeof Loader>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    colorScheme: 'inherited',
+    size: 'md',
+    zIndex: 10,
+    children: <Loader.Spinner />,
+  },
+  tags: ['isHidden'],
 };

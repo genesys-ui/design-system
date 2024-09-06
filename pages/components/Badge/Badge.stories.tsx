@@ -65,6 +65,7 @@ export const Example: Story = {
     size: 'md',
     text: '42',
   },
+  tags: ['isHidden'],
 };
 
 export const Role: Story = {
@@ -80,11 +81,12 @@ export const Role: Story = {
       <Badge
         colorScheme="error"
         aria-label="There is an error with the alert"
-        title="There is an error with the alert"
+        tooltip="There is an error with the alert"
         aria-atomic="true"
         aria-live="polite"
         role="status"
       />
     </>
   ),
+  tags: ['isHidden'],
 };

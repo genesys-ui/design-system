@@ -8,7 +8,6 @@ ProgressBar.displayName = 'ProgressBar';
 const meta: Meta<React.ComponentProps<typeof ProgressBar>> = {
   title: 'Components/ProgressBar',
   component: ProgressBar,
-  // PENDING
   argTypes: {},
 };
 
@@ -16,6 +15,10 @@ export default meta;
 type Story = StoryObj<React.ComponentProps<typeof ProgressBar>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    percent: 40,
+    size: 'md',
+    status: 'progressing',
+  },
+  tags: ['isHidden'],
 };

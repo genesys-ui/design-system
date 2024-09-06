@@ -1,15 +1,13 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-// PENDING: THE COMPONENT IS NOT READY IN GENESYS UI YET, SO WE USE MENU INSTEAD
-import { Menu } from '@devoinc/genesys-ui';
+import { Button, Menu, Popover } from '@devoinc/genesys-ui';
 
 Menu.displayName = 'Menu';
 
 const meta: Meta<React.ComponentProps<typeof Menu>> = {
   title: 'Components/DropdownMenu',
   component: Menu,
-  // PENDING
   argTypes: {},
 };
 
@@ -17,6 +15,31 @@ export default meta;
 type Story = StoryObj<React.ComponentProps<typeof Menu>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  render: () => {
+    const popoverId = 'base';
+    return (
+      <Popover id={popoverId} placement="bottom-start">
+        {({ toggle, ref, isOpened }) => (
+          <Button
+            aria-controls={popoverId}
+            aria-expanded={isOpened}
+            aria-haspopup={true}
+            onClick={toggle}
+            ref={ref}
+            state={isOpened ? 'expanded' : undefined}
+          >
+            TriggerElement
+          </Button>
+        )}
+        <Popover.Panel>
+          <Menu>
+            <Menu.Item label="Option 1" />
+            <Menu.Item label="Option 2" />
+            <Menu.Item label="Option 3" />
+          </Menu>
+        </Popover.Panel>
+      </Popover>
+    );
+  },
+  tags: ['isHidden'],
 };

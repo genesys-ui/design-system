@@ -1,11 +1,11 @@
-import { Meta, Canvas, Controls } from '@storybook/blocks';
+import { Meta } from '@storybook/blocks';
 
 import * as Stories from './Menu.stories';
 
-import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
-import { getCmpTokensJson } from '../../../tokens';
+import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { getAliasTokensByNameJson } from '../../../tokens';
 
-<Meta of={Stories} />
+<Meta title="Components/Menu" />
 
 # Menu
 
@@ -17,20 +17,11 @@ import { getCmpTokensJson } from '../../../tokens';
 
 ## Live demo
 
-Preview the Menu component with the React live demo. For detailed code usage
-documentation, see the Genesys UI or Genesys Styles version of the component.
-
-<Canvas of={Stories.Example} />
-<Controls of={Stories.Example} />
-
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
-    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-navigation-menu--docs" />
-  </div>
-  <div className="mcol-12 mcol-sm-6">
-    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
-  </div>
-</section>
+<LiveDemo
+  story={Stories.Example}
+  urlHtml="https://devoinc.github.io/genesys-styles"
+  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-navigation-menu--docs"
+/>
 
 ## Anatomy
 
@@ -50,13 +41,4 @@ documentation, see the Genesys UI or Genesys Styles version of the component.
 
 ⚠️ It is necessary to check if there are component tokens to create the rest of specific component tokens, or at least add the alias tokens to the list.
 
-<DesignTokensList
-  tokens={getCmpTokensJson('menu')}
-  intro={
-    <p style={{ margin: '1.6rem 0' }}>
-      There are {getCmpTokensJson('menu').length} Menu design tokens. The units
-      in rem are not based in browser, but in base 10, so{' '}
-      <code>1rem = 10px</code>.
-    </p>
-  }
-/>
+<DesignTokensList tokens={getAliasTokensByNameJson('menus')} />

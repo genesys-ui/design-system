@@ -1,36 +1,28 @@
-import { Meta, Canvas, Controls } from '@storybook/blocks';
+import { Meta } from '@storybook/blocks';
 
 import * as Stories from './Stepper.stories';
 
-import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
-import { getCmpTokensJson } from '../../../tokens';
+import { DesignTokensList, LiveDemo } from '../../../blocks';
 
-<Meta of={Stories} />
+<Meta title="Components/Stepper" />
 
 # Stepper
 
-(PENDING)
+The purpose of the Stepper component is to provide a visual representation of a multi-step process
 
 ## Overview
+
+The component can display the status of each step, indicating whether it is completed, in progress, or disabled, and allows the user to navigate between steps using buttons.
 
 (PENDING) Variants, sizes, alignment, location... etc.
 
 ## Live demo
 
-Preview the Stepper component with the React live demo. For detailed code usage
-documentation, see the Genesys UI or Genesys Styles version of the component.
-
-<Canvas of={Stories.Example} />
-<Controls of={Stories.Example} />
-
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
-    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-navigation-stepper--docs" />
-  </div>
-  <div className="mcol-12 mcol-sm-6">
-    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
-  </div>
-</section>
+<LiveDemo
+  story={Stories.Example}
+  urlHtml="https://devoinc.github.io/genesys-styles/?path=/docs/components-stepper--docs"
+  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-navigation-stepper--docs"
+/>
 
 ## Anatomy
 
@@ -66,13 +58,4 @@ in combination with `aria-label` will confer meaning to the arrow icons between 
 
 #### Complete list
 
-<DesignTokensList
-  tokens={getCmpTokensJson('stepper')}
-  intro={
-    <p style={{ margin: '1.6rem 0' }}>
-      There are {getCmpTokensJson('stepper').length} Stepper design tokens. The
-      units in rem are not based in browser, but in base 10, so{' '}
-      <code>1rem = 10px</code>.
-    </p>
-  }
-/>
+<DesignTokensList componentName="stepper" />

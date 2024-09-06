@@ -8,14 +8,30 @@ TagGroup.displayName = 'TagGroup';
 const meta: Meta<React.ComponentProps<typeof TagGroup>> = {
   title: 'Components/TagGroup',
   component: TagGroup,
-  // PENDING
-  argTypes: {},
+  argTypes: {
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<React.ComponentProps<typeof TagGroup>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    children: [
+      <TagGroup.Tag text="Category one" />,
+      <TagGroup.Tag colorScheme="secondary" text="Category two" />,
+      <TagGroup.Tag colorScheme="data-dusk" text="Category three" />,
+      <TagGroup.Tag colorScheme="warning" text="Category four" />,
+    ],
+    label: 'TagGroup label',
+    labelPosition: 'left',
+    quiet: false,
+    size: 'md',
+  },
+  tags: ['isHidden'],
 };

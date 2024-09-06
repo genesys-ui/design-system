@@ -16,6 +16,11 @@ export default meta;
 type Story = StoryObj<React.ComponentProps<typeof UploadFiles>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    label: 'Label for story',
+    labelPosition: 'top',
+    size: 'md',
+    status: 'base',
+  },
+  tags: ['isHidden'],
 };

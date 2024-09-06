@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { IconButton } from '@devoinc/genesys-ui';
+import { GIReloadRefreshUpdate } from '@devoinc/genesys-icons';
 
 IconButton.displayName = 'IconButton';
 const meta: Meta<React.ComponentProps<typeof IconButton>> = {
@@ -60,8 +61,9 @@ There are predefined types: accent-high, accent... etc.`,
       },
     },
     icon: {
-      // eslint-disable-next-line quotes
-      description: `The icon for the IconButton.`,
+      table: {
+        disable: true,
+      },
     },
   },
 };
@@ -74,8 +76,9 @@ export const Example: Story = {
     colorScheme: 'neutral',
     size: 'md',
     state: 'enabled',
-    icon: 'reload_refresh_update',
+    icon: <GIReloadRefreshUpdate />,
   },
+  tags: ['isHidden'],
 };
 
 export const AccAriaControls: Story = {
@@ -83,9 +86,10 @@ export const AccAriaControls: Story = {
     <IconButton
       aria-haspopup="true"
       aria-controls="modal-id"
-      icon="gi-reload_refresh_update"
+      icon={<GIReloadRefreshUpdate />}
     />
   ),
+  tags: ['isHidden'],
 };
 
 export const AccAriaExpanded: Story = {
@@ -93,7 +97,8 @@ export const AccAriaExpanded: Story = {
     <IconButton
       state="expanded"
       aria-controls="dropdown-id"
-      icon="gi-reload_refresh_update"
+      icon={<GIReloadRefreshUpdate />}
     />
   ),
+  tags: ['isHidden'],
 };

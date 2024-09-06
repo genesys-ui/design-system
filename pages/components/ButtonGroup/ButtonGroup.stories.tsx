@@ -7,14 +7,26 @@ ButtonGroup.displayName = 'ButtonGroup';
 const meta: Meta<React.ComponentProps<typeof ButtonGroup>> = {
   title: 'Components/ButtonGroup',
   component: ButtonGroup,
-  // PENDING
-  argTypes: {},
+  argTypes: {
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 export default meta;
 type Story = StoryObj<React.ComponentProps<typeof ButtonGroup>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    colorScheme: 'neutral',
+    size: 'md',
+    children: [
+      <ButtonGroup.Button>Button one</ButtonGroup.Button>,
+      <ButtonGroup.Button>Button two</ButtonGroup.Button>,
+    ],
+  },
+  tags: ['isHidden'],
 };

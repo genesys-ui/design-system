@@ -7,7 +7,6 @@ ChipGroup.displayName = 'ChipGroup';
 const meta: Meta<React.ComponentProps<typeof ChipGroup>> = {
   title: 'Components/ChipGroup',
   component: ChipGroup,
-  // PENDING
   argTypes: {},
 };
 
@@ -15,6 +14,12 @@ export default meta;
 type Story = StoryObj<React.ComponentProps<typeof ChipGroup>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    size: 'md',
+    children: [
+      <ChipGroup.Chip>Chip one</ChipGroup.Chip>,
+      <ChipGroup.Chip>Chip two</ChipGroup.Chip>,
+    ],
+  },
+  tags: ['isHidden'],
 };

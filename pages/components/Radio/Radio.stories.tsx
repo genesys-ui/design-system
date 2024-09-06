@@ -8,7 +8,6 @@ Radio.displayName = 'Radio';
 const meta: Meta<React.ComponentProps<typeof Radio>> = {
   title: 'Components/Radio',
   component: Radio,
-  // PENDING
   argTypes: {},
 };
 
@@ -16,6 +15,11 @@ export default meta;
 type Story = StoryObj<React.ComponentProps<typeof Radio>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    label: 'Radio label',
+    status: 'base',
+    size: 'md',
+    disabled: false,
+  },
+  tags: ['isHidden'],
 };

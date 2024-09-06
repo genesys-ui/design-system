@@ -16,7 +16,7 @@ export const StyledDesignTokensSizeBox = styled(StyledDesignTokensBox)`
       background-color: ${DESIGN_TOKEN_LIST_COLORS[
         borderRadius ? 'BG_SHAPE' : 'BG_LAYOUT'
       ]};
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: bold;
       letter-spacing: 2px;
       text-transform: uppercase;

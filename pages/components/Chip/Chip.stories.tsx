@@ -7,7 +7,6 @@ Chip.displayName = 'Chip';
 const meta: Meta<React.ComponentProps<typeof Chip>> = {
   title: 'Components/Chip',
   component: Chip,
-  // PENDING
   argTypes: {},
 };
 
@@ -15,6 +14,10 @@ export default meta;
 type Story = StoryObj<React.ComponentProps<typeof Chip>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    children: 'Chip content',
+    size: 'md',
+    state: 'enabled',
+  },
+  tags: ['isHidden'],
 };

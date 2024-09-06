@@ -1,12 +1,10 @@
-import { Meta, Canvas, Controls } from '@storybook/blocks';
+import { Meta } from '@storybook/blocks';
 
 import * as Stories from './Tabs.stories';
-import * as ItemStories from './TabsItem.stories';
 
-import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
-import { getCmpTokensJson } from '../../../tokens';
+import { DesignTokensList, LiveDemo } from '../../../blocks';
 
-<Meta of={Stories} />
+<Meta title="Components/Tabs" />
 
 # Tabs
 
@@ -23,22 +21,11 @@ documentation, see the Genesys UI or Genesys Styles version of the component.
 
 ## Tabs
 
-<Canvas of={Stories.Example} />
-<Controls of={Stories.Example} />
-
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
-    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-navigation-tabs--docs" />
-  </div>
-  <div className="mcol-12 mcol-sm-6">
-    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
-  </div>
-</section>
-
-## TabsItem
-
-<Canvas of={ItemStories.Example} />
-<Controls of={ItemStories.Example} />
+<LiveDemo
+  story={Stories.Example}
+  urlHtml="https://devoinc.github.io/genesys-styles/?path=/docs/components-tabs--docs"
+  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-navigation-tabs--docs"
+/>
 
 ## Anatomy
 
@@ -121,13 +108,4 @@ adding a `title` attribute to inform the users by hovering with the mouse.
 
 ### Complete list
 
-<DesignTokensList
-  tokens={getCmpTokensJson('tabs')}
-  intro={
-    <p style={{ margin: '1.6rem 0' }}>
-      There are {getCmpTokensJson('tabs').length} Tabs design tokens. The units
-      in rem are not based in browser, but in base 10, so{' '}
-      <code>1rem = 10px</code>.
-    </p>
-  }
-/>
+<DesignTokensList componentName="tabs" />

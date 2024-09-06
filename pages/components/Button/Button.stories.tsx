@@ -76,6 +76,7 @@ export const Example: Story = {
     state: 'enabled',
     children: 'Button text',
   },
+  tags: ['isHidden'],
 };
 
 export const AccAriaControls: Story = {
@@ -84,6 +85,7 @@ export const AccAriaControls: Story = {
       Button text
     </Button>
   ),
+  tags: ['isHidden'],
 };
 
 export const AccAriaExpanded: Story = {
@@ -92,4 +94,5 @@ export const AccAriaExpanded: Story = {
       Button text
     </Button>
   ),
+  tags: ['isHidden'],
 };

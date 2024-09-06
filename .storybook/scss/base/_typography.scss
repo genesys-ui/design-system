@@ -61,10 +61,18 @@ $doc-base-class-name: sbdocs;
   font-size: $font-size-base;
   line-height: $line-height-base;
 
+  .sb-unstyled {
+    ul, ol {
+      margin: initial;
+      padding: initial;
+    }
+  }
+
   .sbdocs {
     $parent: &;
     color: var(--dds-color-body-base);
     font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
 
     [class*='#{$doc-base-class-name}-h']:not(.#{$doc-base-class-name}-hr) {
       border: none;

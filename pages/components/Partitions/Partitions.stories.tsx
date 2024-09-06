@@ -8,14 +8,15 @@ Partitions.displayName = 'Partitions';
 const meta: Meta<React.ComponentProps<typeof Partitions>> = {
   title: 'Components/Partitions',
   component: Partitions,
-  // PENDING
-  argTypes: {},
 };
 
 export default meta;
 type Story = StoryObj<React.ComponentProps<typeof Partitions>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    size: 'md',
+    hasSeparators: false,
+  },
+  tags: ['isHidden'],
 };

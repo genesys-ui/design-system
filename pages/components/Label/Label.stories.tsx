@@ -48,7 +48,7 @@ const meta: Meta<React.ComponentProps<typeof Label>> = {
         // prettier-ignore
         'If the text of the label doesn\'t fit then there is a text ellipsis',
       table: {
-        defaultValue: { summary: true },
+        defaultValue: { summary: 'true' },
       },
     },
     cursor: {
@@ -72,4 +72,5 @@ export const Example: Story = {
     children: 'The label text',
     truncated: true,
   },
+  tags: ['isHidden'],
 };

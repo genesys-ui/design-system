@@ -12,4 +12,5 @@ export const StyledDesignTokensBox = styled.div`
   margin: 0 auto;
   border-radius: ${DESIGN_TOKEN_LIST_SIZES.BORDER_RADIUS};
   background-color: ${DESIGN_TOKEN_LIST_COLORS.BG_SURFACE};
+  max-width: 100%;
 `;

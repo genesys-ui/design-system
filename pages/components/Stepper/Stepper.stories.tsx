@@ -25,5 +25,12 @@ type Story = StoryObj<React.ComponentProps<typeof Stepper>>;
 export const Example: Story = {
   args: {
     size: 'md',
+    steps: [
+      { name: 'OPT_1', label: 'Option 1', status: 'completed' },
+      { name: 'OPT_2', label: 'Option 2', status: 'current' },
+      { name: 'OPT_3', label: 'Option 3', status: 'pending' },
+      { name: 'OPT_4', label: 'Option 4', status: 'disabled' },
+    ],
   },
+  tags: ['isHidden'],
 };

@@ -54,6 +54,11 @@ const meta: Meta<React.ComponentProps<typeof Select>> = {
       control: 'text',
       description: 'Label for the component (aria-label is the same as Label).',
     },
+    options: {
+      table: {
+        disabled: true,
+      },
+    },
   },
 };
 
@@ -64,8 +69,14 @@ export const Example: Story = {
   args: {
     label: 'Input label',
     labelPosition: 'top',
+    options: [
+      { value: 1, label: 'Option one' },
+      { value: 2, label: 'Option two' },
+      { value: 3, label: 'Option three', isDisabled: true },
+    ],
     placeholder: 'Select an option...',
     size: 'md',
     status: 'base',
   },
+  tags: ['isHidden'],
 };

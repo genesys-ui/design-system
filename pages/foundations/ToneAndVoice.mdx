@@ -1,29 +1,30 @@
 import { Meta } from '@storybook/blocks';
 
-import {
-  CardHtml,
-  CardReact,
-  DesignTokensList,
-  Figma,
-  Figure,
-} from '../../blocks';
+import { Figure } from '../../blocks';
 
 <Meta title="Foundations/Content, voice and tone" />
 
 # Content, voice and tone
 
 Technical documentation should be concise and grammatically correct. It is written on a specific topic and is aimed at a specific reader. The main purpose of this document is to provide guidelines on how to make technical writing clear, concise, consistent and understandable for end users.
+
 <Figure>
   <img
     alt="Location of the 'status' icon button in a widget header"
     src="img/Glossary-15x.png"
   />
 </Figure>
-Those with a background in journalism will be familiar with the [Chicago style manual](https://www.chicagomanualofstyle.org/home.html). This is an indispensable reference for all things  grammar and syntax related, and serves as our point of reference for all grammar-related pain points. However, it isn't specific to the needs of technical writing so this document will include Devo-specific style rules.
+
+Those with a background in journalism will be familiar with the [Chicago style manual](https://www.chicagomanualofstyle.org/home.html).
+This is an indispensable reference for all things grammar and syntax related, and
+serves as our point of reference for all grammar-related pain points. However, it
+isn't specific to the needs of technical writing so this document will include Devo-specific
+style rules.
 
 This guide covers the core principles of English writing, lists key grammar and punctuation rules, explains how to structure content to improve readability, and provides some useful pointers to make the process of technical writing easier.
 
 It is aimed at all those who write or review texts in the interfaces of Devo products in the areas:
+
 - Voice & Tone
 - Language and grammar
 - Glossary of action labels
@@ -34,27 +35,34 @@ It is aimed at all those who write or review texts in the interfaces of Devo pro
 
 <section className="mrow">
   <div className="mcol-12 mcol-sm-6">
-Devo's voice is how we communicate with users. When creating content it's important to consider not just what we say, but how we say it.  Although our voice is consistent throughout all of our documentation, its tone adapts to each situation as well as the reader's expectations.
- </div>
+    Devo's voice is how we communicate with users. When creating content it's
+    important to consider not just what we say, but how we say it. Although our
+    voice is consistent throughout all of our documentation, its tone adapts to
+    each situation as well as the reader's expectations.
+  </div>
   <div className="mcol-12 mcol-sm-6 mt-4">
-   <Figure>
-  <img
-    alt="Location of the 'status' icon button in a widget header"
-    src="img/Voice-tone.png"
-  />
-</Figure>
+    <Figure>
+      <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/Voice-tone.png"
+      />
+    </Figure>
   </div>
 </section>
-Devo's voice is clear, informative, and relaxed.  We use an informal style to write content that is both simple and instructive. Check [this article](https://techwhirl.com/gender-neutral-technical-writing/) for more information on keeping your writing and tone gender neutral.
 
-|**Be concise (Less is more )**  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; |Takes an existing object and uses it in a new context. |
-| :------------- |:-------------|
-| **Be human**         | Even though this is technical documentation, avoid sounding like a robot. Read your text out loud and ask yourself if this is something a human would say. Also keep in mind that not all readers are experts on the given topic.<br/><em>Robotic: Invalid password.</em><br/><em>Human: Your password must contain a mix of letters, numbers, and special characters.</em>   
-| **Be present**       | Where possible, use the present tense and avoid using the past or future tense. This makes following procedures and instructions easier for readers and gives a sense of immediacy.    |
-| **Be direct<br/>/simple/clear**      | This is not creative writing, but rather informative writing. Lead with important actions. The user wants to find information quickly. This allows the reader to scan the page for keywords.<br/>Most of the time, start each statement with a verb. Avoid using "you can" and "there is", "there are", "there were".    |
-| **Be inclusive**      | - Use the second-person pronoun (you, your, yours).<br/>- Do not use words that have gender-specific pairs (mankind, man hours).<br/>- Avoid phrases or words that could be misinterpreted or offend (blacklist/whitelist).<br/>- To avoid repetition it is acceptable to use the third-person pronoun they or replace he/she with the user.- Use the imperative mood (Do this, Close the window, Open a new tab). |
+Devo's voice is clear, informative, and relaxed. We use an informal style to write
+content that is both simple and instructive. Check [this article](https://techwhirl.com/gender-neutral-technical-writing/)
+for more information on keeping your writing and tone gender neutral.
+
+| **Be concise (Less is more )** &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; | Takes an existing object and uses it in a new context.                                                                                                                                                                                                                                                                                                                                                             |
+| :------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Be human**                                                   | Even though this is technical documentation, avoid sounding like a robot. Read your text out loud and ask yourself if this is something a human would say. Also keep in mind that not all readers are experts on the given topic.<br/><em>Robotic: Invalid password.</em><br/><em>Human: Your password must contain a mix of letters, numbers, and special characters.</em>                                        |
+| **Be present**                                                 | Where possible, use the present tense and avoid using the past or future tense. This makes following procedures and instructions easier for readers and gives a sense of immediacy.                                                                                                                                                                                                                                |
+| **Be direct<br/>/simple/clear**                                | This is not creative writing, but rather informative writing. Lead with important actions. The user wants to find information quickly. This allows the reader to scan the page for keywords.<br/>Most of the time, start each statement with a verb. Avoid using "you can" and "there is", "there are", "there were".                                                                                              |
+| **Be inclusive**                                               | - Use the second-person pronoun (you, your, yours).<br/>- Do not use words that have gender-specific pairs (mankind, man hours).<br/>- Avoid phrases or words that could be misinterpreted or offend (blacklist/whitelist).<br/>- To avoid repetition it is acceptable to use the third-person pronoun they or replace he/she with the user.- Use the imperative mood (Do this, Close the window, Open a new tab). |
 
 ### 02. Abbreviations
+
 Avoid using abbreviations where possible in your writing. This includes common abbreviations such as etc., e.g., and i.e. Instead, write out full words or choose phrases that explicitly explain the message you want to convey.
 
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
@@ -63,198 +71,194 @@ Avoid using abbreviations where possible in your writing. This includes common a
       type="dont"
       caption="Don’t use for heading amd body text any color not included in body color scheme or status one."
     >
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>etc.</em>**<br/>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>e.g.</em>**<br/>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>i.e.</em>**
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>etc.</em>**
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>e.g.</em>**
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>i.e.</em>**
     </Figure>
   </div>
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>And so on</em>**<br/>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>For example</em>**<br/>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>Specifically or namely</em>**
+    <Figure type="do" caption="">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>And so on</em>**
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>For example</em>**
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>Specifically or namely</em>**
     </Figure>
   </div>
 </section>
 
 ### 03. Active and passive voice
+
 Use the active voice to make your sentences direct and easy to read. The **active voice** conveys a strong and clear tone, while the **passive voice** is weaker.
 
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-     **<em>A new password needs to be selected.</em>**
+    <Figure type="dont" caption="">
+      **<em>A new password needs to be selected.</em>**
     </Figure>
   </div>
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-     **<em>Select a new password.</em>**<br/>
-     <br/>
+    <Figure type="do" caption="">
+      **<em>Select a new password.</em>**
+      <br />
+      <br />
     </Figure>
   </div>
 </section>
-With the **active voice**, the subject of the sentence does the action. With the **passive voice**, the subject of the sentence has the action done to it.
+With the **active voice**, the subject of the sentence does the action. With the
+**passive voice**, the subject of the sentence has the action done to it.
 
 However, the **passive voice** is acceptable in the following situations:
+
 - In an error message or troubleshooting content when the active subject is the user.
 - The subject of the action is unknown, or you want to emphasize the object on which the action is performed.
 - The sentence in active voice sounds unnatural or complicated.
 
 ### 04. Messaging guidelines
+
 1. Write the error in clear, concise, and simple language. Avoid long sentences or ambiguous phrases.
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>An error has occurred during the login process and you cannot log in to your account, please try again.</em>**
-    </Figure>
-  </div>
-  <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    **<em>Your password and/or username do not match. Please try again.</em>**
-    </Figure>
-  </div>
-</section>
+
+   <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+     <div className="col">
+       <Figure type="dont" caption="">
+         **
+         <em>
+           An error has occurred during the login process and you cannot log in
+           to your account, please try again.
+         </em>
+         **
+       </Figure>
+     </div>
+     <div className="col">
+       <Figure type="do" caption="">
+         **
+         <em>Your password and/or username do not match. Please try again.</em>
+         **
+       </Figure>
+     </div>
+   </section>
 
 2. Don’t blame the user.
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>You didn’t enter an email address.</em>**
-    </Figure>
-  </div>
-  <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    **<em>Please enter an email address.</em>**
-    </Figure>
-  </div>
-</section>
- 3. Avoid negative words that undermine the user’s ability to follow instructions.
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>  The username you have entered contains errors.</em>**
-    </Figure>
-  </div>
-  <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    **<em>Please enter a valid username.</em>**
-    </Figure>
-  </div>
-</section>
+   <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+     <div className="col">
+       <Figure type="dont" caption="">
+         **<em>You didn’t enter an email address.</em>**
+       </Figure>
+     </div>
+     <div className="col">
+       <Figure type="do" caption="">
+         **<em>Please enter an email address.</em>**
+       </Figure>
+     </div>
+   </section>
+3. Avoid negative words that undermine the user’s ability to follow instructions.
+   <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+     <div className="col">
+       <Figure type="dont" caption="">
+         **<em> The username you have entered contains errors.</em>**
+       </Figure>
+     </div>
+     <div className="col">
+       <Figure type="do" caption="">
+         **<em>Please enter a valid username.</em>**
+       </Figure>
+     </div>
+   </section>
 4. Guide the user and offer suggestions to help resolve the issue.
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>Enter a new name.</em>**<br/>
-    </Figure>
-  </div>
-  <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    **<em>A domain with this name already exists. Please enter a new name.</em>**
-    </Figure>
-  </div>
-</section>
+   <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+     <div className="col">
+       <Figure type="dont" caption="">
+         **<em>Enter a new name.</em>**
+         <br />
+       </Figure>
+     </div>
+     <div className="col">
+       <Figure type="do" caption="">
+         **
+         <em>
+           A domain with this name already exists. Please enter a new name.
+         </em>
+         **
+       </Figure>
+     </div>
+   </section>
 5. Avoid using all caps or upper case. This gives the impression of shouting at the user and is difficult to read.
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-     **<em> AN ERROR HAS OCCURRED. PLEASE TRY AGAIN.</em>**
-    </Figure>
-  </div>
-  <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-     **<em>An error has occurred. Please try again.</em>**
-    </Figure>
-  </div>
-</section>
+   <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+     <div className="col">
+       <Figure type="dont" caption="">
+         **<em> AN ERROR HAS OCCURRED. PLEASE TRY AGAIN.</em>**
+       </Figure>
+     </div>
+     <div className="col">
+       <Figure type="do" caption="">
+         **<em>An error has occurred. Please try again.</em>**
+       </Figure>
+     </div>
+   </section>
 
 ### 05. Modal verbs
+
 Use modal verbs to express ideas such as ability, uncertainty, necessity and permission. Use modal verbs sparingly and at your discretion, and always use the correct verb for the instruction.
-  <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>Avoid the modal verbs shall, might, would, and ought to in your writing.</em>**
-    </Figure>
-    
+
+{' '}
+
+<Figure type="dont" caption="">
+  **
+  <em>
+    Avoid the modal verbs shall, might, would, and ought to in your writing.
+  </em>
+  **
+</Figure>
+
     <Figure
       type="do"
       caption=""
     >
     **<em>Can:</em>** Relates to present ability and general possibility.<br/>
+
 **<em>Could:</em>** Relates to possibility and suggestion.<br/>
-**<em>May:</em>** Relates to probability and permission. It also means that an item      
+**<em>May:</em>** Relates to probability and permission. It also means that an item
 is optional.<br/>
-**<em>Need:</em>** Relates to the absence of obligation. In technical documentation, 
+**<em>Need:</em>** Relates to the absence of obligation. In technical documentation,
 this verb is used only as a synonym for the verb want.<br/>
-**<em>Must:</em>** Relates to personal obligation. It means that the definition is an 
+**<em>Must:</em>** Relates to personal obligation. It means that the definition is an
 absolute requirement of the specification.<br/>
-**<em>Have to:</em>** Relates to impersonal obligation. Don't use it as a synonym for 
+**<em>Have to:</em>** Relates to impersonal obligation. Don't use it as a synonym for
 the verb must.<br/>
-**<em>Should:</em>** Relates to expectation and recommendation. Don't use it as a 
+**<em>Should:</em>** Relates to expectation and recommendation. Don't use it as a
 synonym for the verb must.<br/>
-    </Figure>
+
+</Figure>
 
 ## Language and grammar
 
-The core function of the language and grammar used in technical and UX writing is to inform, as opposed to arguing or entertaining. Therefore, your writing should focus on providing straightforward and instructional statements that users can easily understand. 
+The core function of the language and grammar used in technical and UX writing is to inform, as opposed to arguing or entertaining. Therefore, your writing should focus on providing straightforward and instructional statements that users can easily understand.
 
 <section className="mrow">
   <div className="mcol-12 mcol-sm-6">
-Your writing should be consistent and concise, so that the user can follow prompts and steps without hesitation. Since the topic is instructional and often requires focused attention, longer sentences can lead to a higher potential for confusion. Short explanations are easier to understand. 
-</div>
+    Your writing should be consistent and concise, so that the user can follow
+    prompts and steps without hesitation. Since the topic is instructional and
+    often requires focused attention, longer sentences can lead to a higher
+    potential for confusion. Short explanations are easier to understand.
+  </div>
   <div className="mcol-12 mcol-sm-6 mt-4">
-   <Figure>
-  <img
-    alt="Location of the 'status' icon button in a widget header"
-    src="img/illustration-1.png"
-  />
-</Figure>
+    <Figure>
+      <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/illustration-1.png"
+      />
+    </Figure>
   </div>
 </section>
-The same process applies to writing UI labels or commands. Remove superfluous words and keep a consistent grammatical style throughout. 
+The same process applies to writing UI labels or commands. Remove superfluous words
+and keep a consistent grammatical style throughout.
 
 ### 01. Bold
+
 Use bold text formatting for static interface elements: buttons, tabs, links, options, check boxes, step names, and so forth. Do not use quotation marks to refer to these elements.
+
 <Figure>
   <img
     alt="Location of the 'status' icon button in a widget header"
@@ -262,47 +266,55 @@ Use bold text formatting for static interface elements: buttons, tabs, links, op
   />
 </Figure>
 
-### 02. Capitalization	
-**Use sentence case**. That means only capitalizing the first word of a sentence, heading, title, UI label, tab, or standalone phrase. Sentence case makes it easier to differentiate between common and proper nouns. 
+### 02. Capitalization
+
+**Use sentence case**. That means only capitalizing the first word of a sentence, heading, title, UI label, tab, or standalone phrase. Sentence case makes it easier to differentiate between common and proper nouns.
 
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>In Data Search, The Tabs Would Be Explore Your Data, Search History,   
-Query Management, And Lookup Management.</em>**<br/>
+    <Figure type="dont" caption="">
+      **
+      <em>
+        In Data Search, The Tabs Would Be Explore Your Data, Search History,
+        Query Management, And Lookup Management.
+      </em>
+      **
+      <br />
     </Figure>
   </div>
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    **<em>A domain with this name already exists. Please enter a new name.</em>**
+    <Figure type="do" caption="">
+      **
+      <em>A domain with this name already exists. Please enter a new name.</em>
+      **
     </Figure>
   </div>
 </section>
 
 Exceptions to the sentence case rule are products and trademarks, which are written according to their stylization.
 
-Do not use all caps (all uppercase) as this makes it difficult for the reader to differentiate between common and proper nouns.  
+Do not use all caps (all uppercase) as this makes it difficult for the reader to differentiate between common and proper nouns.
+
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>USE THE CREDENTIALS CREATED HERE TO AUTHENTICATE REST API REQUESTS AND DEVO RELAY CONNECTIONS TO THE DEVO PLATFORM.</em>**<br/>
+    <Figure type="dont" caption="">
+      **
+      <em>
+        USE THE CREDENTIALS CREATED HERE TO AUTHENTICATE REST API REQUESTS AND
+        DEVO RELAY CONNECTIONS TO THE DEVO PLATFORM.
+      </em>
+      **
+      <br />
     </Figure>
   </div>
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    **<em>Use the credentials created here to authenticate REST API requests and Devo Relay connections to the Devo Platform.</em>**
+    <Figure type="do" caption="">
+      **
+      <em>
+        Use the credentials created here to authenticate REST API requests and
+        Devo Relay connections to the Devo Platform.
+      </em>
+      **
     </Figure>
   </div>
 </section>
@@ -311,291 +323,263 @@ When writing about a UI element, always follow the same capitalization as used i
 
 The above rule applies to all UI elements including input forms, drop-down menus, and action labels.
 
-### 03. Currency	
+### 03. Currency
+
 Write the names of currencies in lowercase, but capitalize the reference to the country or region.
 
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>US dollar</em>**<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>Canadian dollar</em>**<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>British pound</em>**<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>Japanese yen</em>**<br/>
+    <Figure type="do" caption="">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>US dollar</em>**
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>Canadian dollar</em>**
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>British pound</em>**
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>Japanese yen</em>**
+      <br />
     </Figure>
   </div>
-  <div className="col">
-  </div>
+  <div className="col"></div>
 </section>
 Note that the euro is not capitalized and do not make it plural.
 
 When referring to specific amounts of money in any currency, use the currency symbol on first reference followed by the amount with no spacing. Any further references use the currency symbol.
+
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>USD450, then $450</em>**<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>EUR100, then €100</em>**<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>JPY250, then ¥250</em>**<br/>
+    <Figure type="do" caption="">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>USD450, then $450</em>**
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>EUR100, then €100</em>**
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>JPY250, then ¥250</em>**
+      <br />
     </Figure>
   </div>
-  <div className="col">
-  </div>
+  <div className="col"></div>
 </section>
 
-### 04. Date & time	
+### 04. Date & time
+
 **Dates** are written in the month–day–year order, with a comma before and after the year if it is not at the end of a sentence:
+
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>March 24, 2021</em>**
+    <Figure type="do" caption="">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>March 24, 2021</em>**
     </Figure>
   </div>
-  <div className="col">
-  </div>
+  <div className="col"></div>
 </section>
-    When describing a length of time, use abbreviations:
+When describing a length of time, use abbreviations:
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>8h 30min.</em>**
+    <Figure type="do" caption="">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>8h 30min.</em>**
     </Figure>
   </div>
-  <div className="col">
-  </div>
+  <div className="col"></div>
 </section>
-  Time is written in 24-hour notation:
- <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+Time is written in 24-hour notation:
+<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>18:14</em>**
+    <Figure type="do" caption="">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**<em>18:14</em>**
     </Figure>
   </div>
-  <div className="col">
-  </div>
+  <div className="col"></div>
 </section>
 
 ### 05. Gender
-Use the **second-person pronou**n** (you, your, yours) and avoid words that have gender pairs:
-Use the imperative mood: 
-<Figure
-      type="do"
-      caption=""
-    >
-   **<em>"Choose a password and type it into the text box."</em>**
-    </Figure>
 
-Drop the pronoun whenever you can: 
+Use the **second-person pronou**n\*\* (you, your, yours) and avoid words that have gender pairs:
+Use the imperative mood:
 
- <Figure
-      type="do"
-      caption=""
-    >
-   **<em>"The user chooses a password and types it into the text box."</em>**
-    </Figure>
+<Figure type="do" caption="">
+  **<em>"Choose a password and type it into the text box."</em>**
+</Figure>
+
+Drop the pronoun whenever you can:
+
+{' '}
+
+<Figure type="do" caption="">
+  **<em>"The user chooses a password and types it into the text box."</em>**
+</Figure>
 Replace gender-specific possessive pronouns with the:
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>"When the user types his password..."</em>**
+    <Figure type="dont" caption="">
+      **<em>"When the user types his password..."</em>**
     </Figure>
   </div>
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    **<em>"When the user types the password..."</em>**
+    <Figure type="do" caption="">
+      **<em>"When the user types the password..."</em>**
     </Figure>
   </div>
 </section>
 
-### 06. Italics	
+### 06. Italics
+
 Use italic text formatting for selectable interface elements (drop-down list options, object types) and input data you enter (object names, parameter names, parameter values, field values). Also, use italic formatting for error messages, section names if referencing an external document, and state and status names.
 
 ### 07. Links / Hyperlinks
-When cross-referencing or linking to another article, include the link in the descriptive text. 
+
+When cross-referencing or linking to another article, include the link in the descriptive text.
+
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>"Click here”</em>**<br/>
-    **<em>"More information here”</em>**
+    <Figure type="dont" caption="">
+      **<em>"Click here”</em>**
+      <br />
+      **<em>"More information here”</em>**
     </Figure>
   </div>
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    **<em>"Read our documentation on LINQ queries"</em>**
+    <Figure type="do" caption="">
+      **<em>"Read our documentation on LINQ queries"</em>**
     </Figure>
   </div>
 </section>
 
 ### 08. Lists and procedures
+
 **Bullet lists** do not necessarily need to go in order. They are a collection of items that have something in common but whose order is interchangeable:
+
 - Use a period after every bullet that is a sentence.
-- Don’t use a period after bullet lists that are not complete sentences or do not complete the opening stem sentence.  
-- Do not use semicolons to end punctuation. 
-- Use either all full sentences in your bullet lists or all fragments. 
+- Don’t use a period after bullet lists that are not complete sentences or do not complete the opening stem sentence.
+- Do not use semicolons to end punctuation.
+- Use either all full sentences in your bullet lists or all fragments.
 - Capitalize the first letter in each bullet.
 - End the stem sentence with a colon.
 
-**Numbered lists** are used for steps or processes and must go in chronological order. 
+**Numbered lists** are used for steps or processes and must go in chronological order.
+
 - Use a period after every bullet that is a sentence.
-- Don’t use a period after bullet lists that are not complete sentences or do not complete the opening stem sentence.  
-- Do not use semicolons to end punctuation. 
-- Use either all full sentences in your bullet lists or all fragments. 
+- Don’t use a period after bullet lists that are not complete sentences or do not complete the opening stem sentence.
+- Do not use semicolons to end punctuation.
+- Use either all full sentences in your bullet lists or all fragments.
 - Capitalize the first letter in each bullet.
 - End the stem sentence with a colon.
 
 For UI writing, if creating a list which is a series of radio buttons or boxes, do not use punctuation unless the items in the list are complete sentences. For both UI and technical writing, keep lists to a maximum of 10 items whenever possible as this makes it easier for the reader to scan.
+
 ### 09. Monospaced text
-Use courier text formatting for anything that can be copy and pasted into a command line: URL paths, folder names, file names, and so forth. 
+
+Use courier text formatting for anything that can be copy and pasted into a command line: URL paths, folder names, file names, and so forth.
 
 ### 10. Numbers
+
 Generally, one to nine are written as words. Anything larger than nine should be written as a numeral (10, 11, and so on). Use commas to separate thousand units: 1,000.
 
 Exceptions to the above are:
+
 - When starting a sentence avoid using numerals.
 - In the same sentence as higher numbers.
 - In headings, buttons, and wherever space is very limited (not subheadings).
 - In version numbers, dates, and times.
 - Abbreviated units of measurement.
 - Percentages.
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>"The category length cant be more than six characters." </em>**<br/>
-    </Figure>
-  </div>
-  <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    **<em>"The category length cant be more than 6 characters."</em>**
-    </Figure>
-  </div>
-</section>
+  <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+    <div className="col">
+      <Figure type="dont" caption="">
+        **<em>"The category length cant be more than six characters." </em>**
+        <br />
+      </Figure>
+    </div>
+    <div className="col">
+      <Figure type="do" caption="">
+        **<em>"The category length cant be more than 6 characters."</em>**
+      </Figure>
+    </div>
+  </section>
 
-### 11. Plurals	
+### 11. Plurals
+
 To form the plural of an abbreviation, an acronym, or a number, add a lowercase s without an apostrophe. If an acronym already represents a plural noun, do not add an s.
 
-<Figure
-      type="do"
-      caption=""
-    >
-   **<em>CPUs, APIs, IDs, OSs, the 1990s, 0s, and 1s</em>**<br/>**<em>FAQ: frequently asked questions</em>**
-    </Figure>
-   To form the plural of a single letter or a symbol, add an apostrophe and a lowercases.
+<Figure type="do" caption="">
+  **<em>CPUs, APIs, IDs, OSs, the 1990s, 0s, and 1s</em>**
+  <br />
+  **<em>FAQ: frequently asked questions</em>**
+</Figure>
+To form the plural of a single letter or a symbol, add an apostrophe and a lowercases.
 
-<Figure
-      type="do"
-      caption=""
-    >
-   **<em>x’s, #’s</em>**
-    </Figure>
-  Abbreviated units of measure are both singular and plural; no s is necessary.
-<Figure
-      type="do"
-      caption=""
-    >
-   **<em>5 mm, 20 min</em>**
-    </Figure>
-Do not use (s), /s, (es), or /es at the end of a word to indicate the possibility of more than one item, and do not combine the singular and plural forms of a verb, such as is/are.
+<Figure type="do" caption="">
+  **<em>x’s, #’s</em>**
+</Figure>
+Abbreviated units of measure are both singular and plural; no s is necessary.
+<Figure type="do" caption="">
+  **<em>5 mm, 20 min</em>**
+</Figure>
+Do not use (s), /s, (es), or /es at the end of a word to indicate the possibility
+of more than one item, and do not combine the singular and plural forms of a verb,
+such as is/are.
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>Close any application(s) that is/are open. </em>**<br/>
+    <Figure type="dont" caption="">
+      **<em>Close any application(s) that is/are open. </em>**
+      <br />
     </Figure>
   </div>
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    **<em>Close any application that is open.</em>**<br/>
-    **<em>Close any applications that are open.</em>**
+    <Figure type="do" caption="">
+      **<em>Close any application that is open.</em>**
+      <br />
+      **<em>Close any applications that are open.</em>**
     </Figure>
   </div>
 </section>
 
 ### 12. Oxford comma
+
 In a list of three or more items, include a comma before the conjunction.
+
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-    **<em>Android, iOS and Windows</em>**<br/>
+    <Figure type="dont" caption="">
+      **<em>Android, iOS and Windows</em>**
+      <br />
     </Figure>
   </div>
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-    **<em>Android, iOS, and Windows</em>**
+    <Figure type="do" caption="">
+      **<em>Android, iOS, and Windows</em>**
     </Figure>
   </div>
 </section>
 
-### 13. Possessives	
-   To form the possessive case of nouns, add an apostrophe and an s, even if the noun ends in s, x, or z. To form the possessive of plural nouns that end in s, add only an apostrophe.
-<Figure
-      type="do"
-      caption=""
-    >
-   **<em>the table's contents</em>**<br/>
-   **<em>the box's contents</em>**<br/>
-   **<em>users' accounts</em>**<br/>
-   **<em>the Joneses' computer</em>**
-    </Figure>
+### 13. Possessives
+
+To form the possessive case of nouns, add an apostrophe and an s, even if the noun ends in s, x, or z. To form the possessive of plural nouns that end in s, add only an apostrophe.
+
+<Figure type="do" caption="">
+  **<em>the table's contents</em>**
+  <br />
+  **<em>the box's contents</em>**
+  <br />
+  **<em>users' accounts</em>**
+  <br />
+  **<em>the Joneses' computer</em>**
+</Figure>
 
 ### 14. Pronouns
- Use the second person singular (you, your) whenever possible. This is a friendly and direct way to communicate with the user. 
-<Figure
-      type="do"
-      caption=""
-    >
-   "You must select your own domain or an external domain."
+
+Use the second person singular (you, your) whenever possible. This is a friendly and direct way to communicate with the user.
+
+<Figure type="do" caption="">
+  "You must select your own domain or an external domain."
 </Figure>
-  Use the first person for tabs and sections that are specific to the user, such as **My account**, **My domains**, or **My data**.
-<Figure
-      type="do"
-      caption=""
-    >
-   **“My favorite searches”** in the Data Search.<br/>
-   **“My cross-search charts”** in the Data Search.
+Use the first person for tabs and sections that are specific to the user, such as
+**My account**, **My domains**, or **My data**.
+<Figure type="do" caption="">
+  **“My favorite searches”** in the Data Search.
+  <br />
+  **“My cross-search charts”** in the Data Search.
 </Figure>
-  Avoid using gender-specific third-person pronouns (he, she).
+Avoid using gender-specific third-person pronouns (he, she).
 
 ### 15. Punctuation
 
@@ -604,40 +588,39 @@ Punctuation is used to structure and organize content. It provides the reader wi
 The more punctuation you add, the more complex a sentence becomes. If a sentence contains more than two commas and ending punctuation, consider rewriting it.
 
 #### Apostrophes
+
 <ins>Use an apostrophe:</ins>
 
 To form the possessive case of nouns. Add an apostrophe and an s, even if the noun ends in s, x, or z. To form the possessive of plural nouns that end in s, add only an apostrophe.
-<Figure
-      type="do"
-      caption=""
-    >
-   **<em>the table's contents</em>**<br/>
-   **<em>the box's contents</em>**<br/>
-   **<em>users' accounts</em>**<br/>
-   **<em>the Joneses' computer</em>**
+
+<Figure type="do" caption="">
+  **<em>the table's contents</em>**
+  <br />
+  **<em>the box's contents</em>**
+  <br />
+  **<em>users' accounts</em>**
+  <br />
+  **<em>the Joneses' computer</em>**
 </Figure>
 <ins>Don’t use an apostrophe:</ins>
-<Figure
-      type="dont"
-      caption=""
-    >
-   **<em>For the possessive form of it.</em>**<br/>
-   **<em>With a possessive pronoun.</em>**<br/>
-   **<em>To form the plural of a singular noun.</em>**
+<Figure type="dont" caption="">
+  **<em>For the possessive form of it.</em>**
+  <br />
+  **<em>With a possessive pronoun.</em>**
+  <br />
+  **<em>To form the plural of a singular noun.</em>**
 </Figure>
 To indicate a missing letter in a contraction.
-<Figure
-      type="do"
-      caption=""
-    >
-   **<em>won't</em>**<br/>
-   **<em>don't</em>**<br/>
-   **<em>it's</em>**
+<Figure type="do" caption="">
+  **<em>won't</em>**
+  <br />
+  **<em>don't</em>**
+  <br />
+  **<em>it's</em>**
 </Figure>
-#### Colons and semicolons
- ##### Colons
-  
-   A colon provides an explanation to the information you have just mentioned. A semicolon indicates a brief pause that is slightly longer than that of a comma.
+#### Colons and semicolons ##### Colons
+
+A colon provides an explanation to the information you have just mentioned. A semicolon indicates a brief pause that is slightly longer than that of a comma.
 
 <ins>Use a colon:</ins>
 
@@ -652,22 +635,24 @@ When you use a colon in a sentence, lowercase the word that follows it unless:
 When you use a colon in a title or heading, capitalize the word that directly follows it.
 
 ##### Semicolons
-   
+
 Sentences that contain semicolons are often difficult to read. Try to simplify the sentence by breaking it into multiple sentences or a list.
 
-<ins>Use semicolons:</ins>
-- Between two independent clauses that are not joined by a conjunction.
-- Between contrasting statements that are not joined by a conjunction.
-- To separate items in a series that contains commas or other punctuation. In this case it is usually better to break it down into a list as it scans better.
+<ins>Use semicolons:</ins>- Between two independent clauses that are not joined
+by a conjunction. - Between contrasting statements that are not joined by a
+conjunction. - To separate items in a series that contains commas or other
+punctuation. In this case it is usually better to break it down into a list as
+it scans better.
 
 <section className="mrow">
 
   <div className="mcol-12 mcol-sm-6">
-  
+
 </div>
 </section>
 
 #### Commas
+
 While a period ends a sentence, a comma indicates a brief pause.
 
 **<ins>Use a comma:</ins>**
@@ -678,43 +663,50 @@ While a period ends a sentence, a comma indicates a brief pause.
 - To separate conjunctive adverbs (in addition, also, on the other hand, however, moreover, furthermore, for example, finally).
 
 Here is a full list of conjunctive adverbs:
- <Figure>
-     <img
+
+{' '}
+
+<Figure>
+  <img
     alt="Location of the 'status' icon button in a widget header"
     src="img/adverbs-15x.png"
   />
 </Figure>
-**<ins>Don’t use a comma:</ins>**
-- To join independent clauses when you do not use a conjunction. Use a semicolon instead.
-- Between two verbs that apply to the same subject.
-- Between the month and the year when a specific date is not mentioned.
+**<ins>Don’t use a comma:</ins>** - To join independent clauses when you do not use
+a conjunction. Use a semicolon instead. - Between two verbs that apply to the same
+subject. - Between the month and the year when a specific date is not mentioned.
 
 #### Contractions
+
 Contractions convey a warm and friendly tone, but they can be confusing for non-native readers. For this reason it is best to avoid them. A contraction indicates that one word should be written as two words.
 
 #### Dashes and hyphens
+
 Dashes and hyphens are not interchangeable. Keep the following in mind:
+
 - Em dashes (—) set off or emphasize parenthetical phrases.
-- En dashes (–) are used in number and date ranges, in negative numbers, and as a minus sign. 
+- En dashes (–) are used in number and date ranges, in negative numbers, and as a minus sign.
 - Hyphens (-) are used to join words and connect prefixes to stem words. Do not use two hyphens in place of an em dash.
 
 Do not use spaces before or after em and en dashes.
 
 #### Ellipses
+
 Avoid using an ellipsis (…) except to indicate omitted code in technical content.
 
 #### Exclamation points/marks
-  Exclamation points should not be used. In the unusual case of it being appropriate to use one, never end a sentence with more than one exclamation point.
-<Figure
-      type="dont"
-      caption=""
-    >
-   **<em>Never end a sentence with more than one exclamation point!!!!!!</em>**<br/>
-   **<em>Does that apply to question marks, too?????</em>**<br/>
-   **<em>Yes!!!!!!!</em>**
+
+Exclamation points should not be used. In the unusual case of it being appropriate to use one, never end a sentence with more than one exclamation point.
+
+<Figure type="dont" caption="">
+  **<em>Never end a sentence with more than one exclamation point!!!!!!</em>**
+  <br />
+  **<em>Does that apply to question marks, too?????</em>**
+  <br />
+  **<em>Yes!!!!!!!</em>**
 </Figure>
-#### Periods (full stops)
-Do not use periods in headings, subheadings, UI titles, UI text, or simple lists (three or fewer words per item).
+#### Periods (full stops) Do not use periods in headings, subheadings, UI titles,
+UI text, or simple lists (three or fewer words per item).
 
 End all sentences with a period. Put one space after a period.
 
@@ -725,25 +717,28 @@ When a phrase ending with a colon introduces a bulleted list:
 - If one or more list elements are complete sentences, use a period after every element, even if a list element contains three or fewer words.
 
 #### Question marks
+
 The reader is looking for an answer, not a question, so use them sparingly.
 
 However, it is acceptable to use a question mark when the user needs to make a decision.
-<Figure
-      type="do"
-      caption=""
-    >
-   **<em>Do you want to save your changes?</em>**<br/>
-   **<em>Do you want to shut down the system?</em>**
+
+<Figure type="do" caption="">
+  **<em>Do you want to save your changes?</em>**
+  <br />
+  **<em>Do you want to shut down the system?</em>**
 </Figure>
 
 #### Quotation marks
+
 Limit the use of quotations to direct quotes as they give a busy look to the text. When necessary, use double quotation marks (" ") instead of single quotation marks (' ').
 
 Place closing quotation marks:
+
 - Outside commas and periods.
 - Inside other punctuation.
 
 #### Slashes
+
 When you instruct users to enter a slash, include the spelled-out term first, followed by the symbol in parentheses.
 
 Use a slash for combinations. Capitalize the word after the slash if the word before the slash is capitalized. In the case of in-app features or parts, capitalize both.
@@ -753,62 +748,69 @@ Don't use a slash as a substitute for or. If the UI uses a slash in this way, fo
 ### 16. Titles and headings
 
 Headings allow readers to easily scan content by offering structure and reference points. It is important that headings are used consistently; it usually suffices to have one or two heading levels in any given article.
+
 - Keep headings as short as possible, and lead in with the most important idea.
-- Be as specific as possible, becoming even more detailed with lower-level headings. 
+- Be as specific as possible, becoming even more detailed with lower-level headings.
 - Focus on what users can achieve or what they need to know about a feature.
 - Use noun phrases for first-level headings, verb phrases for second-level headings, and infinitive phrases for headings in instructions.
 
-<Figure
-      type="do"
-      caption=""
-    >
-   **<em>Activeboards / Working with Activeboards / To share an Activeboard</em>**
+<Figure type="do" caption="">
+  **<em>Activeboards / Working with Activeboards / To share an Activeboard</em>
+  **
 </Figure>
 
 - Use sentence-style capitalization for headings. That means that you capitalize the first word, any proper nouns, and the first word after a colon (if there is one).
 - Don't end headings with a period. Use your own judgement if a question mark is needed in certain cases:
 
-<Figure
-      type="do"
-      caption=""
-    >
-**1. What can we help you find?**<br/>
-**2. Are you sure you want to end the session?**
+<Figure type="do" caption="">
+  **1. What can we help you find?**
+  <br />
+  **2. Are you sure you want to end the session?**
 </Figure>
 
 Use italic if it would be required in body text.
-  - Keep hyphenated words and multiple-word proper nouns on the same line.
-  - If a heading is longer than two lines, consider rewriting it.
-  - Do not use ampersands (&) or plus signs (+) in headings unless you're referring to UI that contains them or space is limited.
-  - Avoid hyphens in headings if possible.
 
-### 17. US English (Spelling)	
- Use American English for all documentation:
- <Figure
-      type="do"
-      caption=""
-    >
-**<em>canceled not cancelled</em>**<br/>
-**<em>emphasize not emphasise</em>**<br/>
-**<em>focused not focussed</em>**<br/>
-**<em>program not programme</em>**<br/>
-**<em>disk not disc</em>**
+- Keep hyphenated words and multiple-word proper nouns on the same line.
+- If a heading is longer than two lines, consider rewriting it.
+- Do not use ampersands (&) or plus signs (+) in headings unless you're referring to UI that contains them or space is limited.
+- Avoid hyphens in headings if possible.
+
+### 17. US English (Spelling)
+
+Use American English for all documentation:
+
+{' '}
+
+<Figure type="do" caption="">
+  **<em>canceled not cancelled</em>**
+  <br />
+  **<em>emphasize not emphasise</em>**
+  <br />
+  **<em>focused not focussed</em>**
+  <br />
+  **<em>program not programme</em>**
+  <br />
+  **<em>disk not disc</em>**
 </Figure>
 Run an American English spellcheck if you're unsure.
 
 ## Glossary of action labels
+
 Using the right words for action labels is important if you want to make your product user-friendly. Consistent and precise labelling gives users clarity and motivation to take the right action.
+
 <section className="mrow">
   <div className="mcol-12 mcol-sm-6">
-Action labels are the middlemen between your product and its users, any confusion or hesitation could lead to dissatisfaction on the users’ behalf, which in turn could lead to frustration and poor user experience. 
-</div>
+    Action labels are the middlemen between your product and its users, any
+    confusion or hesitation could lead to dissatisfaction on the users’ behalf,
+    which in turn could lead to frustration and poor user experience.
+  </div>
   <div className="mcol-12 mcol-sm-6 mt-4">
-   <Figure>
-  <img
-    alt="Location of the 'status' icon button in a widget header"
-    src="img/Glossary-15x.png"
-  />
-</Figure>
+    <Figure>
+      <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/Glossary-15x.png"
+      />
+    </Figure>
   </div>
 </section>
 
@@ -824,39 +826,36 @@ Use the imperative form in an active voice. This reduces the number of words and
 
 **3. Use language that lets the user know the end result of the action.**
 
-Vague or generic action labels can cause uncertainty for users because they aren’t sure what the result of the action will be. If users are unsure of the result of clicking on an action label, there is a chance they will make errors, leading to user dissatisfaction. 
+Vague or generic action labels can cause uncertainty for users because they aren’t sure what the result of the action will be. If users are unsure of the result of clicking on an action label, there is a chance they will make errors, leading to user dissatisfaction.
 
-
-| Action  &nbsp; &nbsp; &nbsp;&nbsp; | Explanation &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;   |
-| :------------- |:-------------|
-| **Add**                          | Takes an existing object and uses it in a new context.                                                                                          |
-| **Apply**                        | Saves changes without closing the dialog.                                                                                                       | 
-| **Cancel**                       | Stops the current action and closes the dialog. Warn the user of any possible negative consequences of stopping an action from progressing.     |
-| **Clear**                        | This action clears all the fields or selections. Where appropriate, combine Clear with the object (Clear fields or Clear all).                  |
-| **Create**                       | Creates a new object.                                                                                                                           |
-| **Close**                        | Closes the current page or window. Do not use Close alongside OK or Cancel actions.                                                             |
-| **Delete**                       | Destroys an existing object.                                                                                                                    |
-| **Download**                     | Transfers a file to a user’s local system.                                                                                                      |
-| **Edit**                         | Allows data or values to be modified. Edit does not always imply the object is automatically updated, the user usually has to save the changes. |
-| **Export**                       | Saves data in a different format external to the system. Typically opens a secondary window for the user to specify the file type and destination.|
-| **Filter**                       | Changes view to only include objects that match the filter criteria.                                                                             |
-| **Hide**                         | Removes an element that was previously shown.                                                                                                    | 
-| **Import**                       | Includes objects from an external source.                                                                                                        |
-| **Learn more**                   | Opens a separate window containing the relevant page for the product documentation.                                                              |
-| **Manage                       | Modifies existing object settings or options.                                                                                                    |
-| **New**                         | Starts the creation of a new object. New either creates the object immediately or opens a dialog or set of fields where the user can enter properties. Combine New with the object to create (New user or New column). |
-| **Refresh**                      | Reloads the view of an object when the displayed view has become unsynchronized with the source.                                                 |
-| **Remov**                       | Removes an object from the current context but the object is not destroyed as a result of the action.                                            |
-| **Reset**                        | Reverts values back to their last saved state. The last saved state includes the values stored the last time the user clicked Apply.             |
-| **Run**                          | Initiates a procedure.                                                                                                                           |
-| **Save**                         | Saves data entered when you create an object.                                                                                                    |
-| **Search**                       | Returns all objects within a defined set that match some specified criteria.                                                                     | 
-| **Select**                       | Selects data from a table.                                                                                                                       |
-| **Select all**                   | Adds all objects in the view to the selection set or checks all checkboxes.                                                                      |
-| **Send**                         | Transfers information to the recipient or destination.                                                                                           |
-| **Show**                         | Reveals an object that was previously hidden.                                                                                                    |
-| Sort                         | Sorts a list or table column.                                                                                                                    |
-| Update                       | Automatically changes the data of an existing object.                                                                                            |
-| Upload                       | Transfers a file from a local system to a remote system.  
-
-
+| Action &nbsp; &nbsp; &nbsp;&nbsp; | Explanation &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;                                                                          |
+| :-------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Add**                           | Takes an existing object and uses it in a new context.                                                                                                                                                                 |
+| **Apply**                         | Saves changes without closing the dialog.                                                                                                                                                                              |
+| **Cancel**                        | Stops the current action and closes the dialog. Warn the user of any possible negative consequences of stopping an action from progressing.                                                                            |
+| **Clear**                         | This action clears all the fields or selections. Where appropriate, combine Clear with the object (Clear fields or Clear all).                                                                                         |
+| **Create**                        | Creates a new object.                                                                                                                                                                                                  |
+| **Close**                         | Closes the current page or window. Do not use Close alongside OK or Cancel actions.                                                                                                                                    |
+| **Delete**                        | Destroys an existing object.                                                                                                                                                                                           |
+| **Download**                      | Transfers a file to a user’s local system.                                                                                                                                                                             |
+| **Edit**                          | Allows data or values to be modified. Edit does not always imply the object is automatically updated, the user usually has to save the changes.                                                                        |
+| **Export**                        | Saves data in a different format external to the system. Typically opens a secondary window for the user to specify the file type and destination.                                                                     |
+| **Filter**                        | Changes view to only include objects that match the filter criteria.                                                                                                                                                   |
+| **Hide**                          | Removes an element that was previously shown.                                                                                                                                                                          |
+| **Import**                        | Includes objects from an external source.                                                                                                                                                                              |
+| **Learn more**                    | Opens a separate window containing the relevant page for the product documentation.                                                                                                                                    |
+| \*\*Manage                        | Modifies existing object settings or options.                                                                                                                                                                          |
+| **New**                           | Starts the creation of a new object. New either creates the object immediately or opens a dialog or set of fields where the user can enter properties. Combine New with the object to create (New user or New column). |
+| **Refresh**                       | Reloads the view of an object when the displayed view has become unsynchronized with the source.                                                                                                                       |
+| **Remov**                         | Removes an object from the current context but the object is not destroyed as a result of the action.                                                                                                                  |
+| **Reset**                         | Reverts values back to their last saved state. The last saved state includes the values stored the last time the user clicked Apply.                                                                                   |
+| **Run**                           | Initiates a procedure.                                                                                                                                                                                                 |
+| **Save**                          | Saves data entered when you create an object.                                                                                                                                                                          |
+| **Search**                        | Returns all objects within a defined set that match some specified criteria.                                                                                                                                           |
+| **Select**                        | Selects data from a table.                                                                                                                                                                                             |
+| **Select all**                    | Adds all objects in the view to the selection set or checks all checkboxes.                                                                                                                                            |
+| **Send**                          | Transfers information to the recipient or destination.                                                                                                                                                                 |
+| **Show**                          | Reveals an object that was previously hidden.                                                                                                                                                                          |
+| Sort                              | Sorts a list or table column.                                                                                                                                                                                          |
+| Update                            | Automatically changes the data of an existing object.                                                                                                                                                                  |
+| Upload                            | Transfers a file from a local system to a remote system.                                                                                                                                                               |

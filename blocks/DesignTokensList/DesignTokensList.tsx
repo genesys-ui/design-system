@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import { light } from '@devoinc/genesys-brand-devo';
-
 import {
   DesignTokensBgColorBox,
   DesignTokensColorBox,
@@ -10,7 +8,7 @@ import {
   DesignTokensSizeBox,
 } from './components';
 
-import { aliasTokensJson } from '../../tokens';
+import { getCmpTokensJson } from '../../tokens';
 
 import {
   StyledDesignTokensContainer,
@@ -22,18 +20,27 @@ import {
 } from './styled';
 
 type Props = {
-  intro: React.ReactNode;
-  tokens: typeof light.alias | typeof light.cmp;
+  componentName?: string;
+  intro?: React.ReactNode;
+  tokens?: [];
 };
 
 export const DesignTokensList: React.FC<Props> = ({
+  componentName,
   intro,
-  tokens = aliasTokensJson,
+  tokens,
 }) => {
   const [filter, setFilter] = React.useState('');
+  const tokensEval = tokens || getCmpTokensJson(componentName || 'button');
+
   return (
     <StyledDesignTokensContainer className="sb-unstyled">
-      {intro}
+      {intro || (
+        <p className="sbdocs sbdocs-p" style={{ margin: '1.6rem 0' }}>
+          There are {tokensEval?.length} related design tokens for this
+          component.
+        </p>
+      )}
       <input
         className="form-control"
         placeholder="Search by token name (at least 3 characters)"
@@ -53,11 +60,11 @@ export const DesignTokensList: React.FC<Props> = ({
           </StyledDesignTokensRow>
         </StyledDesignTokensThead>
         <tbody>
-          {tokens
+          {tokensEval
             .filter((token) =>
               filter.trim() !== '' && filter.length > 2
                 ? token.name.includes(filter.trim().toLowerCase())
-                : token
+                : token,
             )
             .map((child, idx) => {
               const isBgColor = child.name.includes('color-background');
@@ -124,6 +131,11 @@ export const DesignTokensList: React.FC<Props> = ({
             })}
         </tbody>
       </StyledDesignTokensTable>
+      <small>
+        The units in rem are not based in browser, but in base 10, so 1rem =
+        10px.
+      </small>
+      .
     </StyledDesignTokensContainer>
   );
 };

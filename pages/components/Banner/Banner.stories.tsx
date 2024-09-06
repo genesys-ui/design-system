@@ -18,4 +18,5 @@ export const Example: Story = {
     content: 'This is the content of this Banner',
     status: 'info',
   },
+  tags: ['isHidden'],
 };

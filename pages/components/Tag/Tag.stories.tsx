@@ -74,4 +74,5 @@ export const Example: Story = {
     size: 'md',
     text: 'Tag text',
   },
+  tags: ['isHidden'],
 };

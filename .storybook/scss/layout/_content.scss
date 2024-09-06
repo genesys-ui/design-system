@@ -21,4 +21,10 @@
       gap: 6.4rem;
     }
   }
+
+  // fix problem with the canvas wrapper for components live demo
+  [id*="story--components-"] {
+    overflow: visible !important;
+  }
 }
+

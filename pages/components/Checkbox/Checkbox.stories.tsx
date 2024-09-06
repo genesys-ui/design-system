@@ -7,7 +7,6 @@ Checkbox.displayName = 'Checkbox';
 const meta: Meta<React.ComponentProps<typeof Checkbox>> = {
   title: 'Components/Checkbox',
   component: Checkbox,
-  // PENDING
   argTypes: {},
 };
 
@@ -15,6 +14,10 @@ export default meta;
 type Story = StoryObj<React.ComponentProps<typeof Checkbox>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    label: 'Checkbox label',
+    size: 'md',
+    status: 'base',
+  },
+  tags: ['isHidden'],
 };

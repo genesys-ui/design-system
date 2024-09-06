@@ -7,7 +7,6 @@ Avatar.displayName = 'Avatar';
 const meta: Meta<React.ComponentProps<typeof Avatar>> = {
   title: 'Components/Avatar',
   component: Avatar,
-  // PENDING
   argTypes: {},
 };
 
@@ -15,6 +14,9 @@ export default meta;
 type Story = StoryObj<React.ComponentProps<typeof Avatar>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    imageSrc: 'https://i.pravatar.cc/300',
+    size: 'md',
+  },
+  tags: ['isHidden'],
 };

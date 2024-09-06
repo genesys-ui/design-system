@@ -57,4 +57,5 @@ export const Example: Story = {
     state: 'enabled',
     children: 'The link text',
   },
+  tags: ['isHidden'],
 };

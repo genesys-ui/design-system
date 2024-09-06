@@ -2,10 +2,9 @@ import { Meta, Canvas, Controls } from '@storybook/blocks';
 
 import * as Stories from './ChoiceGroup.stories';
 
-import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
-import { getCmpTokensJson } from '../../../tokens';
+import { ComponentBanners, DesignTokensList, LiveDemo } from '../../../blocks';
 
-<Meta of={Stories} />
+<Meta title="Components/ChoiceGroup" />
 
 # Choice group
 
@@ -23,14 +22,16 @@ documentation, see the Genesys UI or Genesys Styles version of the component.
 <Canvas of={Stories.Example} />
 <Controls of={Stories.Example} />
 
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
-    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-form-choicegroup--docs" />
-  </div>
-  <div className="mcol-12 mcol-sm-6">
-    <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
-  </div>
-</section>
+<ComponentBanners
+  urlHtml="https://devoinc.github.io/genesys-styles"
+  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-form-choicegroup--docs"
+/>
+
+<LiveDemo
+  story={Stories.Example}
+  urlHtml="https://devoinc.github.io/genesys-styles"
+  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-form-choicegroup--docs"
+/>
 
 ## Anatomy
 
@@ -50,13 +51,4 @@ documentation, see the Genesys UI or Genesys Styles version of the component.
 
 ⚠️ It is necessary to check if there are component tokens to create the rest of specific component tokens, or at least add the alias tokens to the list.
 
-<DesignTokensList
-  tokens={getCmpTokensJson('choiceGroup')}
-  intro={
-    <p style={{ margin: '1.6rem 0' }}>
-      There are {getCmpTokensJson('choiceGroup').length} ChoiceGroup design
-      tokens. The units in rem are not based in browser, but in base 10, so{' '}
-      <code>1rem = 10px</code>.
-    </p>
-  }
-/>
+<DesignTokensList componentName="choiceGroup" />

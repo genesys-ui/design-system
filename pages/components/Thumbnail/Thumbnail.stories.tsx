@@ -8,7 +8,6 @@ Thumbnail.displayName = 'Thumbnail';
 const meta: Meta<React.ComponentProps<typeof Thumbnail>> = {
   title: 'Components/Thumbnail',
   component: Thumbnail,
-  // PENDING
   argTypes: {},
 };
 
@@ -16,6 +15,12 @@ export default meta;
 type Story = StoryObj<React.ComponentProps<typeof Thumbnail>>;
 
 export const Example: Story = {
-  // PENDING
-  args: {},
+  args: {
+    src: 'https://i.pravatar.cc/800',
+    objectFit: 'cover',
+    objectPosition: 'center',
+    width: '100%',
+    height: '24rem',
+  },
+  tags: ['isHidden'],
 };
