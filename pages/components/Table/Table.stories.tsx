@@ -10,7 +10,23 @@ BasicTable.displayName = 'Table';
 const meta: Meta<React.ComponentProps<typeof BasicTable>> = {
   title: 'Components/Table',
   component: BasicTable,
-  argTypes: {},
+  argTypes: {
+    data: {
+      table: {
+        disable: true,
+      },
+    },
+    colDefs: {
+      table: {
+        disable: true,
+      },
+    },
+    defaultColDef: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 export default meta;
