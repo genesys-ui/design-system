@@ -48,7 +48,12 @@
     "@devoinc/genesys-brand-devo": "^6.5.0",
     "@devoinc/genesys-icons": "^4.1.0",
     "@devoinc/genesys-ui": "^11.0.0",
-    "@devoinc/genesys-ui-upload": "^11.0.0"
+    "@devoinc/genesys-ui-code": "^11.1.1",
+    "@devoinc/genesys-ui-color": "^11.1.1",
+    "@devoinc/genesys-ui-datetime": "^11.1.1",
+    "@devoinc/genesys-ui-table": "^11.1.1",
+    "@devoinc/genesys-ui-upload": "^11.0.0",
+    "@devoinc/holo": "^1.0.5"
   },
   "engines": {
     "node": ">=18",
