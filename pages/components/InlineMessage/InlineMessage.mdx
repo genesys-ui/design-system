@@ -3,6 +3,7 @@ import { Meta } from '@storybook/blocks';
 import * as Stories from './InlineMessage.stories';
 
 import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
 
 <Meta title="Components/InlineMessage" />
 
@@ -36,8 +37,16 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 
 ### Complete list
 
-(PENDING)
-
-⚠️ It is necessary to check if there are component tokens and if not, create the rest, or at least add the alias tokens to the list.
-
-<DesignTokensList componentName="inlineMessage" />
+<DesignTokensList
+  intro={
+    <p className="sbdocs sbdocs-p" style={{ margin: '1.6rem 0' }}>
+      This component is based in Panel text and IconButtonStatus components, so
+      almost all the applied tokens come from those ones.
+    </p>
+  }
+  tokens={[
+    ...getCmpTokensJson('inlineMessage'),
+    ...getCmpTokensJson('panel'),
+    ...getCmpTokensJson('iconButtonStatus'),
+  ]}
+/>

@@ -3,6 +3,7 @@ import { Meta } from '@storybook/blocks';
 import * as Stories from './FloatingMessage.stories';
 
 import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
 
 <Meta title="Components/FloatingMessage *" />
 
@@ -36,4 +37,12 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 
 ### Complete list
 
-<DesignTokensList componentName="floatingMessage" />
+<DesignTokensList
+  intro={
+    <p className="sbdocs sbdocs-p" style={{ margin: '1.6rem 0' }}>
+      This component is based in Panel and Helper components, so the applied
+      tokens come from those ones.
+    </p>
+  }
+  tokens={[...getCmpTokensJson('panel'), ...getCmpTokensJson('helper')]}
+/>
