@@ -41,7 +41,7 @@
     "styled-components": "^6.1.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
-    "vite": "^5.2.12"
+    "vite": "^5.4.6"
   },
   "dependencies": {
     "@devoinc/genesys-base-styles": "^1.2.1",
