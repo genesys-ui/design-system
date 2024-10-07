@@ -1,11 +1,12 @@
-import { Meta, Canvas, Controls } from '@storybook/blocks';
+import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
 
 import * as Stories from './AppBar.stories';
 
-import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
+import { CardHtml, CardReact, DesignTokensList, Figma, Figure, } from '../../../blocks';
 import { getCmpTokensJson } from '../../../tokens';
 
 <Meta of={Stories} />
+
 
 # App bar
 
@@ -33,8 +34,14 @@ documentation, see the Genesys UI or Genesys Styles version of the component.
 </section>
 
 ## Anatomy
+The App Bar is compoused by three areas:
+- On the left is the main page/section name.
+- The next area o the left, separated with a divider, is the main navigation with the subsections of the page.
+- On the right of the App Bar there are some main actions and the user options separated with another divider.
+<Figure caption="The internal structure and specs of the IconButton component.">
+  <Figma url="https://www.figma.com/design/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?node-id=14132-64784&t=RQb9FPEqsJrvQIC5-1" />
 
-(PENDING)
+</Figure>
 
 ## Accessibility
 
