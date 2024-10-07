@@ -1,37 +1,35 @@
+import { Meta } from '@storybook/blocks';
 
+import { Figma, Figure } from '../../blocks';
 
-import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
-
-import {
-  CardHtml,
-  CardReact,
-  DesignTokensList,
-  Figma,
-  Figure,
-} from '../../blocks';
-
-<Meta title="Foundations/Color" />
+<Meta title="Foundations/Color" />{' '}
 
 # Color
 
-Application of Color in Dalí is designed to be harmonious, ensure consistency, accessible text, and distinguish interface elements and components from one another.
+Application of Color in Genesys is designed to be harmonious, ensure consistency, accessible text, and distinguish interface elements and components from one another.
 
-<Figure>
-  <img
-    alt="Location of the 'status' icon button in a widget header"
-    src="img/Color1-2x.png"
-  />
-</Figure>
-
-Color is also used to emphasize important information, to display different states or to add meaning and support design communication.
-
-Dalí’s default palettes are derived from the Devo Style Guide to ensure we maintain our brand’s personality throughout the UI.
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+    Genesys’s default palettes are derived from the Devo Style Guide to ensure
+    we maintain our brand’s personality throughout the UI.
+  </div>
+  <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/GenesysColor-2x.png"
+      />
+    </Figure>
+  </div>
+</section>
+Color is also used to emphasize important information, to display different states
+or to add meaning and support design communication.
 
 ## Palettes
 
 ### Brand palettes
 
-The **primary palette** is used for the main action of the page. This means that there cannot be more than one action on the same page using this palette. It is used to mark active first-level navigation elements: active sections in the main menu and in the sub-section tabs located in the upper area. 
+The **primary palette** is used for the main action of the page. This means that there cannot be more than one action on the same page using this palette. It is used to mark active first-level navigation elements: active sections in the main menu and in the sub-section tabs located in the upper area.
 
 Similarly, it is used to draw attention to certain elements or to add branding in certain contexts.
 
@@ -156,6 +154,7 @@ These palettes are aimed at data visualization (graphics) as well as feedback el
 </Figure>
 
 #### Sky
+
 <Figure>
   <img
     alt="Location of the 'status' icon button in a widget header"
@@ -253,5 +252,8 @@ The miscellaneous palettes will be used for all elements associated with very sp
 The following table helps to decide which color palettes to use in the app, depending on the context of the element. Well-chosen colors help users to identify statuses, actions, and interactions. They also make it easy to locate help, differentiate between different types of information, and to understand which steps to take. A consistent use of color improves the user experience and requires less work on their part.
 
 <Figure spaceToTop>
-  <Figma aspectRatio='6x5' url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=6980%3A6270&mode=design&t=RE4bbatEUXom8VAu-1" />
+  <Figma
+    aspectRatio="6x5"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=6980%3A6270&mode=design&t=RE4bbatEUXom8VAu-1"
+  />
 </Figure>

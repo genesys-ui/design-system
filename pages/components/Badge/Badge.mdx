@@ -2,17 +2,42 @@ import { Meta, Canvas } from '@storybook/blocks';
 
 import * as Stories from './Badge.stories';
 
-import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
 
 <Meta title="Components/Badge" />
 
 # Badge
 
-(PENDING)
+The Badge component is used to highlight an information relevant for the user or to just draw attention in a specific element. Content within the badge usually are numbers or icons.
 
 ## Overview
 
-(PENDING) Variants, sizes, alignment, location... etc.
+The Badge Component used to display a small piece of information, either as icon or text. It should be always appended to other components like Buttons, Actions, or Labels. In the case of Buttons and Actions, the Badge is located in the upper right corner, putting the center of the Badge in the main component vertice. In the case of isolates texts like Labels or Links Components, the Badge will be appended on the left aligned with the vertical center.
+
+Badges always should have an icon or a number, occasionally could have one or two letters, for example for the user initials. The unique exception that allows an empty Badge is to put the focus on a button for a miscellaneous reason not measurable.
+
+### Variants
+
+There are three variants available:
+
+- **Size**: This must match the component it accompanies: sm. md and lg.
+- **ColorScheme**
+- **Content**
+
+{' '}
+
+<Figure>
+  <Figma
+    aspectRatio="4x3"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?node-id=14907-65949&t=mhGpLge3NLmaMvDj-1"
+  />
+</Figure>
+
+### Emphasis
+
+<Figure spaceToTop>
+  <Figma url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys---Doc---assets?type=design&node-id=1445%3A5200&mode=design&t=w2L6EPXjlqcjNbrV-1" />
+</Figure>
 
 ## Live demo
 
@@ -24,7 +49,22 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 
 ## Anatomy
 
-(PENDING)
+The badge component is a very basic component composed of a rounded container and a label or icon with the information to show:
+
+<Figure caption="The internal structure and specs of the Badge component.">
+  <Figma
+    aspectRatio="4x3"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=14907%3A66980&mode=design&t=Dw2xOfqO2VoLFeWs-1"
+  />
+</Figure>
+1. **Container**: This element manages sizing and spacing. 2. **Icon**/**Tex**: Icon
+ot text content.
+
+It has an empty variation with a smaller circumference and higher contrast background color.
+
+### Sizes
+
+This must match the component it accompanies: sm. md and lg.
 
 ## Accessibility
 
@@ -63,7 +103,9 @@ The status role defines an advisory that is not important enough to be an alert.
 
 ## Design tokens
 
-(PENDING)
+### Size, space and typographic design tokens
+
+### Color design tokens
 
 ### Complete list
 

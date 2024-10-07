@@ -2,17 +2,34 @@ import { Meta, Source } from '@storybook/blocks';
 
 import * as Stories from './Tag.stories';
 
-import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { DesignTokensList, LiveDemo, Figma, Figure } from '../../../blocks';
 
 <Meta title="Components/Tag" />
 
 # Tag
 
-(PENDING)
+Tags are informative elements presented with a keyword or phrase that allows the user to quickly know the status of the elements marked with it.
+
+Each element may contain one or more tags depending on its data nature or classification system applied.
 
 ## Overview
 
-(PENDING) Variants, sizes, alignment, location... etc.
+Multiple or single tags can be used to categorize items. Each element may contain one or more tags depending on its data nature or classification system applied.
+
+### Variants
+
+The Tag components can be single or a list of items, in a single row or several of the with of the space reserved for a list of tags don´t allow a single line.
+
+- **Size**: Four options: ‘lg’, ‘md’, ‘sm’, and ‘xs’.
+- **ColorScheme**: with all the schemes available: Brand, UI and Visualzation
+- **Content**: with three options: ‘label’, ‘icon + label’ and ‘quiet’
+- **State**: Error, warning, success, help, info...
+
+There isn't a 'quiet' version without icon; then, don't hide the icon when you use this variant.
+
+#### Alignment
+
+#### Location
 
 ## Live demo
 
@@ -24,7 +41,23 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 
 ## Anatomy
 
-(PENDING)
+A Tag Component is quite simple component composed by an icon and a text wrapped in a colored box.
+
+1. **Container**: This element manages sizing and spacing.
+2. **Label**: Label.
+3. **Icon**: Icon.
+
+<Figure caption="The internal structure and specs of the Tag component.">
+  <Figma
+    aspectRatio="4x3"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=15083%3A68601&mode=design&t=Dw2xOfqO2VoLFeWs-1"
+  />
+</Figure>
+
+The main difference is on the ‘quite’ version. It hasn't background (but it still reseving the same space around) and it uses the component ‘Badge’ to for the side icon.
+
+There is a spacing size that doesn't fit the standard rules.
+The ‘lg’ and ‘md’ ‘icon + label’ options use 6px to improve the visual weight of the icon.
 
 ## Accessibility
 
