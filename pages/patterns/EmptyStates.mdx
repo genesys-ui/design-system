@@ -1,5 +1,26 @@
 import { Meta } from '@storybook/blocks';
 
+import {
+  CardHtml,
+  CardReact,
+  DesignTokensList,
+  Figma,
+  Figure,
+} from '../../blocks';
+
 <Meta title="Patterns/Empty states" />
 
 # Empty states
+
+If we have an empty state such as a Table without data, Activeboard without widgets, a widget with no data… etc. we should use a component StatusMessage
+
+This component usually will be used without status, except when the empty state is caused by an error.
+
+Whenever it’s possible we have to add the action/s to allow the user to revert this empty state. If this action already exists in some near and visible location, it should be removed from the page while the empty state remains.
+
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/empty-status-1x.jpg"
+  />
+</Figure>

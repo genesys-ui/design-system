@@ -1,5 +1,248 @@
 import { Meta } from '@storybook/blocks';
 
+import { Figure, Figma } from '../../blocks';
+
 <Meta title="Patterns/Message system" />
 
 # Message system
+Definition of Devo's message system usage patterns.
+
+## Intrusiveness
+
+We must take into account the level of intrusiveness of each component and choose the appropriate one in each case depending on the context in which it must appear, the importance of the message to be transmitted, its criticality and its priority of appearance.
+
+The following pages describe the different components, as well as how and when to use each of them.
+
+<Figure>
+  <img
+    src="img/Intrusiveness-15x.jpg"
+    alt="level of intrusiveness"
+  />
+</Figure>
+
+## Inline messages
+
+They are displayed to alert users about **addtional information or about the need to perform an action to complete the current task**.
+
+**To reveal the message, users have to click on the icon or secondary text.**
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+Their main use will focus on providing additional information / help to the user, although they may also display errors, confirmations or warnings related to the component they accompany.
+
+They will be eligible for use **when we need to simplify the UI** (saving space) or when the importance of the message for the component they accompany is low / moderate. Otherwise, the use of more intrusive kind of messages should be considered (Banners).
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Inline messages"
+        src="img/inline-messages-15x.png"
+      />
+    </Figure>
+  </div>
+</section>
+
+### Draggable
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+In case the **information provided** within the Inline Message **needs to persist while the user interacts with some other part of the UI** (for example when keyboard shortcuts are displayed), this component will be used in its dragabble mode, which will alow users to freely reposition it on the screen and close it whenever they want.
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Inline messages/Dragable"
+        src="img/inline-messages2-15x.jpg"
+      />
+    </Figure>
+  </div>
+</section>
+
+## Toast messages
+They are used for confirmations, warnings, errors, help or information and usually **require minimal user interaction**.
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+Toasts must appear after user interaction. They cannot be the result of forms validation, neither server-side nor client-side.
+
+They can use icons, titles, content and additional actions. Text labels should be as concise and short as possible.
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Inline messages/Dragable"
+        src="img/Toast-message-1.5x.png"
+      />
+    </Figure>
+  </div>
+</section>
+
+### Contextual
+They appear **after user interaction right where it happened**. Barely disruptive, they should be used mainly for low-importance action confirmations, such as "Query was copied to clipboard succesfully".
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+They should not be used if there is a context change, for example if the action performed closes a modal window and we return to the previous page.
+
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Inline messages/Dragable"
+        src="img/Contextual.png"
+      />
+    </Figure>
+  </div>
+</section>
+
+### Standard
+They can be used for confirmations, warnings, errors, help or information with **low-medium priority, overlayed at the bottom left of the screen**.
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+These messages are generated as a consequence of user actions (event-driven messages). They have a progress bar and **will disappear after 'n' seconds but can also be closed by clicking the 'x'**.
+
+The user can pause automatic closing by hovering over the message. **They may include additional actions**.
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Inline messages/Dragable"
+        src="img/Standard-15x.png"
+      />
+    </Figure>
+  </div>
+</section>
+
+### Bold
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+Unlike Standard toast Messages, they can **also contain system generated messages**.
+
+They are **used to reinforce the importance of a message**. They do **not close automatically and they will persist until the problem is solved or until the user closes it using the 'x'**.
+
+They may also include additional actions. 
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Bold"
+        src="img/Bold-15x.png"
+      />
+    </Figure>
+  </div>
+</section>
+
+## Notifications
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+System generated messages that are **stored within the app notification center**. Like Standard Toast messages, they can be closed by clicking the 'x' or they will disappear after 'n' seconds.
+
+Their most frequent use is to notify when new tables, lookups, relays, or uploaded files are available in the domain and also when they are deleted. We may as well use it to notify new users in the domain, activeboards shared with you, generated alerts and, ultimately, any message that needs to be stored for later consultation / storage.
+
+**Their position on the screen is bound to the notifications icon**, which is part of the side menu.
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Notifications"
+        src="img/Notifications-1.5x.png"
+      />
+    </Figure>
+  </div>
+</section>
+
+## Field helpers
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+They appear **below the field they are accompanying**. Their mission is to provide users with valuable information to help them complete the action they are performing. Whenever possible, include an example of how the field should be completed.
+
+Do not use them abusively, only when clarification is required.
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Notifications"
+        src="img/Field-Helpers-15x.png"
+      />
+    </Figure>
+  </div>
+</section>
+
+## Validation messages
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+They appear **below the field that presents the error, warning, success, etc**. They inform the user of the problem/situation and advise on possible solutions. They must be a **consequence of real-time validation**, when the field loses focus (server-side).
+
+In the event that the error comes from the server side (once a summit is done), an Inline Banner will be conveniently used.
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Validation Messages"
+        src="img/Validation-messages-15x.png"
+      />
+    </Figure>
+  </div>
+</section>
+
+## Inline and section banners
+Banners provide users with **messages generated either by**: 
+- The need for **explicit information** (info, help, warning, etc) to complete a certain configuration or proccess.
+- **The validation of a group of fields within a form (server-side).**
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+Their **type** can be **inline** (address the issues inside the content area) or **section** (placed on a particular area of a page or at the top of the component they correspond to).
+
+They persist until the user closes them or until the problem described is solved.
+
+Banners can contain several messages on the same banner (for example a summary of errors within a form). In addition, they can include further actions.
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Inline and Section Banners"
+        src="img/Inline-section-banners-15x.png"
+      />
+    </Figure>
+  </div>
+</section>
+
+## Global banners
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+Usually, they are placed at the top of a page above everything else.
+
+They should **only be used for critical system-level messages** (warnings and errors) about loss of data or functionality.
+
+They **persist until the user closes them or until the problem is solved and may include additional actions**.
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Inline and Section Banners"
+        src="img/Inline-section-banner-1.5x.png"
+      />
+    </Figure>
+  </div>
+</section>
+
+## Modal dialogs
+
+<section className="mrow">
+  <div className="mcol-12 mcol-sm-6">
+They are **highly disruptive** and provide users with **critical information** that needs their attention **BEFORE proceeding action**.
+
+They are generally used for critical processes in which confirmation is needed. They persist and block tasks until the user accepts or cancels them.
+  </div>
+    <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Modal Dialog"
+        src="img/Modal-dialogs-15x.jpg"
+      />
+    </Figure>
+  </div>
+</section>
+

@@ -16,12 +16,12 @@ We use it to place everything on a screen within the Devo Platform.
    <Figure>
   <img
     alt="Location of the 'status' icon button in a widget header"
-    src="img/layout-15x.png"
+    src="img/layout-1.5x.png"
   />
 </Figure>
 It’s made up of different regions that define our Information Architecture. Each of them contains basic interaction, be it navigation, quick access to configurations, data sets, contents, etc.
 
-Dalí also offers different components when generating layouts, consistently and systematically. Each of them should be used according to the context of use.
+Genesys also offers different components when generating layouts, consistently and systematically. Each of them should be used according to the context of use.
 ## UI regions
 
 They represent the skeleton of the platform and the rest of the contents, components, navigations, etc. are placed on them. These areas are generated with the **“Grid”** component.
@@ -33,19 +33,16 @@ They represent the skeleton of the platform and the rest of the contents, compon
 <section className="mrow">
   <div className="mcol-12 mcol-sm-6">
     <div className="mcol-12 mcol-sm-6">
-        1. Global region
+      1. Global region
+      2. App header
     </div>
-   <div className="mcol-12 mcol-sm-6">
-2. App header
-  </div>
   </div>
   <div className="mcol-12 mcol-sm-6">
  <div className="mcol-12 mcol-sm-6">
-3. Leading region
+      3. Leading region
+      4. Main region 
   </div>
-   <div className="mcol-12 mcol-sm-6">
-4. Main region
-  </div>
+   
   </div>
 </section>
 
@@ -56,27 +53,25 @@ The App header is reserved for the App bar and used as the first level navigatio
 ### Leading region
 The leading region is primarily used for content navigation within a section that needs an additional level of depth.
 ### Main region 
-The main region contains the main content of each section of the platform. It's internal structure is determined by a **Fluid** component.
-
-It houses the main content of each section of the platform. It’s generated with the **"Fluid"** component, which is based on the well-known twelve column system.
- <Figure>
-  <img
-    alt="Location of the 'status' icon button in a widget header"
-    src="img/layout-main-region-15x.jpg"
-  />
-</Figure>
+The main region contains the main content of each section of the platform. It's internal structure is determined by a Fluid component.
 
 <section className="mrow">
   <div className="mcol-12 mcol-sm-6">
-    
+    It houses the main content of each section of the platform. It’s generated with the **"Fluid"** component, which is based on the well-known twelve column system.
   </div>
   <div className="mcol-12 mcol-sm-6">
+    <Figure>
+      <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/layout-main-region-15x.jpg"
+      />
+    </Figure>
   </div>
 </section>
 
 While the other regions remain stable throughout the user's journey, this region is the most dynamic and changing. Therefore, it’s the most important area and the one that should have the greatest number of options.
 
-Dalí offers three basic settings for the main region that should be used depending on the type of content that we should show the user.
+Genesys offers three basic settings for the main region that should be used depending on the type of content that we should show the user.
 
 #### Predefined main region layouts
 
@@ -111,17 +106,16 @@ Dalí offers three basic settings for the main region that should be used depend
 <section className="mrow">
   <div className="mcol-12 mcol-sm-6">
      <Figure>
-  <img
-    alt="Location of the 'status' icon button in a widget header"
-    src="img/layout-main-region-booking-grid.png"
-  />
-</Figure>
+      <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/layout-main-region-booking-grid.png"
+      />
+    </Figure>
   </div>
   <div className="mcol-12 mcol-sm-6">
-3. **Booking grid:** It’s a two-column layout on larger screens. On smaller screens, the second column is placed underneath the first.
+  3. **Booking grid:** It’s a two-column layout on larger screens. On smaller screens, the second column is placed underneath the first.
   </div>
 </section>
-
 ## Layout components
 
 ### 01. Fluid
@@ -166,9 +160,6 @@ Every flex based Container component must use as child a component  called "flex
 ### 04. Box
 It is our most versatile layout component.
 
-Our universal building block for layouts, which has a very wide range of properties that allow you to control size, positioning, spacing, distribution, etc.
-
-It serves as the basis for creating other layout components, which use it using only the properties they need for much more specific use cases.
 <section className="mrow">
   <div className="mcol-12 mcol-sm-6">
 <Figure>
@@ -179,7 +170,8 @@ It serves as the basis for creating other layout components, which use it using 
   </Figure>
  </div>
     <div className="mcol-12 mcol-sm-6">
-    
+    Our universal building block for layouts, which has a very wide range of properties that allow you to control size, positioning, spacing, distribution, etc.
+   
+    It serves as the basis for creating other layout components, which use it using only the properties they need for much more specific use cases.
   </div>
 </section>
-

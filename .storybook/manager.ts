@@ -8,4 +8,11 @@ addons.setConfig({
     brandUrl: '#',
     brandImage: '',
   }),
+  sidebar: {
+    filters: {
+      patternns: (item) => {
+        return !(item?.tags?.includes('isHidden') ?? false);
+      }
+    }
+  },
 });

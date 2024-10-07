@@ -2,18 +2,48 @@ import { Meta, Canvas, Controls } from '@storybook/blocks';
 
 import * as Stories from './Banner.stories';
 
-import { CardHtml, CardReact, DesignTokensList } from '../../../blocks';
+import { CardHtml, CardReact, DesignTokensList, Figma, Figure, } from '../../../blocks';
 import { getCmpTokensJson } from '../../../tokens';
 
 <Meta of={Stories} />
 
 # Banner
+The Banner component provides to the users the messages about:
+ - Explicit information for/complete a configuration or process (info, help, etc.).
+ - Warning for a form's fields group validation.
 
-(PENDING)
+Both persist until the problem described is solved, but only the context banner type can be closed by the user.
+
+Banners can contain several messages on the same banner (for example a summary of errors within a form). In addition, they can include further actions.
 
 ## Overview
 
-(PENDING) Variants, sizes, alignment, location... etc.
+(PENDING) 
+
+### Variants
+Size, alignment, location, component type, state... etc.
+
+
+### Location
+It can be: 
+ - Inside another component context, and placed at the top of this component.
+
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/location-banner-075x.jpg"
+  />
+</Figure>
+ - Global and placed at the top of the page.
+ <Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/Location-Globalbanner075x.jpg"
+  />
+</Figure>
+
+### Component
+Type contextual and global.
 
 ## Live demo
 
@@ -25,7 +55,7 @@ documentation, see the Genesys UI or Genesys Styles version of the component.
 
 <section className="mrow">
   <div className="mcol-12 mcol-sm-6">
-    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-feedback-boxmessage--docs" />
+    <CardReact url="https://devoinc.github.io/genesys-ui/?path=/docs/components-feedback-banner--docs" />
   </div>
   <div className="mcol-12 mcol-sm-6">
     <CardHtml url="https://gitlab.devotools.com/engineering/quvis/genesys-styles" />
@@ -33,8 +63,13 @@ documentation, see the Genesys UI or Genesys Styles version of the component.
 </section>
 
 ## Anatomy
+<Figure caption="The internal structure and specs of the Banner component.">
+  <Figma
+    aspectRatio="4x3"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=15400%3A72165&mode=design&t=Dw2xOfqO2VoLFeWs-1"
+  />
+</Figure>
 
-(PENDING)
 
 ## Accessibility
 
