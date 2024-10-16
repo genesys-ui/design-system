@@ -1,12 +1,12 @@
 import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
 
-import {   
+import {
   CardHtml,
   CardReact,
   DesignTokensList,
   Figma,
   Figure,
-   } from '../../blocks';
+} from '../../blocks';
 
 <Meta title="Patterns/Form layout" />
 
@@ -16,15 +16,16 @@ The definition of spacing and sizing patterns to distribute and group form field
 
 <section className="mrow">
   <div className="mcol-12 mcol-sm-6">
-    How the form fields are grouped and distributed is especially important for users to
-understand the relations and dependencies between those fields. In addition, the size
-of each form control helps users to realize the nature and length of the expected data.
+    How the form fields are grouped and distributed is especially important for
+    users to understand the relations and dependencies between those fields. In
+    addition, the size of each form control helps users to realize the nature
+    and length of the expected data.
   </div>
-    <div className="mcol-12 mcol-sm-6">
+  <div className="mcol-12 mcol-sm-6">
     <Figure>
       <img
         alt="Location of the 'status' icon button in a widget header"
-        src="img/illustration-1.png"
+        src="img/Illustration-1.png"
       />
     </Figure>
   </div>
@@ -36,25 +37,19 @@ The way the form fields will be distributed will be by default in one column, pl
 
 <section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
   <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
-     <img
-      src="img/Distribution-Dont-15x.png"
-      alt="Incorrect use of horizontal distribution"
-    />
+    <Figure type="dont" caption="">
+      <img
+        src="img/Distribution-Dont-15x.png"
+        alt="Incorrect use of horizontal distribution"
+      />
     </Figure>
   </div>
   <div className="col">
-    <Figure
-      type="do"
-      caption=""
-    >
-     <img
-      src="img/Distribution-do-15x.png"
-      alt="Correct use of vertical distribution"
-    />
+    <Figure type="do" caption="">
+      <img
+        src="img/Distribution-do-15x.png"
+        alt="Correct use of vertical distribution"
+      />
     </Figure>
   </div>
 </section>
@@ -112,10 +107,10 @@ separation, although it is slightly higher than the one that the label would hav
       caption="Don't use boxes with background color to group fields."
       type="dont"
     >
-    <img
-    src="img/groups-dont-15x.jpg"
-    alt="Form groups with only one field"
-  />
+      <img
+        src="img/groups-dont-15x.jpg"
+        alt="Form groups with only one field"
+      />
     </Figure>
   </div>
   <div className="col">
@@ -123,10 +118,7 @@ separation, although it is slightly higher than the one that the label would hav
       caption="Use always a box to group fields, not only a form group heading (except when there is only one field in the group):."
       type="dont"
     >
-         <img
-    src="img/Group-dont-3.jpg"
-    alt="Form groups with only one field"
-  />
+      <img src="img/Group-dont-3.jpg" alt="Form groups with only one field" />
     </Figure>
   </div>
 </section>
@@ -177,41 +169,31 @@ of the relation between the elements and the type of distribution applied to the
 
 ### Space between fields
 
-The space between fields will be in almost any case ‘cmp-md’ (16px or 1.6rem). 
+The space between fields will be in almost any case ‘cmp-md’ (16px or 1.6rem).
 
 <Figure caption="Use of sub-groups instead another form groups.">
   <img
-  src="img/Spacing-spaces-between-fields-15x.png"
-  alt="Spacing between fields"
-/>
+    src="img/Spacing-spaces-between-fields-15x.png"
+    alt="Spacing between fields"
+  />
 </Figure>
 
 But when we are working with an horizontal distribution and the relation between the fields is very strong we can use ‘cmp-sm’ (12px ).
 
 <Figure>
-<img
-  src="img/Spacing-spaces-between-fields-2-15x.jpg"
-  alt="Spacing between fields"
-/>
+  <img
+    src="img/Spacing-spaces-between-fields-2-15x.jpg"
+    alt="Spacing between fields"
+  />
 </Figure>
 Don’t use arbitrary spaces to separate the fields.
-<Figure
-      type="dont"
-    >
-    <img
-    src="img/spacing-1-15x.png"
-    alt="Form groups with only one field"
-  />
-    </Figure>
-    Don’t use more space to separate fields than to separate groups:
-     <Figure
-      type="dont"
-    >
-         <img
-    src="img/spacing-2-15x.jpg"
-    alt="Form groups with only one field"
-  />
-    </Figure>
+<Figure type="dont">
+  <img src="img/spacing-1-15x.png" alt="Form groups with only one field" />
+</Figure>
+Don’t use more space to separate fields than to separate groups:
+<Figure type="dont">
+  <img src="img/spacing-2-15x.jpg" alt="Form groups with only one field" />
+</Figure>
 
 ### Spacing with groups
 
@@ -220,9 +202,10 @@ We’re talking about the space between groups (nested or not) and between field
 groups. The spacing between the form and the buttons block is the same.
 
 The spacing between the form group heading and the group (or the field) is always ‘cmp-xs’ (8px).
+
 <Figure>
-<img
-  src="img/Spacing-with-groups-15x.jpg"
-  alt="Spacing between groups and other blocks"
-/>
+  <img
+    src="img/Spacing-with-groups-15x.jpg"
+    alt="Spacing between groups and other blocks"
+  />
 </Figure>
