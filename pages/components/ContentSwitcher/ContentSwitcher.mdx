@@ -2,20 +2,106 @@ import { Meta } from '@storybook/blocks';
 
 import * as Stories from './ContentSwitcher.stories';
 
-import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { DesignTokensList, LiveDemo, Figma, Figure } from '../../../blocks';
 
 <Meta title="Components/ContentSwitcher" />
 
 # Content switcher
 
-(PENDING)
+The Content switcher allows the user to toggle between different views of related content within the same section of the platform. Only one view is shown at the same time (just one tab activated).
+
+
+
 
 ## Overview
 
-(PENDING) Variants, sizes, alignment, location... etc.
+### Variants
+The Content switcher has two props: size and color scheme (use blend when background color is other than white).
+
+The tabs have the possibility of controlling their status (enabled, active and hover) and deciding if they have an icon or not. The size prop should not be changed (It is controlled from the parent component).
+<Figure>
+  <Figma
+    aspectRatio="21x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=20085%3A30864&node-id=20085-30931&node-type=frame&viewport=-95%2C1062%2C1.02&t=YqCpLr27NOY5cUEJ-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
+
+| **Variant** &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  | **Usage**                                                                                                                                                                                                                                                            |
+| :----------------------------------------------------------------  | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Neutral**                                                         | This is the default variant.                                          |
+| **Blend**                                                          | Use blend when background color is other than white.   |
+
+In Devo's Search window, for example, it’s used to toggle between  different formatting (table view and list view).
+
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/content-switcher-TABLE.jpg"
+  />
+</Figure>
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/content-switcher-list-15x.jpg"
+  />
+</Figure>
+
+**When you shouldn't use the Content switcher**
+
+<section className="row">
+  <div class="col-8">
+  **Switch**<br/>
+It should be used to toggle between states, based on binary decisions (on/off  yes/no).
+</div>
+  <div class="col-4">
+  <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/switch-15x-2.jpg"
+      />
+      </div>
+</section>
+<section className="row">
+  <div class="col-8">
+**Tabs**<br/>
+When the contents of a page are related but independent of each other. Tabs will be used to separate the different contents (closely related to the information architecture of the app).
+</div>
+  <div class="col-4">
+  <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/tabs-2.jpg"
+      />
+      </div>
+</section>
+
+<section className="row">
+  <div class="col-8">
+**Chips**<br/>
+They will be used within a specific block of content to filter (lists, tables, etc).
+</div>
+  <div class="col-4">
+  <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/chips-2.jpg"
+      />
+      </div>
+</section>
+
+<section className="row">
+  <div class="col-8">
+**Choice group**<br/>
+They will be used in toolbars or compact contexts of use to offer a group of actions related to each other (single or multiple selection).
+</div>
+  <div class="col-4">
+  <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/choice-group-2.jpg"
+      />
+      </div>
+</section>
+
+
 
 ## Live demo
-
 <LiveDemo
   story={Stories.Example}
   urlHtml="https://devoinc.github.io/genesys-styles"
@@ -23,8 +109,28 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 />
 
 ## Anatomy
+It’s made up of a container box that organizes the different options horizontally, separates them, adds a perimeter padding and also receives the background color.
 
-(PENDING)
+<Figure>
+  <Figma
+    aspectRatio="21x9"
+    url="https://www.figma.com/proto/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=20085%3A30864&node-id=20085-30865&node-type=frame&viewport=-95%2C1062%2C1.02&t=YqCpLr27NOY5cUEJ-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
+### States
+The tab has different states depending on the interaction with the user, with other blocks of the page or with
+processes of which he is the trigger.
+- **Enable**: It is enable to activate by the user.
+- **Hover**: when the user interacts with an element with a pointing device, but does not necessarily activate it.
+  It is generally triggered when the user hovers over an element with the cursor (mouse pointer). Sometimes we can use
+  this state to highlight an action over other ones. The styles bound to this state are equivalent to pseudo-class
+  `:hover` ones.
+- **Activated**: this state is used to indicate which tab within single-selection composite widgets is selected.
+  This state should be accompanied of `aria-selected` attribute. With this state the HTML tag rendered should not
+  be a `button` but a `label`, because a radio should be rendered inside, but not visible. 
+
+### Sizes
+ It has three sizes: sm, md and lg.
 
 ## Accessibility
 

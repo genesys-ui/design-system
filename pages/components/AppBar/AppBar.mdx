@@ -8,11 +8,35 @@ import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
 
 # App bar
 
-(PENDING)
-
+The App Bar component includes the main navigation for each page/section plus user configurations and some gener  al commonly used options.
+<Figure>
+  <img
+    alt="AppBar example"
+    src="img/AppBar_example-15x.jpg"
+  />
+</Figure>
 ## Overview
+The App Bar displays navigation and key actions.
 
-(PENDING) Variants, sizes, alignment, location... etc.
+### Variants
+
+Drilling down into the components'  tree, it is possible to switch the number of tabs and colorScheme of each one. Is expected that the main App Bar always uses the size 'lg' of Tabs and never has any of the closable options.
+
+<Figure>
+  <Figma
+    aspectRatio="21x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?node-id=18176-44628&t=6SefHIGJcEozxu4Y-1"
+  />
+</Figure>
+
+### Location
+The App Bar should be placed on the top of the frame of each page model.
+
+### Sizes
+Unique size. Is expected that the main App Bar always uses the size 'lg' of tabs and never has any of the closable options.
+
+### Alignment
+(PENDING) 
 
 ## Live demo
 
@@ -29,10 +53,16 @@ The App Bar is composed by three areas:
 - On the left is the main page/section name.
 - The next area o the left, separated with a divider, is the main navigation with the subsections of the page.
 - On the right of the App Bar there are some main actions and the user options separated with another divider.
-    <Figure caption="The internal structure and specs of the IconButton component.">
-<Figma url="https://www.figma.com/design/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?node-id=14132-64784&t=RQb9FPEqsJrvQIC5-1" />
 
+<Figure caption="The internal structure and specs of the AppBar component.">
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=14132%3A64260&node-id=18176-33981&node-type=frame&viewport=-455%2C129%2C0.48&t=aR6Ppa5YFLBbGf5y-1&scaling=min-zoom&content-scaling=fixed"
+  />
+  
 </Figure>
+
+
 
 ## Accessibility
 

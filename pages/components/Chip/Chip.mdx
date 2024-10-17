@@ -2,17 +2,27 @@ import { Meta } from '@storybook/blocks';
 
 import * as Stories from './Chip.stories';
 
-import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
 
 <Meta title="Components/Chip" />
 
 # Chip
 
-(PENDING)
+The chip component provides the user the ability to select and filter the represented information in an easy and clear way. 
+Chips generally appear as a group of components that interact together (see ChipGroup).
 
 ## Overview
 
-(PENDING) Variants, sizes, alignment, location... etc.
+### Variants
+<Figure>
+  <Figma
+    aspectRatio="21x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=19419%3A22729&node-id=19419-22857&node-type=frame&viewport=194%2C441%2C1.33&t=XVDrnJFZIJRwN223-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
+
+### Location
+Place always the chip near its refered content to establish a clear conection. 
 
 ## Live demo
 
@@ -23,8 +33,56 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 />
 
 ## Anatomy
+Chips are made up of three key elements:
 
-(PENDING)
+- **Container**: This element manages sizing and spacing between these elements.
+- **Content**: A label text should be always displayed. It's important to be concise and clear.
+- **Icon**: It is optional and helps to categorise the Chip.
+- **Action remove**: It is optional and facilitates the removal of the Chips.
+
+<Figure caption="The internal structure and specs of the Chip component.">
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=18566%3A46223&node-id=18566-46235&node-type=frame&viewport=1%2C357%2C0.4&t=suvnhcvxbBHPDSuE-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
+
+### Sizes
+We're using usually the 'md' size for our chips, but in some circumstances or contexts we need to use some variants
+because of space and design reasons.
+
+| Size &nbsp; &nbsp; &nbsp; &nbsp; | Usage                                                                                                                                                                                                                                    |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **xxs**                          | It size is only applied to chips in a selected group. |
+| **xs**                           | This is the default size and the most common.    |
+| **sm**                           | This is the default size and the most common.   |
+| **md**                           | This is the default size and the most common.                                                                                                                                                                                               |
+| **lg**                           | The expressive size. It is barely used in the App context, only in large or commercial contexts. 
+
+### States
+ The dynamic states of the container effectively communicate to the user the various states of the Chips:
+<Figure>
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=18566%3A46223&node-id=18944-6360&node-type=frame&viewport=173%2C-457%2C1.47&t=E9PUii2tvp83bLE9-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
+- **Default**: Represents the appearance of the chip before interaction.
+- **Hovered**: When the user interacts with an element with a pointing device, but does not necessarily activate it.
+  It is generally triggered when the user hovers over an element with the cursor (mouse pointer). Sometimes we can use
+  this state to highlight an action over other ones. The styles bound to this state are equivalent to pseudo-class
+  `:hover` ones.
+- **Focused**: when the chip component has received focus. It is generally triggered when the user clicks or taps on an element
+  or selects it with the keyboard's Tab key. The styles bound to this state are equivalent to pseudo-class
+  `:focus` or `:focus-visible` ones.
+- **Pressed**: when the chip component is being activated by the user. When using a mouse, "activation" typically starts when
+  the user presses down the primary mouse chip. The styles bound to this state are equivalent to pseudo-class
+  `:active` ones.
+- **Selected**: Represents its state after interaction. This state is used to indicate which chip component within the multi-select composite widgets is selected.
+  This state should be accompanied of `aria-selected` attribute.
+- **Activated**: this state is used to indicate which chip component is selected.
+  This state should be accompanied of `aria-selected` attribute.
+- **Disabled**: this state is used to indicate the chip component is disabled. We should add the `disabled` attribute. 
 
 ## Accessibility
 
@@ -32,7 +90,44 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 
 ## Design tokens
 
-(PENDING)
+### Size, space and typographic design tokens
+
+Some of the tokens are based in the size of the chip.
+There are three pre-defined sizes: `sm`, `md` and `lg`.
+
+| Element &nbsp; &nbsp; &nbsp; | Property &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; | Token                                                                                                               |
+| ---------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Container                    | height                                                                | `cmp-chip-size-height-xxs`<br/>`cmp-chip-size-height-xs`<br/>`cmp-chip-size-height-sm` <br/>`cmp-chip-size-height-md`<br/>`cmp-chip-size-height-lg`                           |
+| Container                    | min-width                                                             | `cmp-chip-size-minWidth-xxs`<br/>`cmp-chip-size-minWidth-xs`<br/>`cmp-chip-size-minWidth-sm`<br/>`cmp-chip-size-minWidth-md`<br/>`cmp-chip-size-minWidth-lg`                   |
+| Container                    | padding hor.                                                          | `cmp-chip-space-padding-xxs`<br/>`cmp-chip-space-padding-xs`<br/>`cmp-chip-space-padding-sm`<br/>`cmp-chip-space-padding-md`<br/>`cmp-chip-space-padding-lg`                   |
+| Container                    | border-radius                                                         | `cmp-chip-shape-borderRadius-medium`                                                                              |
+| Content                      | font-size                                                             | `cmp-chip-label-typo-fontSize-xxs`<br/>`cmp-chip-label-typo-fontSize-xs`<br/>`cmp-chip-label-typo-fontSize-sm`<br/>`cmp-chip-label-typo-fontSize-md`<br/>`cmp-chip-label-typo-fontSize-lg` |
+| Content                      | line-height                                                           | `cmp-typo-lineHeight-action-xxs`<br/>`cmp-typo-lineHeight-action-xs`<br/>`cmp-typo-lineHeight-action-sm`<br/>`cmp-typo-lineHeight-action-md`<br/>`cmp-typo-lineHeight-action-lg`<br/>      |
+| Content                      | font-weight                                                           | `cmp-chip-label-typo-fontWeight`                                                                                      |
+| Content                      | letter-spacing                                                        | `cmp-chip-label-typo-letterSpacing`                                                                                   |
+| Icon                         | font-size / width-height                                              | `cmp-chip-icon-typo-fontSize-xxs`<br/>`cmp-chip-icon-typo-fontSize-xs`<br/>`cmp-chip-icon-typo-fontSize-sm`<br/>`cmp-chip-icon-typo-fontSize-md`<br/>`cmp-chip-icon-typo-fontSize-lg`    |
+| Icon                         | margin-left/right                                                     | `cmp-chip-icon-space-margin-xxs`<br/>`cmp-chip-icon-space-margin-xs`<br/>`cmp-chip-icon-space-margin-sm`<br/>`cmp-chip-icon-space-margin-md`<br/>`cmp-chip-icon-space-margin-lg`       |
+| Icon                         | margin-left/right                                                     | `cmp-chip-icon-space-offset-xxs`<br/>`cmp-chip-icon-space-offset-xs`<br/>`cmp-chip-icon-space-offset-sm`<br/>`cmp-chip-icon-space-offset-md`<br/>`cmp-chip-icon-space-offset-lg`       |
+| Spinner                      | width-height                                                          | `cmp-chip-loader-size-width-sm`<br/>`cmp-chip-loader-size-width-md`<br/>`cmp-chip-loader-size-width-lg`       |
+| Spinner                      | margin-left/right                                                     | `cmp-chip-icon-space-margin-xxs`<br/>`cmp-chip-icon-space-margin-xs`<br/>`cmp-chip-icon-space-margin-sm`<br/>`cmp-chip-icon-space-margin-md`<br/>`cmp-chip-icon-space-margin-lg`       |
+
+### Color design tokens
+
+The color tokens are based in the color scheme and the state of the chip. So each token usually is a combination of a
+color scheme and state (except the backdrop tokens).
+
+There are several pre-defined color schemes: `accent-hight`, `accent`, `neutral`, `blend-base`, `blend-inverse`, `quiet`,
+`error`, `success`, `warning`, `help` and `info`.
+
+There are several pre-defined states: `enabled`, `hovered`, `focused`, `pressed`, `expanded`, `selected`, `activated`
+`loading`, `loading-error`, `loading-success` and `disabled`.
+
+| Element &nbsp; &nbsp; &nbsp; | Property &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Token                                                                                                                                                                                                                                                                                                                       |
+| ---------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Container                    | background-color                                                                           | `cmp-chip-color-background-focused`<br/>`cmp-chip-color-background-hovered`<br/>`cmp-chip-color-background-pressed`<br/>`cmp-chip-color-background-selected`<br/>`cmp-chip-color-background-activated`<br/>`cmp-chip-color-background-disabled`<br/>`cmp-chip-color-background-enabled` |
+| Backdrop                     | background-color                                                                           | `cmp-chip-color-backdrop-hovered`<br/>`cmp-chip-color-backdrop-focused`<br/>`cmp-chip-color-backdrop-pressed`                                                                                                                                                                                                         |
+| Content                      | color                                                                                      | `cmp-chip-color-text-selected`<br/>`cmp-chip-color-text-hovered`<br/>`cmp-chip-color-text-focused`<br/>`...`<br/>`cmp-chip-color-text-enabled`<br/>`cmp-chip-color-text-disabled`<br/>`cmp-chip-color-text-activated`                                     |
+
 
 ### Complete list
 

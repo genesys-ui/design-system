@@ -2,18 +2,49 @@ import { Meta } from '@storybook/blocks';
 
 import * as Stories from './ChipGroup.stories';
 
-import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
 
 <Meta title="Components/ChipGroup" />
 
 # Chip group
-
-(PENDING)
+The Controlled Chip Group component filters the information represented as a logical operator. The chips in this group are related and visually connected to each other. It usually always appears with a label.
 
 ## Overview
+The Controlled Chip Group (CCG) contains two or more chips. A label component should be included when the own chips are not clear semantically by themselves.
 
-(PENDING) Variants, sizes, alignment, location... etc.
+The following variants are available: 
+- **Type**: filter or choice. Use the filter variant when multiple chips could be selected, whereas in the choice variant, only one of the chips is selected.
+- **Label**: left, top, none. Label positioning in relation to chips.
+- **Size**: xs, sm, md, lg
+- **Default value**: (True/False) boolean. A chip status is selected as a predefined value.
+### Variants
 
+<Figure>
+  <Figma
+    aspectRatio="21x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=18566%3A46223&node-id=19324-7259&node-type=frame&viewport=-1122%2C107%2C0.89&t=iIqHnXvvFqstI07N-1&scaling=min-zoom&content-scaling=fixed"/>
+</Figure>
+
+### Sizes
+Size: xs, sm, md and lg.
+
+### Alignment
+The component must be aligned in accordance with its reference content in order to be consistent.
+
+### Location
+Always place it near its refered content to establish a clear conection.  
+<Figure>
+  <Figma
+    aspectRatio="4x3"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=18566%3A46223&node-id=19347-22469&node-type=frame&viewport=206%2C-360%2C0.48&t=1SqsjLDW688fSVxX-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
+<Figure>
+  <Figma
+    aspectRatio="4x3"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=18566%3A46223&node-id=19347-22515&node-type=frame&viewport=234%2C-565%2C0.48&t=2ToWdibEDyosJNDf-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
 ## Live demo
 
 <LiveDemo
@@ -23,8 +54,24 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 />
 
 ## Anatomy
+The Chip Group always displays multiple chips in an horizontal x-axis and packed to the left. The label component can be present in a left or top position in relation to the chips.
 
-(PENDING)
+Space between chips is always fixed. In case of a CCG is contained by a parent component, this spacing will remain fixed and never distributed. However, the parent component width will be it’s own max-width. If a chip is not fitting the chip will be placed in a new line underneath, as the CCG behaves as a wrap component.
+
+Spacing between the label component and chips is fixed no matter the CCG own size.
+<Figure>
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/proto/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=18566%3A46223&node-id=19324-7259&node-type=frame&viewport=-1122%2C107%2C0.89&t=kOsK69DwdmeWfgDh-1&scaling=min-zoom&content-scaling=fixed"/>
+</Figure>
+
+### States
+<Figure>
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=18566%3A46223&node-id=18944-6360&node-type=frame&viewport=234%2C-565%2C0.48&t=2ToWdibEDyosJNDf-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
 
 ## Accessibility
 
@@ -32,11 +79,7 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 
 ## Design tokens
 
-(PENDING)
-
 ### Complete list
-
-(PENDING)
 
 ⚠️ It is necessary to check if there are component tokens to create the rest of specific component tokens, or at least add the alias tokens to the list.
 

@@ -2,17 +2,28 @@ import { Meta, Canvas, Controls } from '@storybook/blocks';
 
 import * as Stories from './ChoiceGroup.stories';
 
-import { ComponentBanners, DesignTokensList, LiveDemo } from '../../../blocks';
+import { ComponentBanners, DesignTokensList, LiveDemo, Figma, Figure, } from '../../../blocks';
 
 <Meta title="Components/ChoiceGroup" />
 
 # Choice group
 
-(PENDING)
+Visually group a series of related actions in the same row. These actions can work independently, as a group of checkboxes, or strongly related to each other through single selection (radio button group behaviour).
+
+Its main use will be in toolbars or small spaces to offer a group of actions related to each other.
 
 ## Overview
 
-(PENDING) Variants, sizes, alignment, location... etc.
+### Variants
+Through the different properties we can control the variants of the component: size (sm, md, lg), add a group label or a helper (via button or text).
+
+To change the state of the buttons (selected or enabled) we have to access the internal properties of the button and change its value there.
+<Figure>
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=19419%3A22729&node-id=19419-22857&node-type=frame&viewport=254%2C322%2C1.17&t=i4vGLTLDCpUCG28V-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
 
 ## Live demo
 
@@ -34,8 +45,69 @@ documentation, see the Genesys UI or Genesys Styles version of the component.
 />
 
 ## Anatomy
+It is a very simple component, which is mainly composed of buttons or iconButtons (depending on the content variant we are using), covered by a parent container that spaces them.
 
-(PENDING)
+In addition to that, it can be accompanied by a group label above and helpers (either as a button or as help text below).
+<Figure>
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=19419%3A22729&node-id=19419-22730&node-type=frame&viewport=254%2C322%2C1.17&t=i4vGLTLDCpUCG28V-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
+
+### Sizes
+Sizes: sm, md and lg.
+
+### State
+We can change the states of the buttons (selected or enabled) by accessing the internal properties of the button.
+The states of the button are:
+
+- **Hovered**: when the user interacts with an element with a pointing device, but does not necessarily activate it.
+  It is generally triggered when the user hovers over an element with the cursor (mouse pointer). Sometimes we can use
+  this state to highlight an action over other ones. The styles bound to this state are equivalent to pseudo-class
+  `:hover` ones.
+- **Focused**: when the button has received focus. It is generally triggered when the user clicks or taps on an element
+  or selects it with the keyboard's Tab key. The styles bound to this state are equivalent to pseudo-class
+  `:focus` or `:focus-visible` ones.
+- **Pressed**: when the button is being activated by the user. When using a mouse, "activation" typically starts when
+  the user presses down the primary mouse button. The styles bound to this state are equivalent to pseudo-class
+  `:active` ones.
+- **Expanded**: to indicate if a button is expanded or collapsed, and whether the controlled elements by the button
+  are displayed or hidden. This state should be accompanied of `aria-expanded` and `aria-controls` attributes.
+- **Selected**: this state is used to indicate which buttons within multi-selection composite widgets are selected.
+  This state should be accompanied of `aria-selected` attribute. With this state the HTML tag rendered should not be
+  a `button` but a `label`, because a checkbox should be rendered inside, but not visible. Other alternative is to
+  use the role `checkbox` accompanied of the attributes `aria-checked` and `tabindex`.
+- **Activated**: this state is used to indicate which button within single-selection composite widgets is selected.
+  This state should be accompanied of `aria-selected` attribute. With this state the HTML tag rendered should not
+  be a `button` but a `label`, because a radio should be rendered inside, but not visible. Other alternative is to
+  use the role `radio` accompanied of the attributes `aria-checked` and `tabindex`.
+- **Disabled**: this state is used to indicate the button is disabled, so no action or operation is available for
+  the button. We should add the `disabled` attribute. However, there can be instances where elements need to be exposed
+  as disabled, but are still available for users to find when navigating via the Tab key. In these cases we should use
+  the `aria-disabled` attribute, but it's important to block any action bounded to the button, because this aria
+  attribute does not have the native behavior of the `disabled` one.
+- **Loading**: this state is used when the process or the action triggered by the button is not immediate,
+  and it's still running. To denote this context we add a spinner loader to the left of the text; we modify the text of
+  the button to transmit the state of the process, and we add ellipsis points to its end. E.g. from 'Save changes' to
+  'Saving changes...'. In addition, we add a spinner loader to the left of the text.
+- **Loading error**: this state is used when the process or the action triggered by the button is not immediate,
+  and it's finished with errors. To denote this context we add an error icon to the left of the text, and we replace
+  temporary the text of the button with the error message of the process. This state is not permanent, because after a
+  few moments the button has to return to its default state. In addition, to get to this state, we always need
+  previously a 'loading' state in the button.
+- **Loading success**: this state is used when the process or the action triggered by the button is not immediate,
+  and it's finished successfully. To denote this context we add a success icon to the left of the text, and we replace
+  temporary the text of the button with the success message of the process. This state is not permanent, because after a
+  few moments the button has to return to its default state. In addition, to get to this state, we always need
+  previously a 'loading' state in the button.
+
+<Figure>
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=19419%3A22729&node-id=19670-26143&node-type=frame&viewport=131%2C-2829%2C1.08&t=PBWA0ifzMh2mD5uJ-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
 
 ## Accessibility
 

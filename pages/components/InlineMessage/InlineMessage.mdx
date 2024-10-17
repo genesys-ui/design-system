@@ -2,14 +2,27 @@ import { Meta } from '@storybook/blocks';
 
 import * as Stories from './InlineMessage.stories';
 
-import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
 import { getCmpTokensJson } from '../../../tokens';
 
 <Meta title="Components/InlineMessage" />
 
 # Inline message
 
-(PENDING)
+The Inline Message component gives additional information to users about an action requested to complete the current task and displays confirmations, errors, or warnings related to a component.
+
+<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+  <div class="col-8">
+<p class="sbdocs sbdocs-p margin-none">To reveal the message, users have to click or hover on a trigger item like an Action, a Link, or a Label Component. The Inline Message then could be appear attached to the trigger or floating over the rest of the page elements in the upper right corner. In this case, the Inline Message is also draggable and it could be moved to any place on the page.</p>
+  </div>
+  <div class="col-4">
+  <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/inline-message-overview-3.jpg"
+      />
+      </div>
+</section>
+
 
 ## Overview
 
@@ -24,14 +37,29 @@ import { getCmpTokensJson } from '../../../tokens';
 />
 
 ## Anatomy
-
-(PENDING)
+<Figure>
+  <Figma
+    aspectRatio="4x3"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=21342%3A17414&node-id=21342-18570&node-type=frame&viewport=177%2C1385%2C0.84&t=AZx5BbX4bMqcGl2I-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
 
 ## Accessibility
 
 (PENDING)
 
+|                |ASCII                          |HTML                         |
+|----------------|-------------------------------|-----------------------------|
+|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
+|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
+|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+
+
+
 ## Design tokens
+
+### Design tokens
+#### Design tokens
 
 (PENDING)
 

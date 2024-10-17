@@ -2,20 +2,27 @@ import { Meta } from '@storybook/blocks';
 
 import * as Stories from './CodeEditor.stories';
 
-import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { DesignTokensList, LiveDemo, Figma, Figure } from '../../../blocks';
 
 <Meta title="Components/CodeEditor" />
 
 # Editor
+The Code Editor component allows users to write, edit, and view code within an application. It's used when:
+- Users need to create or edit large blocks of code
+- Displaying large code snippets.
 
-(PENDING)
 
 ## Overview
 
-(PENDING) Variants, sizes, alignment, location... etc.
+### Variants
+<Figure>
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=19670%3A26211&node-id=19670-26759&node-type=frame&viewport=129%2C348%2C1&t=Zc2EtsQGAq803GRb-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
 
 ## Live demo
-
 <LiveDemo
   story={Stories.Example}
   urlHtml="https://devoinc.github.io/genesys-styles/?path=/docs/components-tabs--docs"
@@ -23,8 +30,35 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 />
 
 ## Anatomy
+Key anatomical elements of a code editor:
+- Container
+- Query code editor area: The main area where code is written and displayed.
+- Line numbers column: Displayed in the left margin of the code window. 
+- Actions area like Copy.
+- Label.
+- Help action.
+- Helper text/ Validation text.
 
-(PENDING)
+<Figure>
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=19670%3A26211&node-id=19670-26212&node-type=frame&viewport=-970%2C331%2C0.77&t=SBCrJTjCKlTwHemP-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
+
+### Sizes
+The code editor has only one size: md. Size by default is md.
+
+### State
+States:
+- Enable/Default
+- ReadOnly
+<Figure>
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=19670%3A26211&node-id=19670-26759&node-type=frame&viewport=129%2C348%2C1&t=Zc2EtsQGAq803GRb-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
 
 ## Accessibility
 

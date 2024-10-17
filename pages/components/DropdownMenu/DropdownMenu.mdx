@@ -2,18 +2,98 @@ import { Meta } from '@storybook/blocks';
 
 import * as Stories from './DropdownMenu.stories';
 
-import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
 import { getAliasTokensByNameJson } from '../../../tokens';
 
 <Meta title="Components/DropdownMenu" />
 
 # Dropdown menu
 
-(PENDING)
+The Dropdown menu displays a list of actions or selectable options for a user.
+
+<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+  <div class="col-8">
+  The drop-down menu usually will have a structure like the example shows: 
+  </div>
+  <div class="col-4">
+  <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/example-dropdown-15x.jpg"
+      />
+      </div>
+</section>
 
 ## Overview
 
-(PENDING) Variants, sizes, alignment, location... etc.
+### Variants
+
+The Dropdown in the example is created by the combination of two internal components: 
+ - The <code>'./internal/dropdownMenu/content'</code>:an example of a grouped list of items.
+ - The <code>'./internal/dropdownMenu/container'</code>: which contains the content group. 
+
+To build your own custom Dropdown Menu, you'll need to: 
+<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+  <div class="col-8">
+ - Create a new component with the desired content similar to <code>'./internal/dropdownMenu/content'</code>.
+ - Create a new instance of the main 'DropdownMenu' component.
+ - Swap the instance of the example content with your own content component.
+  </div>
+  <Figure caption="Dropdown menu component structure.">
+ <img
+        alt="Dropdown menu component structure"
+        src="img/example-dropdownmenu-2-15x.jpg"
+      />
+</Figure>
+</section>
+
+In some cases, the options included in the Dropdown component won’t be so complex as the first example. In this case, it´s possible to still use the <code>‘./internal/dropdownMenu/items/option’</code> hiding all the elements except for the text label. 
+
+<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+  <div class="col-8">
+In this case, it´s important to hide also the icon container frame instead of only the icon instance to align items on the left without spacing.
+  </div>
+  <Figure caption="Dropdown menu with text label only.">
+ <img
+        alt="Dropdown menu with text label only"
+        src="img/example-dropdown-2.jpg"
+      />
+</Figure>
+</section>
+
+#### Complete and scrolled variant
+The Dropdown Menu Items has a variant named ‘Content’ with two options: ‘complete’, and ‘scrolled’. The option ‘scrolled’ will put an auto-height scroll simulation on the right of the container.
+<Figure>
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=20271%3A3796&node-id=20382-77456&node-type=frame&viewport=93%2C1161%2C0.64&t=yBrOny3R5cMHOJd7-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
+
+
+ #### Variant 4
+ There are three different variants of dropdowns that support various kinds of functionality—dropdown, multiselect, and combo box.
+
+### Location
+Dropdowns can be used in forms on full pages, in modals, or on side panels. The dropdown component is used to filter or sort contents on a page. It is a stylized version of the select component, and can be styled as needed.
+
+<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
+  <div className="col">
+    <Figure
+      caption=""
+      type="dont"
+    >
+    Not to use a dropdown if there are two options to choose from. In this case, use a radio button group instead.
+    </Figure>
+  </div>
+  <div className="col">
+    <Figure
+      type="dont"
+      caption=""
+    >
+  Do not nest dropdowns or use them to display overly complex information. Keep option selections as straight forward as possible.
+    </Figure>
+  </div>
+</section>
 
 ## Live demo
 
@@ -24,8 +104,54 @@ import { getAliasTokensByNameJson } from '../../../tokens';
 />
 
 ## Anatomy
+The Dropdown Menu component is a wrapper container  with 16px of vertical and 12px of horizontal padding.
+The dropdown items can be organized more clearly and structured by using titles and separators within the container. This will enhance the user experience by making navigation and content easier to understand.
 
-(PENDING)
+The inner items in this example are composed by:
+ - An optional **icon**.
+ - A **label** text.
+ - A optional **shortcut** text.
+ - Other optional elements like **Tags** or **Badges**.
+<Figure>
+  <Figma
+    aspectRatio="4x3"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=20271%3A3796&node-id=20271-3797&node-type=frame&viewport=-901%2C745%2C0.75&t=7S9DWLKlcji9IH5p-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
+
+### States
+<Figure>
+  <Figma
+    aspectRatio="16x9"
+    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?page-id=20271%3A3796&node-id=20271-3881&node-type=frame&viewport=-901%2C745%2C0.75&t=7S9DWLKlcji9IH5p-1&scaling=min-zoom&content-scaling=fixed"
+  />
+</Figure>
+The dropdown item has different states depending on the interaction with the user, with other blocks of the page or with processes of which he is the trigger:
+- **Hovered**: when the user interacts with an element with a pointing device, but does not necessarily activate it.
+  It is generally triggered when the user hovers over an element with the cursor (mouse pointer). Sometimes we can use
+  this state to highlight an action over other ones. The styles bound to this state are equivalent to pseudo-class
+  `:hover` ones.
+- **Focused**: when it as received focus. It is generally triggered when the user clicks or taps on an element
+  or selects it with the keyboard's Tab key. The styles bound to this state are equivalent to pseudo-class
+  `:focus` or `:focus-visible` ones.
+- **Pressed**: when it is being activated by the user. When using a mouse, "activation" typically starts when
+  the user presses down. The styles bound to this state are equivalent to pseudo-class
+  `:active` ones.
+- **Expanded**: to indicate if it is expanded or collapsed, and whether the controlled elements are displayed or hidden. This state should be accompanied of `aria-expanded` and `aria-controls` attributes.
+- **Selected**: this state is used to indicate which items within multi-selection composite widgets are selected.
+  This state should be accompanied of `aria-selected` attribute. With this state the HTML tag rendered should not be
+  a `button` but a `label`, because a checkbox should be rendered inside, but not visible. Other alternative is to
+  use the role `checkbox` accompanied of the attributes `aria-checked` and `tabindex`.
+- **Activated**: this state is used to indicate which item within single-selection composite widgets is selected.
+  This state should be accompanied of `aria-selected` attribute. With this state the HTML tag rendered should not
+  be a `button` but a `label`, because a radio should be rendered inside, but not visible. Other alternative is to
+  use the role `radio` accompanied of the attributes `aria-checked` and `tabindex`.
+- **Disabled**: this state is used to indicate if it is disabled, so no action or operation is available for
+  the button. We should add the `disabled` attribute. However, there can be instances where elements need to be exposed
+  as disabled, but are still available for users to find when navigating via the Tab key. In these cases we should use
+  the `aria-disabled` attribute, but it's important to block any action bounded to the button, because this aria
+  attribute does not have the native behavior of the `disabled` one.
+
 
 ## Accessibility
 

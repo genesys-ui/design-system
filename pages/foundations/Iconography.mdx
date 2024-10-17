@@ -20,6 +20,65 @@ can’t find there an icon which covers our needs, then we have to create a new 
 but using as base an existing icon from the library with the same aspect ratio.
 
 We can apply a very wide range of colours to our icons depending on their parent components, context, status... etc. but we should use always a size included in this limited range:
+## Design principles
+
+### The Grid
+
+The skeleton of every icon set is its underlying grid system. You’re probably pretty familiar with Google’s Material Icons, which are built on a 24x24 pixel grid. But other multiples of 8 can be pretty common, from 8x8 up to 64x64 or more (though that often infringes on spot illustration territory). You might even come across something weird like 21x21 in some non-retina circumstances where centered, 1px elements are absolute musts.
+
+For our purposes here, we’ll look at the more standard **24px icon format**.
+
+### Keylines
+
+Keylines are guides that help keep icon sets visually balanced, regardless of the orientation of their component parts.
+
+Most icons are based on a handful of core silhouettes: squares, circles, vertical rectangles, and horizontal rectangles. There are, of course, variants on all these; but keylines help keep your icons cohesive when seen and used together.
+
+Your first instinct might be to make shapes’ dimensions the same. But we're dealing more with visual area here than exact exterior dimensions. When dealing with shapes at such a small scale, shaving off a couple pixels can make a big difference! These are just basic shape guidelines, of course, but provide a good foundation for icon consistency.
+
+### Rules & Consistency
+
+These are the main areas where a lot of icon designers stumble. It’s very tempting to cram as much content as you can into the space, especially if you’re working at an enlarged size and without surrounding screen context. So err on the side of simplicity and constantly check icons against their intended context.
+
+##### Element Size #####
+It can be helpful to start with whatever the smallest element in your icon needs to be, and add detail from there. Cramming more elements in is always tempting, but rarely pays off.
+
+##### Dimension & Perspective #####
+Do your icons need to have dimension or perspective baked in? Making that choice can definitely set your icons apart, but make sure the treatment is spread around consistently. If you’re doing a side view forced perspective to show an open file folder, think about how that impacts the entire set.
+
+##### Overlaps #####
+Speaking of depth, you can’t always communicate complex concepts with singular elements/objects. A lot of icons rely on juxtaposing two or more elements together, sometimes on top of each other. Do elements fit snugly together? Is there a stroke break for extra impact? Maybe elements further back are a different color or fill?
+
+##### Strokes & Corners #####
+Nothing makes a weird icon stick out more than mismatched corner treatments and stroke weight. Very small changes can make a lot of difference, and vastly influence an icon set’s character and cohesion.
+
+### Documentation
+
+We used a **24 x 24 pixel grid**. The key lines were set with a **20px live area** and a **2px padding** margin to ensure visual balance between the icons and create breathing space.
+
+<section className="row">
+  <div class="col-8">
+ The main building block is a **2px centred stroke**, although some small solid elements can also be used sparingly as needed for balance. **Corners are mainly rounded by 1px**, except in some cases where a larger radius makes sense (such as the bevels of a phone or some obtuse exterior angles).
+</div>
+  <div class="col-4">
+  <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/documentation-15x.jpg"
+      />
+      </div>
+</section>
+
+### Links/References
+<a href="https://ux.shopify.com/product-vs-marketing-illustration-7ac474dfe2ed" target="_blank">Product vs Marketing Illustration</a>
+· Meg Robichaud
+
+<a href="https://medium.com/@lunarsaloon/on-icon-design-c6f92b474c5f" target="_blank">On Icon Design</a> 
+· Alex Griendling
+
+<a href="https://minoraxis.medium.com/icon-grids-keylines-demystified-5a228fe08cfd" target="_blank">Icon Grids & Keylines Demystified</a> 
+· Helena Zhang
+
+<a href="https://m2.material.io/design/iconography/system-icons.html#design-principles" target="_blank">Google Material Design</a> 
 
 ### Icon sizes
 
