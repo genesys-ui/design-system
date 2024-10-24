@@ -44,15 +44,15 @@
     "vite": "^5.4.6"
   },
   "dependencies": {
-    "@devoinc/genesys-base-styles": "^1.2.1",
-    "@devoinc/genesys-brand-devo": "^6.5.0",
-    "@devoinc/genesys-icons": "^4.1.0",
-    "@devoinc/genesys-ui": "^11.0.0",
-    "@devoinc/genesys-ui-code": "^11.1.1",
-    "@devoinc/genesys-ui-color": "^11.1.1",
-    "@devoinc/genesys-ui-datetime": "^11.1.1",
-    "@devoinc/genesys-ui-table": "^11.1.1",
-    "@devoinc/genesys-ui-upload": "^11.0.0",
+    "@devoinc/genesys-base-styles": "^2.0.1",
+    "@devoinc/genesys-brand-devo": "^7.4.0",
+    "@devoinc/genesys-icons": "^6.1.0",
+    "@devoinc/genesys-ui": "^13.3.0",
+    "@devoinc/genesys-ui-code": "^13.3.0",
+    "@devoinc/genesys-ui-color": "^13.3.0",
+    "@devoinc/genesys-ui-datetime": "^13.3.0",
+    "@devoinc/genesys-ui-table": "^13.3.0",
+    "@devoinc/genesys-ui-upload": "^13.3.0",
     "@devoinc/holo": "^1.0.5"
   },
   "engines": {

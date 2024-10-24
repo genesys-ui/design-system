@@ -16,6 +16,7 @@ type Story = StoryObj<React.ComponentProps<typeof Popover>>;
 export const Example: Story = {
   name: 'With arrow',
   args: {},
+  tags: ['isHidden'],
   parameters: {
     layout: 'centered',
   },
@@ -26,8 +27,8 @@ export const Example: Story = {
         {...args}
         id={popoverId}
         arrowConfig={{
-          component: ({ placement, size }) => (
-            <Popover.Arrow placement={placement} size={size} />
+          component: ({ $placement, $size }) => (
+            <Popover.Arrow $placement={$placement} $size={$size} />
           ),
         }}
       >

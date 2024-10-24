@@ -1,76 +1,45 @@
 import * as React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Tabs, useTabsAccessibility } from '@devoinc/genesys-ui';
-import { GIChart, GICheckThick } from '@devoinc/genesys-icons';
+import { KeyValue } from '@devoinc/genesys-ui';
 
-Tabs.displayName = 'Tabs';
-const meta: Meta<React.ComponentProps<typeof Tabs>> = {
+KeyValue.displayName = 'KeyValue';
+const meta: Meta<React.ComponentProps<typeof KeyValue>> = {
   title: 'Components/KeyValue',
-  component: Tabs,
+  component: KeyValue,
   argTypes: {
-    colorScheme: {
+    format: {
       control: 'radio',
-      options: ['base', 'primary'],
-      description:
-        'ColorScheme to define the color of the marker, text... etc.',
-      table: {
-        defaultValue: { summary: 'base' },
-      },
+      options: ['base', 'row', 'column'],
     },
-    contained: {
+    size: {
+      control: 'radio',
+      options: ['sm', 'md', 'lg'],
+    },
+    invertOrder: {
       control: 'boolean',
-      description: 'Boxed appearance of the component.',
+    },
+    unit: {
+      control: 'text',
+    },
+    valueWidth: {
+      control: 'text',
+    },
+    keyWidth: {
+      control: 'text',
     },
   },
 };
 
 export default meta;
-type Story = StoryObj<React.ComponentProps<typeof Tabs>>;
+type Story = StoryObj<React.ComponentProps<typeof KeyValue>>;
 
 export const Example: Story = {
   args: {
-    colorScheme: 'base',
+    format: 'base',
     size: 'md',
+    keyContent: 'Rick Sanchez',
+    valueContent: 'rick.sanchez@ilovemorty.com',
   },
-  render: (args) =>
-    ((args) => {
-      const tabsRef = React.useRef<HTMLDivElement>();
-      const [activeTab, setActiveTab] = React.useState(0);
-      useTabsAccessibility({ activeTab, tabsRef });
-      return (
-        <Tabs {...args}>
-          <Tabs.List activeTabIndex={activeTab} ref={tabsRef}>
-            <Tabs.Item
-              icon={<GIChart />}
-              label="Tiny"
-              onClick={() => setActiveTab(0)}
-              state={activeTab === 0 ? 'selected' : undefined}
-              wide={false}
-            />
-            <Tabs.Item
-              icon={<GICheckThick />}
-              label="Tab with a very very long title"
-              onClick={() => setActiveTab(1)}
-              state={activeTab === 1 ? 'selected' : undefined}
-              wide={false}
-            />
-            <Tabs.Item
-              label="Normal tab"
-              onClick={() => setActiveTab(2)}
-              state={activeTab === 2 ? 'selected' : undefined}
-              wide={false}
-            />
-
-            <Tabs.Item
-              label="Disabled tab"
-              onClick={() => setActiveTab(3)}
-              state="disabled"
-              wide={false}
-            />
-          </Tabs.List>
-        </Tabs>
-      );
-    })(args),
   tags: ['isHidden'],
 };

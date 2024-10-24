@@ -3,7 +3,6 @@ import { Meta } from '@storybook/blocks';
 import * as Stories from './DropdownMenu.stories';
 
 import { DesignTokensList, LiveDemo } from '../../../blocks';
-import { getAliasTokensByNameJson } from '../../../tokens';
 
 <Meta title="Components/DropdownMenu" />
 
@@ -37,11 +36,4 @@ import { getAliasTokensByNameJson } from '../../../tokens';
 
 ### Complete list
 
-(PENDING)
-
-⚠️ It is necessary to check if there are component tokens to create the rest of specific component tokens, or at least add the alias tokens to the list.
-
-<DesignTokensList
-  componentName="menus"
-  tokens={getAliasTokensByNameJson('menus')}
-/>
+<DesignTokensList componentName="menu" />

@@ -3,6 +3,7 @@ import { Meta } from '@storybook/blocks';
 import * as Stories from './Radio.stories';
 
 import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
 
 <Meta title="Components/Radio" />
 
@@ -36,8 +37,6 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 
 ### Complete list
 
-(PENDING)
-
-⚠️ It is necessary to check if there are component tokens to create the rest of specific component tokens, or at least add the alias tokens to the list.
-
-<DesignTokensList componentName="radio" />
+<DesignTokensList
+  tokens={[...getCmpTokensJson('radioControl'), ...getCmpTokensJson('label')]}
+/>

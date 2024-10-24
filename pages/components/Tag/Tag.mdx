@@ -3,6 +3,7 @@ import { Meta, Source } from '@storybook/blocks';
 import * as Stories from './Tag.stories';
 
 import { DesignTokensList, LiveDemo, Figma, Figure } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
 
 <Meta title="Components/Tag" />
 
@@ -78,10 +79,8 @@ to assistive technologies as screen readers.
 
 (PENDING)
 
-The component uses alias tokens for typography.
-
-⚠️ It is necessary to create the rest of specific component tokens, or at least add the alias tokens to the list.
-
 ### Complete list
 
-<DesignTokensList componentName="tag" />
+<DesignTokensList
+  tokens={[...getCmpTokensJson('tag'), ...getCmpTokensJson('body')]}
+/>

@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import {
   DesignTokensBgColorBox,
+  DesignTokensBgImageBox,
   DesignTokensColorBox,
   DesignTokensBorderBox,
   DesignTokensShadowBox,
@@ -32,7 +33,6 @@ export const DesignTokensList: React.FC<Props> = ({
 }) => {
   const [filter, setFilter] = React.useState('');
   const tokensEval = tokens || getCmpTokensJson(componentName || 'button');
-
   return (
     <StyledDesignTokensContainer className="sb-unstyled">
       {intro || (
@@ -72,6 +72,7 @@ export const DesignTokensList: React.FC<Props> = ({
               const isBorderColor = child.name.includes('color-border');
               const isShadowColor = child.name.includes('color-shadow');
               const isShadow = child.name.includes('boxShadow');
+              const isBgImage = child.name.includes('backgroundImage');
               const isSizing = child.attributes.category === 'size';
               const isSpacing = child.attributes.category === 'space';
               const isBorder =
@@ -83,6 +84,7 @@ export const DesignTokensList: React.FC<Props> = ({
               const isBorderRadius = child.name.includes('borderRadius');
               const hasPreview =
                 isBgColor ||
+                isBgImage ||
                 isTextColor ||
                 isShadowColor ||
                 isBorderColor ||
@@ -100,7 +102,7 @@ export const DesignTokensList: React.FC<Props> = ({
                   <StyledDesignTokensCell
                     colSpan={!hasPreview ? '2' : undefined}
                   >
-                    {child.value}
+                    {isBgImage ? null : child.value}
                   </StyledDesignTokensCell>
                   {hasPreview && (
                     <StyledDesignTokensCell align="center">
@@ -112,6 +114,8 @@ export const DesignTokensList: React.FC<Props> = ({
                         <DesignTokensBorderBox borderColor={child.value} />
                       ) : isShadow ? (
                         <DesignTokensShadowBox boxShadow={child.value} />
+                      ) : isBgImage ? (
+                        <DesignTokensBgImageBox $bgImage={child.value} />
                       ) : isSizing || isSpacing ? (
                         <DesignTokensSizeBox size={child.value} />
                       ) : isBorder || isBorderSize ? (

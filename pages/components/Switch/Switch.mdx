@@ -3,6 +3,7 @@ import { Meta } from '@storybook/blocks';
 import * as Stories from './Switch.stories';
 
 import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
 
 <Meta title="Components/Switch" />
 
@@ -19,7 +20,7 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 <LiveDemo
   story={Stories.Example}
   urlHtml="https://devoinc.github.io/genesys-styles"
-  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-navigation-stepper--docs"
+  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-form-switch--docs"
 />
 
 ## Anatomy
@@ -36,8 +37,6 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 
 ### Complete list
 
-(PENDING)
-
-⚠️ It is necessary to check if there are component tokens to create the rest of specific component tokens, or at least add the alias tokens to the list.
-
-<DesignTokensList componentName="switch" />
+<DesignTokensList
+  tokens={[...getCmpTokensJson('switchControl'), ...getCmpTokensJson('label')]}
+/>

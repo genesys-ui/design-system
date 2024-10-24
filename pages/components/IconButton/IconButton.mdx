@@ -3,6 +3,7 @@ import { Meta, Source } from '@storybook/blocks';
 import * as Stories from './IconButton.stories';
 
 import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
 
 <Meta title="Components/IconButton" />
 
@@ -546,4 +547,15 @@ There are several pre-defined states: `enabled`, `hovered`, `focused`, `pressed`
 
 ### Complete list
 
-<DesignTokensList componentName="button" />
+The most of the IconButton tokens are the same as the Button component, but there are several ones
+to apply specific styles to its cases: IconButtonStop, IconButtonDropdown... etc.
+
+<DesignTokensList
+  tokens={[
+    ...getCmpTokensJson('button'),
+    ...getCmpTokensJson('iconButtonDropdown'),
+    ...getCmpTokensJson('iconButtonGoToDocs'),
+    ...getCmpTokensJson('iconButtonStatus'),
+    ...getCmpTokensJson('iconButtonStop'),
+  ]}
+/>

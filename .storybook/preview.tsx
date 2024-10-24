@@ -5,7 +5,7 @@ import { create } from '@storybook/theming/create';
 
 import * as brand from '@devoinc/genesys-brand-devo';
 
-import '@devoinc/genesys-base-styles/dist/styles.min.css';
+import '@devoinc/genesys-base-styles/dist/css/styles.min.css';
 import './preview.scss';
 
 type ComponentsMap = {
