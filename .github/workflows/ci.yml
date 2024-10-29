@@ -71,7 +71,7 @@ jobs:
             ~/.npm
           key: ${{ runner.os }}-prepare-${{ env.cache-name }}-${{ github.sha }}
 
-      - name: Run Eslint
+      - name: Run linter
         run: npm run lint
 
   deploy:
