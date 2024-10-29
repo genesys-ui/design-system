@@ -1,5 +1,7 @@
 // ---------------------- TABLE - COMPONENTS ---------------------- //
 
+@use '../utils/variables' as *;
+
 .example {
   $parent: &;
   margin-bottom: $spacing-md;

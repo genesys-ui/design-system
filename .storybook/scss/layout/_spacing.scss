@@ -1,5 +1,6 @@
 // ---------------------- SPACING - LAYOUT ---------------------- //
 
+@use '../utils/variables' as *;
 
 @each $spacing-prop in $spacing-props {
   @each $direction in $directions {

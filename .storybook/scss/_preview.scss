@@ -1,27 +1,24 @@
 // Vendor
-@import 'vendors/bootstrap-5.1.3/scss/bootstrap';
+@use '../../node_modules/bootstrap/scss/bootstrap';
 
 // Functions
-@import 'utils/functions/map-deep-functions';
-
-// Variables
-@import 'utils/variables/variables';
+@use 'utils/functions/map-deep-functions';
 
 // Base
-@import 'base/base';
-@import 'base/typography';
-@import 'base/code';
-@import 'base/media';
+@use 'base/base';
+@use 'base/typography';
+@use 'base/code';
+@use 'base/media';
 
 // Utils
-@import 'layout/spacing';
+@use 'layout/spacing';
 
 // Layout
-@import 'layout/content';
+@use 'layout/content';
 
 // Components
-@import 'components/card';
-@import 'components/example';
-@import 'components/table';
-@import 'components/form';
-@import 'components/toc';
+@use 'components/card';
+@use 'components/example';
+@use 'components/table';
+@use 'components/form';
+@use 'components/toc';

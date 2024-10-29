@@ -1,5 +1,7 @@
 // ---------------------- TABLE - COMPONENTS ---------------------- //
 
+@use '../utils/variables' as *;
+
 #storybook-docs .sbdocs .sbdocs-table {
   width: 100%;
   text-align: left;
