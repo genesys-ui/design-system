@@ -1,11 +1,6 @@
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
-import { Preview, ReactRenderer } from '@storybook/react';
-import { DocsContainer } from '@storybook/blocks';
-import { create } from '@storybook/theming/create';
-import { withThemeFromJSXProvider } from '@storybook/addon-themes';
-
-import { light, dark } from '@devoinc/genesys-brand-devo';
+import { Preview } from '@storybook/react';
+import { PREFER_UI_THEME, DocContainer, themeDecorator } from './theming';
 
 import '@devoinc/genesys-base-styles/dist/css/styles.min.css';
 import './preview.scss';
@@ -25,51 +20,12 @@ export const createCustomComponents = (tagsList: (keyof React.ReactHTML)[]) => {
   }, {});
 };
 
-const customLightTheme = create({
-  base: 'light',
-  fontBase: '"Poppins", sans-serif',
-  fontCode: '"Mono Font", monospace',
-  textColor: '#5B6870',
-  textInverseColor: 'rgba(255,255,255,0.9)',
-});
-const customDarkTheme = create({
-  base: 'dark',
-  fontBase: '"Poppins", sans-serif',
-  fontCode: '"Mono Font", monospace',
-});
-
-// const THEME_CHANNEL = 'globalsUpdated';
-
-const preferTheme =
-  window?.matchMedia &&
-  window?.matchMedia('(prefers-color-scheme: dark)')?.matches
-    ? 'dark'
-    : 'light';
-
 const preview: Preview = {
-  decorators: [
-    // Themes
-    withThemeFromJSXProvider<ReactRenderer>({
-      themes: {
-        light,
-        dark,
-      },
-      defaultTheme: preferTheme,
-      Provider: ThemeProvider,
-    }),
-  ],
-
+  decorators: themeDecorator,
   parameters: {
     docs: {
-      theme: preferTheme === 'dark' ? customDarkTheme : customLightTheme,
-      container: ({ context, children }) => (
-        // Theme for the doc
-        <div className="dali-wrapper dali-wrapper--default">
-          <DocsContainer context={context}>
-            <ThemeProvider theme={light}>{children}</ThemeProvider>
-          </DocsContainer>
-        </div>
-      ),
+      theme: PREFER_UI_THEME,
+      container: DocContainer,
       components: createCustomComponents([
         'div',
         'h1',
