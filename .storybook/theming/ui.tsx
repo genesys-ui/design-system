@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming/create';
 
-import { PREFER_THEME } from './constants';
+// import { PREFER_THEME } from './constants';
 
 const uiLightTheme = create({
   base: 'light',
@@ -21,4 +21,4 @@ export const uiThemeMap = {
   dark: uiDarkTheme,
 };
 
-export const PREFER_UI_THEME = uiThemeMap[PREFER_THEME];
+export const PREFER_UI_THEME = uiThemeMap.light; // uiThemeMap[PREFER_THEME];
