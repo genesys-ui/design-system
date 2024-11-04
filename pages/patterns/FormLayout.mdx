@@ -1,12 +1,6 @@
-import { Meta, Canvas, Controls, Source } from '@storybook/blocks';
+import { Meta } from '@storybook/blocks';
 
-import {
-  CardHtml,
-  CardReact,
-  DesignTokensList,
-  Figma,
-  Figure,
-} from '../../blocks';
+import { Figma, Figure, Col, Row } from '../../blocks';
 
 <Meta title="Patterns/Form layout" />
 
@@ -14,45 +8,47 @@ import {
 
 The definition of spacing and sizing patterns to distribute and group form fields
 
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
+<Row>
+  <Col md={6} lg={7}>
     How the form fields are grouped and distributed is especially important for
     users to understand the relations and dependencies between those fields. In
     addition, the size of each form control helps users to realize the nature
     and length of the expected data.
-  </div>
-  <div className="mcol-12 mcol-sm-6">
+  </Col>
+  <Col md={6} lg={5}>
     <Figure>
       <img
         alt="Location of the 'status' icon button in a widget header"
         src="img/Illustration-1.png"
       />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
 ## Distribution
 
-The way the form fields will be distributed will be by default in one column, placing the fields one below the other. This facilitates the reading order and avoids the user having to follow the 'Z pattern' (zig-zag reading). In this way, it is easier to complete each of the fields.
+The way the form fields will be distributed will be by default in one column, placing the fields one below the other.
+This facilitates the reading order and avoids the user having to follow the 'Z pattern' (zig-zag reading).
+In this way, it is easier to complete each of the fields.
 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
+<Row>
+  <Col sm={6}>
     <Figure type="dont" caption="">
       <img
         src="img/Distribution-Dont-15x.png"
         alt="Incorrect use of horizontal distribution"
       />
     </Figure>
-  </div>
-  <div className="col">
+  </Col>
+  <Col sm={6}>
     <Figure type="do" caption="">
       <img
         src="img/Distribution-do-15x.png"
         alt="Correct use of vertical distribution"
       />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
 The exception for using horizontal distribution with only one field for each row
 is when we are working with related fields, and they don’t need too much space
@@ -101,8 +97,8 @@ separation, although it is slightly higher than the one that the label would hav
   />
 </Figure>
 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--xl">
-  <div className="col">
+<Row>
+  <Col sm={6}>
     <Figure
       caption="Don't use boxes with background color to group fields."
       type="dont"
@@ -112,16 +108,16 @@ separation, although it is slightly higher than the one that the label would hav
         alt="Form groups with only one field"
       />
     </Figure>
-  </div>
-  <div className="col">
+  </Col>
+  <Col sm={6}>
     <Figure
       caption="Use always a box to group fields, not only a form group heading (except when there is only one field in the group):."
       type="dont"
     >
       <img src="img/Group-dont-3.jpg" alt="Form groups with only one field" />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
 ## Sizing
 
@@ -148,8 +144,8 @@ what it will be; then we use a 100% size for the field.
   <Figma url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Dali-examples?node-id=15%3A6226" />
 </Figure>
 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--xl">
-  <div className="col">
+<Row>
+  <Col sm={6}>
     <Figure
       caption="Don't use large sizes for fields whose data is not long and vice versa:"
       type="dont"
@@ -159,8 +155,8 @@ what it will be; then we use a 100% size for the field.
         alt="Incorrect way to apply sizing to fields."
       />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
 ## Spacing
 
@@ -186,11 +182,15 @@ But when we are working with an horizontal distribution and the relation between
     alt="Spacing between fields"
   />
 </Figure>
+
 Don’t use arbitrary spaces to separate the fields.
+
 <Figure type="dont">
   <img src="img/spacing-1-15x.png" alt="Form groups with only one field" />
 </Figure>
+
 Don’t use more space to separate fields than to separate groups:
+
 <Figure type="dont">
   <img src="img/spacing-2-15x.jpg" alt="Form groups with only one field" />
 </Figure>

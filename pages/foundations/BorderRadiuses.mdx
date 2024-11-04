@@ -1,12 +1,7 @@
 import { Meta } from '@storybook/blocks';
 
-import {
-  CardHtml,
-  CardReact,
-  DesignTokensList,
-  Figma,
-  Figure,
-} from '../../blocks';
+import { Figure } from '../../blocks';
+import { Row, Col } from '@devoinc/genesys-ui';
 
 <Meta title="Foundations/Border radiuses" />
 
@@ -27,63 +22,70 @@ In addition, through the different radius values we can provide the user with a 
 
 ### Small (2px)
 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
+<Row>
+  <Col sm={6}>
     It’s used in non-interactive components that have a background or border in
     their anatomy, such as **Tags**.
-  </div>
-  <div className="col">
+  </Col>
+  <Col sm={6}>
     <Figure>
-      <img alt="border-radious-small" src="img/small-15x.png" />
+      <img alt="border radious small" src="img/small-15x.png" />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
 ### Medium (4px)
 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
+<Row>
+  <Col sm={6}>
     The standard border radius size. Used for **Buttons, Inputs, Actions**, and
     most of the interactive UI elements.
-  </div>
-  <div className="col">
+  </Col>
+  <Col sm={6}>
     <Figure>
-      <img alt="border-radious-small" src="img/medium-15x.png" />
+      <img alt="border radious medium" src="img/medium-15x.png" />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
+
 ### Large (6px)
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
+
+<Row>
+  <Col sm={6}>
     Used when a UI element is a surface or needs to float above the underlying
     UI.
-  </div>
-  <div className="col">
+  </Col>
+  <Col sm={6}>
     <Figure>
-      <img alt="border-radious-small" src="img/large-15x.png" />
+      <img alt="border-radious-large" src="img/large-15x.png" />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
+
 ### Pill (9999px - model)
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
+
+<Row>
+  <Col sm={6}>
     Used to round off the smaller edge to a half circle, creating a pill-like
     shape. Used at **Chips** and **Badges**.
-  </div>
-  <div className="col">
+  </Col>
+  <Col sm={6}>
     <Figure>
-      <img alt="border-radious-small" src="img/pill-15x.png" />
+      <img alt="border radious pill" src="img/pill-15x.png" />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
+
 ### Full (50%)
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
-    It’s used to generate a circle, usually as the background of an icon.
-  </div>
-  <div className="col">
+
+<Row>
+  <Col sm={6}>
+    It’s used to generate a circle, usually as the background of an icon or in
+    circular actions.
+  </Col>
+  <Col sm={6}>
     <Figure>
       <img alt="border-radious-small" src="img/full-15x.png" />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>

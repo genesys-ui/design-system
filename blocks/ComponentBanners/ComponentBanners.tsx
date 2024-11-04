@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { CardReact } from '../CardReact';
 import { CardHtml } from '../CardHtml';
+import { Col, Row } from '../Fluid';
 
 export interface ComponentBannersProps {
   urlReact: string;
@@ -11,16 +12,16 @@ export const ComponentBanners: React.FC<ComponentBannersProps> = ({
   urlReact,
   urlHtml,
 }) => (
-  <section className="mrow">
+  <Row>
     {urlReact && (
-      <div className="mcol-12 mcol-sm-6">
+      <Col sm={6}>
         <CardReact url={urlReact} />
-      </div>
+      </Col>
     )}
     {urlHtml && (
-      <div className="mcol-12 mcol-sm-6">
+      <Col sm={6}>
         <CardHtml url={urlHtml} />
-      </div>
+      </Col>
     )}
-  </section>
+  </Row>
 );

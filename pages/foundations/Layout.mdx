@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/blocks';
 
-import { Figma, Figure } from '../../blocks';
+import { Figma, Figure, Row, Col } from '../../blocks';
 
 <Meta title="Foundations/Layout" />
 
@@ -25,28 +25,12 @@ Genesys also offers different components when generating layouts, consistently a
 
 They represent the skeleton of the platform and the rest of the contents, components, navigations, etc. are placed on them. These areas are generated with the **“Grid”** component.
 
-<Figure spaceToTop>
+<Figure caption="1. Global region 2. App header 3. Leading region 4. Main region">
   <Figma
     aspectRatio="4x3"
     url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=9887%3A38268&mode=design&t=RE4bbatEUXom8VAu-1"
   />
 </Figure>
-
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
-    <div className="mcol-12 mcol-sm-6">
-      1. Global region
-      2. App header
-    </div>
-  </div>
-  <div className="mcol-12 mcol-sm-6">
- <div className="mcol-12 mcol-sm-6">
-      3. Leading region
-      4. Main region
-  </div>
-
-  </div>
-</section>
 
 ### Global region
 
@@ -62,23 +46,25 @@ The leading region is primarily used for content navigation within a section tha
 
 ### Main region
 
-The main region contains the main content of each section of the platform. It's internal structure is determined by a Fluid component.
+<Row>
+  <Col md={6} lg={7}>
+    The main region contains the main content of each section of the platform.
+    It's internal structure is determined by a Fluid component.
 
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
-    It houses the main content of each section of the platform. It’s generated
-    with the **"Fluid"** component, which is based on the well-known twelve
-    column system.
-  </div>
-  <div className="mcol-12 mcol-sm-6">
+    It houses the main content of each section of the platform. It’s generated with the
+    **"Fluid"** component, which is based on the well-known twelve column
+    system.
+
+  </Col>
+  <Col md={6} lg={5}>
     <Figure>
       <img
         alt="Location of the 'status' icon button in a widget header"
         src="img/layout-main-region-15x.jpg"
       />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
 While the other regions remain stable throughout the user's journey, this region is the most dynamic and changing. Therefore, it’s the most important area and the one that should have the greatest number of options.
 
@@ -86,53 +72,58 @@ Genesys offers three basic settings for the main region that should be used depe
 
 #### Predefined main region layouts
 
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
+##### Full width
+
+<Row>
+  <Col md={6} lg={4}>
     <Figure>
       <img
         alt="Location of the 'status' icon button in a widget header"
         src="img/layout-main-region-full-width-15x.png"
       />
     </Figure>
-  </div>
-  <div className="mcol-12 mcol-sm-6">
-    1. **Full width:** Is a one-column layout with the same visibility no matter
-    the screen size. It is the platform's default grid and should be used
-    whenever we need to show the different parts of administration and data
-    management.
-  </div>
-</section>
+  </Col>
+  <Col md={6} lg={8}>
+    Is a one-column layout with the same visibility no matter the screen size.
+    It is the platform's default grid and should be used whenever we need to
+    show the different parts of administration and data management.
+  </Col>
+</Row>
 
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
+##### Limited width
+
+<Row>
+  <Col md={6} lg={4}>
     <Figure>
       <img
         alt="Location of the 'status' icon button in a widget header"
         src="img/layout-main-region-limited-width.png"
       />
     </Figure>
-  </div>
-  <div className="mcol-12 mcol-sm-6">
-    2. **Limited width:** This layout is used in settings pages where the main
-    content is not organized within tables. For example, list of elements
-    (cards, media, item list, etc.)
-  </div>
-</section>
+  </Col>
+  <Col md={6} lg={8}>
+    This layout is used in settings pages where the main content is not
+    organized within tables. For example, list of elements (cards, media, item
+    list, etc.)
+  </Col>
+</Row>
 
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
+##### Booking grid
+
+<Row>
+  <Col md={6} lg={4}>
     <Figure>
       <img
         alt="Location of the 'status' icon button in a widget header"
         src="img/layout-main-region-booking-grid.png"
       />
     </Figure>
-  </div>
-  <div className="mcol-12 mcol-sm-6">
-    3. **Booking grid:** It’s a two-column layout on larger screens. On smaller
-    screens, the second column is placed underneath the first.
-  </div>
-</section>
+  </Col>
+  <Col md={6} lg={8}>
+    It’s a two-column layout on larger screens. On smaller screens, the second
+    column is placed underneath the first.
+  </Col>
+</Row>
 
 ## Layout components
 
@@ -186,22 +177,21 @@ direction, centering them and adding a constant space between between its childr
 
 ### 04. Box
 
-It is our most versatile layout component.
+<Row>
+  <Col md={6} lg={4}>
+    <Figure>
+      <img
+        alt="Location of the 'status' icon button in a widget header"
+        src="img/layout-components-box-2x.png"
+      />
+    </Figure>
+  </Col>
+  <Col md={6} lg={8}>
+    It is our most versatile layout component.
 
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
-<Figure>
-  <img
-    alt="Location of the 'status' icon button in a widget header"
-    src="img/layout-components-box-2x.png"
-  />
-  </Figure>
- </div>
-    <div className="mcol-12 mcol-sm-6">
     Our universal building block for layouts, which has a very wide range of properties that allow you to control size, positioning, spacing, distribution, etc.
 
     It serves as the basis for creating other layout components, which use it using only the properties they need for much more specific use cases.
 
-  </div>
-  <div className="mcol-12 mcol-sm-6"></div>
-</section>
+  </Col>
+</Row>

@@ -57,16 +57,16 @@ Keep in mind that you should only group together actions when they are related.
 When we have a group of buttons, we have always to order them from right to left based in the emphasis of the button, so
 the more emphasis it has, more to the right in the group it's located.
 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
+<Row>
+  <Col sm={6}>
     <Figure
       caption="Don´t use two 'accent' type buttons in a group."
       type="dont"
     >
       <img src="img/cmp-button-dont-01.jpg" alt="Dont - emphasis 01" />
     </Figure>
-  </div>
-  <div className="col">
+  </Col>
+  <Col sm={6}>
     <Figure
       type="dont"
       caption="Don´t use the accent-high button in a reduced context as a Modal, Notification, Panel... etc. It has to be in a prominet location of the page."
@@ -76,19 +76,19 @@ the more emphasis it has, more to the right in the group it's located.
         alt="Dont - emphasis 01"
       />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
+<Row>
+  <Col sm={6}>
     <Figure type="do" caption="Use the buttons following the emphasis order.">
       <img
         src="img/component-button-emphasis-do-01.png"
         alt="Do - emphasis 01"
       />
     </Figure>
-  </div>
-  <div className="col">
+  </Col>
+  <Col sm={6}>
     <Figure
       type="do"
       caption="When there are only two actions, then the less important (cancel, close... etc.) should be a quiet variant."
@@ -98,8 +98,8 @@ the more emphasis it has, more to the right in the group it's located.
         alt="Do - emphasis 02"
       />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
 ### Location
 
@@ -119,6 +119,7 @@ We can also have the 'accent-high' button in a group, always decreasing emphasis
     src="img/component-button-location-accent-high.png"
   />
 </Figure>
+
 <Figure caption="Location of the 'accent' button combined with the 'accent-high' one.">
   <img
     alt="Common location of the accent-high button grouped"
@@ -137,6 +138,7 @@ Usually it's the most important action of the specific context: create, delete, 
     src="img/component-button-location-accent-modal.png"
   />
 </Figure>
+
 <Figure caption="Location of the 'accent' button in a Popper floating block.">
   <img
     alt="Location of the 'accent' button in a Popper floating block"
@@ -155,6 +157,7 @@ is a status context, usually in blocks of the message system as Dialogs, Toasts,
     src="img/component-button-location-status-dialog.png"
   />
 </Figure>
+
 <Figure caption="Location of the 'status' button in a Popper floating block.">
   <img
     alt="Location of the 'status' button in a Popper floating block"
@@ -345,27 +348,27 @@ the button texts:
 - **Personalize**: using the words “You”, “Your”, “Me” or “My” creates a sense of ownership.
 - Maintain the **consistency** along the App: number of words, structure, capitalize... etc.
 
-<section className="mrow margin-top--lg">
-  <div className="mcol-12 mcol-sm-6">
+<Row>
+  <Col sm={6}>
     <Figure type="dont" caption="Try not to use button texts without verbs.">
       <img
         src="img/component-button-content-dont-01.png"
         alt="Dialog with two buttons"
       />
     </Figure>
-  </div>
-  <div className="mcol-12 mcol-sm-6">
+  </Col>
+  <Col sm={6}>
     <Figure type="do" caption="Use verbs in button texts whenever possible.">
       <img
         src="img/component-button-content-do-01.png"
         alt="Dialog with two buttons"
       />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
+<Row>
+  <Col sm={6}>
     <Figure
       type="dont"
       caption="Don't use too long sentences for button texts."
@@ -375,8 +378,8 @@ the button texts:
         alt="Detail of Modal with two buttons"
       />
     </Figure>
-  </div>
-  <div className="mcol-12 mcol-sm-6">
+  </Col>
+  <Col sm={6}>
     <Figure
       type="do"
       caption="Keep it simple: use short sentences and the minimum number of words."
@@ -386,8 +389,8 @@ the button texts:
         alt="Detail of Modal with two buttons"
       />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
 ## Accessibility
 

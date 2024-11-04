@@ -62,14 +62,16 @@ const preview: Preview = {
   parameters: {
     docs: {
       theme: preferTheme === 'dark' ? customDarkTheme : customLightTheme,
-      container: ({ context, children }) => (
-        // Theme for the doc
-        <div className="dali-wrapper dali-wrapper--default">
-          <DocsContainer context={context}>
-            <ThemeProvider theme={light}>{children}</ThemeProvider>
-          </DocsContainer>
-        </div>
-      ),
+      container: ({ context, children }) => {
+        return (
+          // Theme for the doc
+          <div className="dali-wrapper dali-wrapper--default">
+            <DocsContainer context={context}>
+              <ThemeProvider theme={light}>{children}</ThemeProvider>
+            </DocsContainer>
+          </div>
+        );
+      },
       components: createCustomComponents([
         'div',
         'h1',
