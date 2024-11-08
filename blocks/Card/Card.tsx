@@ -2,9 +2,9 @@ import * as React from 'react';
 import { GIArrowRight } from '@devoinc/genesys-icons';
 
 export interface CardProps {
-  description?: string;
+  description?: React.ReactNode;
   direction?: 'vertical' | 'horizontal';
-  heading?: string;
+  heading?: React.ReactNode;
   height?: React.CSSProperties['height'];
   icon?: React.ReactElement;
   iconColor?: string;

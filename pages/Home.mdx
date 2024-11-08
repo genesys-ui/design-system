@@ -1,6 +1,7 @@
 import { Meta } from '@storybook/blocks';
 
 import { Card, Row, Col } from '../blocks';
+import { HFlex, Thumbnail, VFlex } from '@devoinc/genesys-ui';
 
 <Meta
   title="Home"
@@ -64,21 +65,46 @@ Devo maintains the design kit in Figma, containing Genesys components. We suppor
 through the component library called Genesys UI, and we have several visual libraries to support the usage of icons,
 HTML + CSS styles and design tokens
 
+##### Documentation
+
 <Row>
   <Col sm={6}>
     <Card
-      description="Get started with Figma libraries for components, foundations and patterns."
+      height="100%"
+      direction="horizontal"
+      description="Get started with our Figma library for components, foundations and patterns."
       heading="UI kit"
-      image="img/ui-kit.png"
+      image="img/figma-logo.png"
       url="https://www.figma.com/file/8hammDWW8E1NmpzUkzFRSt/Genesys-Design-System---UI-Kit?type=design&mode=design&t=DrhcLrMsVVXuDiAg-1"
       target="_blank"
     />
   </Col>
   <Col sm={6}>
     <Card
-      description="Get started with our catalog of UI components."
+      height="100%"
+      direction="horizontal"
+      description={
+        <VFlex>
+          Get started with Genesys UI: our catalog of UI components based on
+          React.
+          <HFlex spacing="0" justifyContent="flex-end">
+            <Thumbnail
+              tooltip="Styled components"
+              width="40px"
+              alt="styled components"
+              src="img/styled.png"
+            />
+            <Thumbnail
+              tooltip="Storybook"
+              width="40px"
+              alt="storybook"
+              src="img/storybook.png"
+            />
+          </HFlex>
+        </VFlex>
+      }
       heading="UI components"
-      image="img/ui-components.png"
+      image="img/react-logo.png"
       url="https://devoinc.github.io/genesys-ui/"
       target="_blank"
     />
@@ -88,19 +114,149 @@ HTML + CSS styles and design tokens
 <Row>
   <Col sm={6}>
     <Card
-      description="Get started with the catalog of our icon resources."
+      height="100%"
+      direction="horizontal"
+      description={
+        <VFlex>
+          Get started with the catalog of our icon resources based on React or
+          Css.
+          <HFlex spacing="0" justifyContent="flex-end">
+            <Thumbnail
+              tooltip="Css 3"
+              width="40px"
+              alt="Css"
+              src="img/css.png"
+            />
+            <Thumbnail
+              tooltip="Storybook"
+              width="40px"
+              alt="storybook"
+              src="img/storybook.png"
+            />
+          </HFlex>
+        </VFlex>
+      }
       heading="Icons"
-      image="img/ui-icons.png"
+      image="img/react-logo.png"
       url="https://devoinc.github.io/genesys-icons/?path=/docs/introduction--docs"
       target="_blank"
     />
   </Col>
   <Col sm={6}>
     <Card
-      description="Get started with our catalog of design tokens."
+      height="100%"
+      direction="horizontal"
+      description={
+        <VFlex>
+          Get started with our catalog of design tokens to be used in TS, JS or
+          SCSS contexts.
+          <HFlex spacing="cmp-xxs" justifyContent="flex-end">
+            <Thumbnail
+              tooltip="Style Dictionary.png"
+              width="40px"
+              alt="style dictionary.png"
+              src="img/style-dictionary.png"
+            />
+            <Thumbnail
+              tooltip="Sass"
+              width="40px"
+              alt="Sass"
+              src="img/sass.png"
+            />
+            <Thumbnail
+              tooltip="Storybook"
+              width="40px"
+              alt="storybook"
+              src="img/storybook.png"
+            />
+          </HFlex>
+        </VFlex>
+      }
       heading="Design tokens"
-      image="img/token.png"
+      image="img/ts-logo.png"
       url="https://devoinc.github.io/genesys-brand-devo/"
+      target="_blank"
+    />
+  </Col>
+</Row>
+
+<Row marginBottom="layout-md">
+  <Col sm={6}>
+    <Card
+      height="100%"
+      direction="horizontal"
+      description={
+        <VFlex>
+          Base CSS styles for its pure HTML version: base 10 rem, fonts... etc.
+          <HFlex spacing="cmp-xxs" justifyContent="flex-end">
+            <Thumbnail
+              tooltip="Github"
+              width="40px"
+              alt="Github"
+              src="img/github.png"
+            />
+          </HFlex>
+        </VFlex>
+      }
+      heading="Genesys base styles"
+      image="img/css.png"
+      url="https://github.com/DevoInc/genesys-base-styles"
+      target="_blank"
+    />
+  </Col>
+  <Col sm={6}>
+    <Card
+      height="100%"
+      direction="horizontal"
+      description={
+        <VFlex>
+          CSS component and foundation styles for its pure HTML version.
+          <HFlex spacing="cmp-xxs" justifyContent="flex-end">
+            <Thumbnail
+              tooltip="Sass"
+              width="40px"
+              alt="Sass"
+              src="img/sass.png"
+            />
+            <Thumbnail
+              tooltip="Storybook"
+              width="40px"
+              alt="storybook"
+              src="img/storybook.png"
+            />
+          </HFlex>
+        </VFlex>
+      }
+      heading="Genesys styles"
+      image="img/css.png"
+      url="https://devoinc.github.io/genesys-styles/?path=/docs/components-badge--docs"
+      target="_blank"
+    />
+  </Col>
+</Row>
+
+##### Repositories
+
+<Row>
+  <Col sm={6}>
+    <Card
+      height="100%"
+      direction="horizontal"
+      description="UI components Github repository."
+      heading="Genesys UI"
+      image="img/github.png"
+      url="https://github.com/DevoInc/genesys-ui"
+      target="_blank"
+    />
+  </Col>
+  <Col sm={6}>
+    <Card
+      height="100%"
+      direction="horizontal"
+      description="Icons Github repository."
+      heading="Genesys Icons"
+      image="img/github.png"
+      url="https://github.com/DevoInc/genesys-icons"
       target="_blank"
     />
   </Col>
@@ -109,19 +265,36 @@ HTML + CSS styles and design tokens
 <Row>
   <Col sm={6}>
     <Card
-      description="Base CSS styles for its pure HTML version."
-      heading="Genesys base styles"
-      image="img/styles-05x.png"
-      url="https://github.com/DevoInc/genesys-base-styles"
+      height="100%"
+      direction="horizontal"
+      description="Design tokens Github repository."
+      heading="Genesys Brand Devo"
+      image="img/github.png"
+      url="https://github.com/DevoInc/genesys-brand-devo"
       target="_blank"
     />
   </Col>
   <Col sm={6}>
     <Card
-      description="CSS styles for its pure HTML version."
-      heading="Genesys styles"
-      image="img/styles.png"
-      url="https://devoinc.github.io/genesys-styles/?path=/docs/components-badge--docs"
+      height="100%"
+      direction="horizontal"
+      description="Base styles Github repository."
+      heading="Genesys Base Styles"
+      image="img/github.png"
+      url="https://github.com/DevoInc/genesys-base-styles"
+      target="_blank"
+    />
+  </Col>
+</Row>
+<Row>
+  <Col sm={6}>
+    <Card
+      height="100%"
+      direction="horizontal"
+      description="Styles Github repository."
+      heading="Genesys Styles"
+      image="img/github.png"
+      url="https://github.com/DevoInc/genesys-styles"
       target="_blank"
     />
   </Col>
