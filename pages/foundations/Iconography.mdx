@@ -19,6 +19,8 @@ We use an Icon Library called [Ionicons](https://ionicons.com/) as base. When we
 can’t find there an icon which covers our needs, then we have to create a new one,
 but using as base an existing icon from the library with the same aspect ratio.
 
+[View the icons](https://engineering.pages.devotools.com/libraries/design/dali/?path=/docs/components-icon--docs)
+
 We can apply a very wide range of colours to our icons depending on their parent components, context, status... etc. but we should use always a size included in this limited range:
 ## Design principles
 
@@ -28,11 +30,22 @@ The skeleton of every icon set is its underlying grid system. You’re probably 
 
 For our purposes here, we’ll look at the more standard **24px icon format**.
 
+
 ### Keylines
 
+<section className="row">
+  <div class="col-8">
 Keylines are guides that help keep icon sets visually balanced, regardless of the orientation of their component parts.
 
 Most icons are based on a handful of core silhouettes: squares, circles, vertical rectangles, and horizontal rectangles. There are, of course, variants on all these; but keylines help keep your icons cohesive when seen and used together.
+</div>
+  <div class="col-4">
+  <img
+        alt="Icon keylines."
+        src="img/keylines.jpg"
+      />
+      </div>
+</section>
 
 Your first instinct might be to make shapes’ dimensions the same. But we're dealing more with visual area here than exact exterior dimensions. When dealing with shapes at such a small scale, shaving off a couple pixels can make a big difference! These are just basic shape guidelines, of course, but provide a good foundation for icon consistency.
 
@@ -50,11 +63,32 @@ Do your icons need to have dimension or perspective baked in? Making that choice
 Speaking of depth, you can’t always communicate complex concepts with singular elements/objects. A lot of icons rely on juxtaposing two or more elements together, sometimes on top of each other. Do elements fit snugly together? Is there a stroke break for extra impact? Maybe elements further back are a different color or fill?
 
 ##### Strokes & Corners #####
+
+<section className="row">
+  <div class="col-8">
 Nothing makes a weird icon stick out more than mismatched corner treatments and stroke weight. Very small changes can make a lot of difference, and vastly influence an icon set’s character and cohesion.
+</div>
+  <div class="col-4">
+  <img
+        alt="Icon Strokes"
+        src="img/stroke-15x.jpg"
+      />
+      </div>
+</section>
 
 ### Documentation
 
-We used a **24 x 24 pixel grid**. The key lines were set with a **20px live area** and a **2px padding** margin to ensure visual balance between the icons and create breathing space.
+<section className="row">
+  <div class="col-8">
+Not only can writing down your new rules help you make sense of them for yourself, but it's an absolute must if you're shipping an MVP set that will need to be expanded upon later. Since you probably can’t guarantee that you will be helming that ship, guidelines are crucial for setting up the client or another team for success.
+</div>
+  <div class="col-4">
+  *"Icons with rules are icons that rule."*
+  </div>
+</section>
+If you have rules, you can also determine when it’s appropriate to bend or break them. Just make sure you document that too, along with your reasons why.
+
+We used a **24 x 24 pixel grid**. The keylines were set with a **20px live area** and a **2px padding** margin to ensure visual balance between the icons and create breathing space.
 
 <section className="row">
   <div class="col-8">
@@ -68,6 +102,17 @@ We used a **24 x 24 pixel grid**. The key lines were set with a **20px live area
       </div>
 </section>
 
+### Icon sizes
+
+Icons should be scaled according to the size of the text. Sizes: xxxxs, xxxs, xxs, xs, sm, md, lg, xl, xxl, xxxl, xxxxl.
+
+<Figure>
+  <img
+    alt="Location of the 'status' icon button in a widget header"
+    src="img/icons.png"
+  />
+</Figure>
+
 ### Links/References
 <a href="https://ux.shopify.com/product-vs-marketing-illustration-7ac474dfe2ed" target="_blank">Product vs Marketing Illustration</a>
 · Meg Robichaud
@@ -80,16 +125,7 @@ We used a **24 x 24 pixel grid**. The key lines were set with a **20px live area
 
 <a href="https://m2.material.io/design/iconography/system-icons.html#design-principles" target="_blank">Google Material Design</a> 
 
-### Icon sizes
-
-<Figure>
-  <img
-    alt="Location of the 'status' icon button in a widget header"
-    src="img/icons.png"
-  />
-</Figure>
-
-### Use case
+### Use cases
 
 <Figure>
   <img

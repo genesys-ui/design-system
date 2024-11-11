@@ -182,6 +182,10 @@ $doc-base-class-name: sbdocs;
         font-size: 1em;
       }
 
+      &-ol {
+        list-style-type: decimal;
+      }
+
       &-ul,
       &-ul:first-of-type,
       &-ul:last-child {
