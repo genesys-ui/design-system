@@ -4,9 +4,9 @@ import * as Stories from './KeyValue.stories';
 
 import { DesignTokensList, LiveDemo } from '../../../blocks';
 
-<Meta title="Components/KeyValue *" />
+<Meta title="Components/KeyValue" />
 
-# Tabs
+# KeyValue
 
 (PENDING)
 
@@ -16,15 +16,13 @@ import { DesignTokensList, LiveDemo } from '../../../blocks';
 
 ## Live demo
 
-Preview the Tabs component with the React live demo. For detailed code usage
+Preview the KeyValue component with the React live demo. For detailed code usage
 documentation, see the Genesys UI or Genesys Styles version of the component.
-
-## Tabs
 
 <LiveDemo
   story={Stories.Example}
   urlHtml="https://devoinc.github.io/genesys-styles/?path=/docs/components-tabs--docs"
-  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-navigation-tabs--docs"
+  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-feedback-keyvalue--docs"
 />
 
 ## Anatomy
@@ -33,74 +31,7 @@ documentation, see the Genesys UI or Genesys Styles version of the component.
 
 ## Accessibility
 
-### Tabs
-
-Recommended attributes to be included:
-
-#### aria-label
-
-The [aria-label](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-attribute defines a string value that labels an interactive element, in this
-case, provides a label that describes the purpose of the set of tabs.
-
-#### role="tablist"
-
-The [tablist role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
-identifies the element that serves as the container for a set of tabs. The tab
-content are referred to as tabpanel elements.
-
-### TabsItem
-
-Recommended attributes to be included:
-
-#### aria-selected
-
-In a tablist, [aria-selected](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected#tab)
-is used on a tab to indicate the currently-displayed tabpanel.
-
-The selected tab in a tablist should have has its aria-selected="true" set. All
-inactive tabs in the tablist should have aria-selected="false" set. Setting the
-state only impacts the accessibility tree: make sure to style the active tab in
-a way that visual indicates it's selected state. The default value for
-aria-selected on a tab role is false.
-
-#### aria-controls
-
-The global [aria-controls](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-property identifies the element (or elements) whose contents or presence are
-controlled by the element on which this attribute is set.
-
-#### tabindex
-
-The [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)
-global attribute indicates that its element can be focused, and where it
-participates in sequential keyboard navigation (usually with the Tab key, hence
-the name).
-
-A negative value (usually tabindex="-1") means that the element is not reachable
-via sequential keyboard navigation, but could be focused with JavaScript or
-visually by clicking with the mouse. It's mostly useful to create accessible
-widgets with JavaScript.
-
-**Is strongly recommended to set the `tabindex="-1"` attribute for disabled
-TabsItem.**
-
-#### role="tab"
-
-The [ARIA tab role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
-indicates an interactive element inside a tablist that, when activated, displays
-its associated tabpanel.
-
-#### aria-hidden (icon)
-
-The icon element must have the `aria-hidden` attribute to hide for assistive
-technologies due is only decorative.
-
-#### aria-label and title (button)
-
-The IconButton has no text content, so we need to use the `aria-label` attribute
-to inform about what the button does to assistive technologies. Is recommend
-adding a `title` attribute to inform the users by hovering with the mouse.
+(PENDING)
 
 ## Design tokens
 
@@ -108,4 +39,4 @@ adding a `title` attribute to inform the users by hovering with the mouse.
 
 ### Complete list
 
-<DesignTokensList componentName="tabs" />
+<DesignTokensList componentName="keyValue" />

@@ -11,7 +11,10 @@ export const DesignTokensSizeBox: React.FC<Props> = ({
   borderRadius,
   size,
 }) => {
-  const sizeNumber = Number(size?.substring(0, size.length - 3));
+  const sizeNumber =
+    typeof size !== 'number'
+      ? Number(size?.substring(0, size.length - 3))
+      : size;
   return (
     <StyledDesignTokensSizeBox
       size={sizeNumber > 6 ? '6.8rem' : size}

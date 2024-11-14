@@ -1,11 +1,8 @@
 import * as React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { Preview } from '@storybook/react';
-import { create } from '@storybook/theming/create';
+import { PREFER_UI_THEME, DocContainer, themeDecorator } from './theming';
 
-import * as brand from '@devoinc/genesys-brand-devo';
-
-import '@devoinc/genesys-base-styles/dist/styles.min.css';
+import '@devoinc/genesys-base-styles/dist/css/styles.min.css';
 import './preview.scss';
 
 type ComponentsMap = {
@@ -23,32 +20,12 @@ export const createCustomComponents = (tagsList: (keyof React.ReactHTML)[]) => {
   }, {});
 };
 
-// styles for documentation
-import { DocsContainerDefault } from '../blocks';
-
-const customTheme = create({
-  base: 'light',
-  fontBase: '"Poppins", sans-serif',
-  fontCode: '"Mono Font", monospace',
-  // Text colors
-  textColor: '#5B6870',
-  textInverseColor: 'rgba(255,255,255,0.9)',
-});
-
 const preview: Preview = {
-  decorators: [
-    // Themes
-    (Story, context) => (
-      <ThemeProvider theme={brand[context.globals.theme] ?? {}}>
-        <Story />
-      </ThemeProvider>
-    ),
-  ],
-
+  decorators: themeDecorator,
   parameters: {
     docs: {
-      theme: customTheme,
-      container: DocsContainerDefault,
+      theme: PREFER_UI_THEME,
+      container: DocContainer,
       components: createCustomComponents([
         'div',
         'h1',
@@ -105,19 +82,6 @@ const preview: Preview = {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/,
-      },
-    },
-  },
-
-  globalTypes: {
-    theme: {
-      name: 'Theme',
-      description: 'Global theme for components',
-      defaultValue: 'light',
-      toolbar: {
-        icon: 'paintbrush',
-        // array of plain string values or MenuItem shape (see below)
-        items: ['light', 'dark'],
       },
     },
   },

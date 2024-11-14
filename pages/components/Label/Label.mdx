@@ -3,6 +3,7 @@ import { Meta, Source } from '@storybook/blocks';
 import * as Stories from './Label.stories';
 
 import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { getAliasTokensByNameJson, getCmpTokensJson } from '../../../tokens';
 
 <Meta title="Components/Label" />
 
@@ -135,4 +136,10 @@ The Label component uses alias tokens for typography and color.
 
 ### Complete list
 
-<DesignTokensList componentName="label" />
+<DesignTokensList
+  tokens={[
+    ...getCmpTokensJson('label'),
+    ...getCmpTokensJson('body'),
+    ...getAliasTokensByNameJson('typo-body'),
+  ]}
+/>

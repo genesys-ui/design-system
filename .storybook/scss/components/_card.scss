@@ -1,4 +1,4 @@
-// ---------------------- TABLE - COMPONENTS ---------------------- //
+// ---------------------- CARD - COMPONENTS ---------------------- //
 
 .dIgeMu svg {
   all: unset;
@@ -7,11 +7,14 @@
 .card {
   $parent: &;
   $heading-fs: 1.8rem;
+  display: flex;
+  flex-direction: column;
   position: relative;
   transition: box-shadow 0.1s ease-out;
   overflow: hidden;
   box-shadow: 0 0.1rem 0.4rem 0 rgba(24, 43, 66, 0.15),
     0 0.1rem 0.1rem 0 rgba(24, 43, 66, 0.1);
+  border: 0.1rem solid #e1eaf0;
   border-radius: var(--dds-br-surface);
   height: 100%;
   background: var(--dds-bg-base);
@@ -27,8 +30,8 @@
     justify-content: center;
     display: flex;
     transition: background-color 0.1s ease-out;
-    font-size: 3.2rem;
-    padding: 3.2rem;
+    font-size: 2rem;
+    padding: 2rem;
 
     #{$parent}--horizontal & {
       height: auto;

@@ -3,6 +3,7 @@ import { Meta, Source } from '@storybook/blocks';
 import * as Stories from './Textarea.stories';
 
 import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
 
 <Meta title="Components/Textarea" />
 
@@ -211,6 +212,9 @@ even if only a portion of it has changed.
 
 ### Complete list
 
-⚠️ It is necessary to create the rest of specific component tokens, or at least add the alias tokens to the list.
-
-<DesignTokensList componentName="textarea" />
+<DesignTokensList
+  tokens={[
+    ...getCmpTokensJson('textareaControl'),
+    ...getCmpTokensJson('label'),
+  ]}
+/>

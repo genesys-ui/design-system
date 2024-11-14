@@ -2,8 +2,8 @@ import { Meta, Source } from '@storybook/blocks';
 
 import * as Stories from './Checkbox.stories';
 
-import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
-import { getAliasTokensByNameJson } from '../../../tokens';
+import { DesignTokensList, LiveDemo } from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
 
 <Meta title="Components/Checkbox" />
 
@@ -12,7 +12,6 @@ import { getAliasTokensByNameJson } from '../../../tokens';
 (PENDING)
 
 ## Overview
-
 (PENDING) Variants, sizes, alignment, location... etc.
 
 ## Live demo
@@ -37,10 +36,9 @@ import { getAliasTokensByNameJson } from '../../../tokens';
 
 ### Complete list
 
-⚠️ It is necessary to create the rest of specific component tokens, or at least add the alias tokens to the list.
-
-<DesignTokensList componentName="checkbox" />
 <DesignTokensList
-  componentName="menus"
-  tokens={getAliasTokensByNameJson('fields')}
+  tokens={[
+    ...getCmpTokensJson('checkboxControl'),
+    ...getCmpTokensJson('label'),
+  ]}
 />

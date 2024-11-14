@@ -14,6 +14,7 @@ export default meta;
 type Story = StoryObj<React.ComponentProps<typeof Template>>;
 
 export const IconButtonLoading: Story = {
+  tags: ['isHidden'],
   render: () => (
     <HFlex spacing="cmp-md">
       <HFlex.Item>
@@ -34,6 +35,7 @@ export const IconButtonLoading: Story = {
 };
 
 export const ButtonTextLoading: Story = {
+  tags: ['isHidden'],
   render: () => (
     <HFlex spacing="cmp-md">
       <HFlex.Item>
@@ -47,6 +49,7 @@ export const ButtonTextLoading: Story = {
 };
 
 export const ButtonIconTextLoading: Story = {
+  tags: ['isHidden'],
   render: () => (
     <HFlex spacing="cmp-md">
       <HFlex.Item>

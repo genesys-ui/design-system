@@ -1,8 +1,14 @@
 // ---------------------- TABLE - COMPONENTS ---------------------- //
 
+@use '../utils/variables' as *;
+
 .example {
   $parent: &;
-  margin-bottom: $spacing-md;
+  margin-bottom: 0;
+
+  * + & {
+    margin-top: $spacing-md;
+  }
 
   &__box {
     position: relative;

@@ -2,7 +2,15 @@ import { Meta, Source } from '@storybook/blocks';
 
 import * as Stories from './IconButton.stories';
 
-import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
+import {
+  Col,
+  DesignTokensList,
+  Figma,
+  Figure,
+  LiveDemo,
+  Row,
+} from '../../../blocks';
+import { getCmpTokensJson } from '../../../tokens';
 
 <Meta title="Components/IconButton" />
 
@@ -71,8 +79,8 @@ of the button, so the more emphasis it has, more to the right in the group it's 
   />
 </Figure>
 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
+<Row>
+  <Col sm={6}>
     <Figure
       type="do"
       caption="In reduced contexts as widget headers use the 'quiet' variant to maintain the white balance."
@@ -82,8 +90,8 @@ of the button, so the more emphasis it has, more to the right in the group it's 
         alt="Do - emphasis 01"
       />
     </Figure>
-  </div>
-  <div className="col">
+  </Col>
+  <Col sm={6}>
     <Figure
       type="do"
       caption="In other contexts or when we want to differentiate some actions from secondary specific ones as the 'close' one, we should use the 'neutral' variant."
@@ -93,8 +101,8 @@ of the button, so the more emphasis it has, more to the right in the group it's 
         alt="Do - emphasis 02"
       />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
 ### Location
 
@@ -306,27 +314,27 @@ the button texts:
 - **Personalize**: using the words “You”, “Your”, “Me” or “My” creates a sense of ownership.
 - Maintain the **consistency** along the App: number of words, structure, capitalize... etc.
 
-<section className="mrow margin-top--lg">
-  <div className="mcol-12 mcol-sm-6">
+<Row>
+  <Col sm={6}>
     <Figure type="dont" caption="Try not to use button texts without verbs.">
       <img
         src="img/component-button-content-dont-01.png"
         alt="Dialog with two buttons"
       />
     </Figure>
-  </div>
-  <div className="mcol-12 mcol-sm-6">
+  </Col>
+  <Col sm={6}>
     <Figure type="do" caption="Use verbs in button texts whenever possible.">
       <img
         src="img/component-button-content-do-01.png"
         alt="Dialog with two buttons"
       />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
+<Row>
+  <Col sm={6}>
     <Figure
       type="dont"
       caption="Don't use too long sentences for button texts."
@@ -336,8 +344,8 @@ the button texts:
         alt="Detail of Modal with two buttons"
       />
     </Figure>
-  </div>
-  <div className="mcol-12 mcol-sm-6">
+  </Col>
+  <Col sm={6}>
     <Figure
       type="do"
       caption="Keep it simple: use short sentences and the minimum number of words."
@@ -347,8 +355,8 @@ the button texts:
         alt="Detail of Modal with two buttons"
       />
     </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
 ## Accessibility
 
@@ -546,4 +554,15 @@ There are several pre-defined states: `enabled`, `hovered`, `focused`, `pressed`
 
 ### Complete list
 
-<DesignTokensList componentName="button" />
+The most of the IconButton tokens are the same as the Button component, but there are several ones
+to apply specific styles to its cases: IconButtonStop, IconButtonDropdown... etc.
+
+<DesignTokensList
+  tokens={[
+    ...getCmpTokensJson('button'),
+    ...getCmpTokensJson('iconButtonDropdown'),
+    ...getCmpTokensJson('iconButtonGoToDocs'),
+    ...getCmpTokensJson('iconButtonStatus'),
+    ...getCmpTokensJson('iconButtonStop'),
+  ]}
+/>

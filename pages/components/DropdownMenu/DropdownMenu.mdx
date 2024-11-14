@@ -2,8 +2,7 @@ import { Meta } from '@storybook/blocks';
 
 import * as Stories from './DropdownMenu.stories';
 
-import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
-import { getAliasTokensByNameJson } from '../../../tokens';
+import { DesignTokensList, LiveDemo, Figure, Figma } from '../../../blocks';
 
 <Meta title="Components/DropdownMenu" />
 
@@ -11,17 +10,19 @@ import { getAliasTokensByNameJson } from '../../../tokens';
 
 The Dropdown menu displays a list of actions or selectable options for a user.
 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div class="col-8">
+<Row>
+  <Col md={6} lg={7}>
   The drop-down menu usually will have a structure like the example shows: 
-  </div>
-  <div class="col-4">
+  </Col>
+  <Col md={6} lg={5}>
+    <Figure>
   <img
         alt="Location of the 'status' icon button in a widget header"
         src="img/example-dropdown-15x.jpg"
       />
-      </div>
-</section>
+    </Figure>
+  </Col>
+</Row>
 
 ## Overview
 
@@ -32,33 +33,38 @@ The Dropdown in the example is created by the combination of two internal compon
  - The <code>'./internal/dropdownMenu/container'</code>: which contains the content group. 
 
 To build your own custom Dropdown Menu, you'll need to: 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div class="col-8">
+
+<Row>
+  <Col md={6} lg={7}>
  - Create a new component with the desired content similar to <code>'./internal/dropdownMenu/content'</code>.
  - Create a new instance of the main 'DropdownMenu' component.
  - Swap the instance of the example content with your own content component.
-  </div>
+  </Col>
+  <Col md={6} lg={5}>
   <Figure caption="Dropdown menu component structure.">
  <img
         alt="Dropdown menu component structure"
         src="img/example-dropdownmenu-2-15x.jpg"
       />
-</Figure>
-</section>
+    </Figure>
+  </Col>
+</Row>
 
 In some cases, the options included in the Dropdown component won’t be so complex as the first example. In this case, it´s possible to still use the <code>‘./internal/dropdownMenu/items/option’</code> hiding all the elements except for the text label. 
 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div class="col-8">
+<Row>
+  <Col md={6} lg={7}>
 In this case, it´s important to hide also the icon container frame instead of only the icon instance to align items on the left without spacing.
-  </div>
+  </Col>
+  <Col md={6} lg={5}>
   <Figure caption="Dropdown menu with text label only.">
  <img
         alt="Dropdown menu with text label only"
         src="img/example-dropdown-2.jpg"
       />
 </Figure>
-</section>
+  </Col>
+</Row>
 
 #### Complete and scrolled variant
 The Dropdown Menu Items has a variant named ‘Content’ with two options: ‘complete’, and ‘scrolled’. The option ‘scrolled’ will put an auto-height scroll simulation on the right of the container.
@@ -76,24 +82,19 @@ The Dropdown Menu Items has a variant named ‘Content’ with two options: ‘c
 ### Location
 Dropdowns can be used in forms on full pages, in modals, or on side panels. The dropdown component is used to filter or sort contents on a page. It is a stylized version of the select component, and can be styled as needed.
 
-<section className="row gy-4 row-cols-1 row-cols-sm-2 margin-top--lg">
-  <div className="col">
+<Row>
+  <Col md={6} lg={7}>
     <Figure
       caption=""
       type="dont"
     >
     Not to use a dropdown if there are two options to choose from. In this case, use a radio button group instead.
     </Figure>
-  </div>
-  <div className="col">
-    <Figure
-      type="dont"
-      caption=""
-    >
+  </Col>
+  <Col md={6} lg={5}>
   Do not nest dropdowns or use them to display overly complex information. Keep option selections as straight forward as possible.
-    </Figure>
-  </div>
-</section>
+  </Col>
+</Row>
 
 ## Live demo
 
@@ -163,11 +164,4 @@ The dropdown item has different states depending on the interaction with the use
 
 ### Complete list
 
-(PENDING)
-
-⚠️ It is necessary to check if there are component tokens to create the rest of specific component tokens, or at least add the alias tokens to the list.
-
-<DesignTokensList
-  componentName="menus"
-  tokens={getAliasTokensByNameJson('menus')}
-/>
+<DesignTokensList componentName="menu" />

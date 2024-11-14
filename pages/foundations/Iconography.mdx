@@ -33,19 +33,19 @@ For our purposes here, we’ll look at the more standard **24px icon format**.
 
 ### Keylines
 
-<section className="row">
-  <div class="col-8">
+<Row>
+  <Col md={6} lg={7}>
 Keylines are guides that help keep icon sets visually balanced, regardless of the orientation of their component parts.
 
 Most icons are based on a handful of core silhouettes: squares, circles, vertical rectangles, and horizontal rectangles. There are, of course, variants on all these; but keylines help keep your icons cohesive when seen and used together.
-</div>
-  <div class="col-4">
+  </Col>
+  <Col md={6} lg={5}>
   <img
         alt="Icon keylines."
         src="img/keylines.jpg"
       />
-      </div>
-</section>
+        </Col>
+</Row>
 
 Your first instinct might be to make shapes’ dimensions the same. But we're dealing more with visual area here than exact exterior dimensions. When dealing with shapes at such a small scale, shaving off a couple pixels can make a big difference! These are just basic shape guidelines, of course, but provide a good foundation for icon consistency.
 
@@ -64,43 +64,48 @@ Speaking of depth, you can’t always communicate complex concepts with singular
 
 ##### Strokes & Corners #####
 
-<section className="row">
-  <div class="col-8">
+<Row>
+  <Col md={6} lg={7}>
 Nothing makes a weird icon stick out more than mismatched corner treatments and stroke weight. Very small changes can make a lot of difference, and vastly influence an icon set’s character and cohesion.
-</div>
-  <div class="col-4">
+ </Col>
+  <Col md={6} lg={5}>
+    <Figure>
   <img
         alt="Icon Strokes"
         src="img/stroke-15x.jpg"
       />
-      </div>
-</section>
+    </Figure>
+  </Col>
+</Row>
 
 ### Documentation
 
-<section className="row">
-  <div class="col-8">
+<Row>
+  <Col md={6} lg={7}>
 Not only can writing down your new rules help you make sense of them for yourself, but it's an absolute must if you're shipping an MVP set that will need to be expanded upon later. Since you probably can’t guarantee that you will be helming that ship, guidelines are crucial for setting up the client or another team for success.
-</div>
-  <div class="col-4">
+  </Col>
+  <Col md={6} lg={5}>
   *"Icons with rules are icons that rule."*
-  </div>
-</section>
+  </Col>
+</Row>
+
 If you have rules, you can also determine when it’s appropriate to bend or break them. Just make sure you document that too, along with your reasons why.
 
 We used a **24 x 24 pixel grid**. The keylines were set with a **20px live area** and a **2px padding** margin to ensure visual balance between the icons and create breathing space.
 
-<section className="row">
-  <div class="col-8">
+<Row>
+  <Col md={6} lg={7}>
  The main building block is a **2px centred stroke**, although some small solid elements can also be used sparingly as needed for balance. **Corners are mainly rounded by 1px**, except in some cases where a larger radius makes sense (such as the bevels of a phone or some obtuse exterior angles).
-</div>
-  <div class="col-4">
+  </Col>
+  <Col md={6} lg={5}>
+   <Figure>
   <img
         alt="Location of the 'status' icon button in a widget header"
         src="img/documentation-15x.jpg"
       />
-      </div>
-</section>
+       </Figure>
+  </Col>
+</Row>
 
 ### Icon sizes
 

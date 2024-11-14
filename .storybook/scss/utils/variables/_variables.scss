@@ -30,6 +30,12 @@ $spacing-size-map: (
   xxxxl: $spacing-xxxxl,
 );
 
+// RESPONSIVE - BREAKPOINTS ------------------------------------ //
+
+$responsive-breakpoint-sm: 576px;
+$responsive-breakpoint-md: 768px;
+$responsive-breakpoint-lg: 992px;
+
 // TEXT - VARIABLES ------------------------------------ //
 
 $font-size-base: 1.6rem;

@@ -1,6 +1,7 @@
 import { Meta } from '@storybook/blocks';
 
 import { Figma, Figure } from '../../blocks';
+import { Row, Col } from '@devoinc/genesys-ui';
 
 <Meta title="Foundations/Color" />{' '}
 
@@ -8,26 +9,30 @@ import { Figma, Figure } from '../../blocks';
 
 Application of Color in Genesys is designed to be harmonious, ensure consistency, accessible text, and distinguish interface elements and components from one another.
 
-<section className="mrow">
-  <div className="mcol-12 mcol-sm-6">
+<Row>
+  <Col sm={6}>
     Genesys’s default palettes are derived from the Devo Style Guide to ensure
     we maintain our brand’s personality throughout the UI.
-  </div>
-  <div className="mcol-12 mcol-sm-6">
+
+    Color is also used to emphasize important information, to display different states
+    or to add meaning and support design communication.
+
+  </Col>
+  <Col sm={6}>
     <Figure>
       <img
         alt="Location of the 'status' icon button in a widget header"
         src="img/GenesysColor-2x.png"
       />
     </Figure>
-  </div>
-</section>
-Color is also used to emphasize important information, to display different states
-or to add meaning and support design communication.
+  </Col>
+</Row>
 
 ## Palettes
 
 ### Brand palettes
+
+#### Primary
 
 The **primary palette** is used for the main action of the page. This means that there cannot be more than one action on the same page using this palette. It is used to mark active first-level navigation elements: active sections in the main menu and in the sub-section tabs located in the upper area.
 
@@ -39,6 +44,8 @@ Similarly, it is used to draw attention to certain elements or to add branding i
     src="img/primary.png"
   />
 </Figure>
+
+#### Secondary
 
 The **secondary palette** is used for other important actions of which there might be more than one per page. This covers elements that give feedback to the user such as progress bars and ranges, as well as active and/or selected statuses of forms or menu items: checkboxes, radios, switches, dropdown items, and so forth.
 

@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // --------------------- MAP DEEP - FUNCTIONS - UTILS ----------------------- //
 
 
@@ -11,7 +13,7 @@
 
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
-    $map: map-get($map, $key);
+    $map: map.get($map, $key);
   }
   @return $map;
 }
@@ -41,7 +43,7 @@
   @for $i from 1 through length($keys) - 1 {
     $current-key: nth($keys, $i);
     $current-map: nth($maps, -1);
-    $current-get: map-get($current-map, $current-key);
+    $current-get: map.get($current-map, $current-key);
     @if ($current-get == null) {
       @error "Key `#{$key}` doesn't exist at current level in map.";
     }

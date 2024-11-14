@@ -1,3 +1,5 @@
+@use "../utils/variables" as v;
+
 // ---------------------- CONTENT - LAYOUT ---------------------- //
 
 .dali-wrapper {
@@ -19,6 +21,7 @@
     .sbdocs-wrapper {
       padding: 6.4rem;
       gap: 6.4rem;
+      justify-content: flex-start;
     }
   }
 
@@ -26,5 +29,35 @@
   [id*="story--components-"] {
     overflow: visible !important;
   }
+}
+
+// FLUID - COLS
+
+.row {
+  margin-top: 2.4rem !important;
+}
+
+@media only screen and (max-width: v.$responsive-breakpoint-sm) {
+  .col + .col {
+    margin-top: 16px;
+  }
+}
+
+@media only screen and (max-width: v.$responsive-breakpoint-md) {
+  .col + [class*="col-md"]:not([class*="col-sm"]) {
+    margin-top: 16px;
+  }
+}
+
+@media only screen and (max-width: v.$responsive-breakpoint-lg) {
+  .col + [class*="col-lg"]:not([class*="col-md"]) {
+    margin-top: 16px;
+  }
+}
+
+// TOC: HIDE TABLE OF CONTENTS WHEN IT'S EMPTY
+
+div:has(.toc-wrapper:empty) > p {
+  display: none;
 }
 

@@ -8,22 +8,37 @@
   .toc-list-item {
     > a {
       color: var(--dds-color-body-strong);
-      font-weight: 300;
 
       &:not(.is-active-li > a):hover {
         text-decoration: underline;
-        font-weight: 400;
       }
 
       &.node-name--H2 {
+        display: block;
         color: var(--dds-color-heading);
-        font-weight: 400;
+        font-weight: 600;
+      }
+
+      + .toc-list {
+        margin-top: var(--spacing-xxs);
       }
     }
 
-    &.is-active-li > a {
-      color: #029cfd;
-      font-weight: 400;
+    &.is-active-li {
+      > a {
+        color: #029cfd;
+      }
+    }
+
+    .toc-list {
+      margin-bottom: var(--spacing-xs);
+    }
+  }
+  > .toc-list {
+    border-left: none;
+
+    > .toc-list-item {
+      margin-left: 0;
     }
   }
 }
