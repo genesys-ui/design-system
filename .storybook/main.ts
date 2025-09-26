@@ -1,22 +1,25 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import { dirname, join } from 'node:path';
 import remarkGfm from 'remark-gfm';
 
 const config: StorybookConfig = {
-  core: {
-    disableWhatsNewNotifications: true,
-  },
   stories: [
     '../pages/Home.mdx',
     '../pages/DesignPrinciples.mdx',
-    '../pages/Resources.mdx',
-    '../pages/overview/*.@(mdx|stories.tsx)',
+    // '../pages/Resources.mdx',
+    // '../pages/overview/*.@(mdx|stories.tsx)',
     '../pages/components/**/*.@(mdx|stories.tsx)',
     '../pages/foundations/*.@(mdx|stories.tsx)',
     '../pages/patterns/*.@(mdx|stories.tsx)',
   ],
+  framework: getAbsolutePath('@storybook/react-vite'),
+  core: {
+    builder: getAbsolutePath('@storybook/builder-vite'),
+  },
   addons: [
+    getAbsolutePath('@storybook/addon-links'),
     {
-      name: '@storybook/addon-docs',
+      name: getAbsolutePath('@storybook/addon-docs'),
       options: {
         mdxPluginOptions: {
           mdxCompileOptions: {
@@ -25,32 +28,26 @@ const config: StorybookConfig = {
         },
       },
     },
-    '@storybook/addon-toolbars',
-    '@storybook/addon-links',
-    '@storybook/addon-viewport',
-    '@storybook/addon-controls',
-    '@storybook/addon-actions',
-    '@storybook/addon-a11y',
-    '@storybook/preset-scss',
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('@storybook/addon-themes'),
+    getAbsolutePath('@storybook/preset-scss'),
   ],
-  staticDirs: ['assets'],
-  framework: '@storybook/react-vite',
   docs: {
-    autodocs: 'tag',
+    defaultName: 'Overview',
   },
-    async viteFinal(config) {
+  staticDirs: ['assets'],
+  async viteFinal(config) {
     const { mergeConfig } = await import('vite');
-    // Merge custom configuration into the default config
     return mergeConfig(config, {
-      // Add dependencies to pre-optimization
       optimizeDeps: {
         include: [
           'styled-components',
+          '@mdx-js/react',
           '@devoinc/genesys-brand-devo',
           '@storybook/theming',
           '@devoinc/genesys-icons',
           '@devoinc/genesys-ui',
-          '@storybook/blocks',
+          '@storybook/addon-docs/blocks',
         ],
       },
     });
@@ -58,3 +55,7 @@ const config: StorybookConfig = {
 };
 
 export default config;
+
+function getAbsolutePath(value: string): any {
+  return dirname(require.resolve(join(value, 'package.json')));
+}

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StoryObj } from '@storybook/react';
-import { Canvas, Controls } from '@storybook/addon-docs';
+import { Canvas, Controls } from '@storybook/addon-docs/blocks';
 import { ComponentBanners, ComponentBannersProps } from '../ComponentBanners';
 
 export interface LiveDemoProps {

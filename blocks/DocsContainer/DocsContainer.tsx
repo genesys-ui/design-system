@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DocsContainer, DocsContextProps } from '@storybook/blocks';
+import { DocsContainer, DocsContextProps } from '@storybook/addon-docs/blocks';
 
 type Props = {
   context: DocsContextProps;

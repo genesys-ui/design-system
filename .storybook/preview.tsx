@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Preview } from '@storybook/react';
+import { Preview } from '@storybook/react-vite';
 import { PREFER_UI_THEME, DocContainer, themeDecorator } from './theming';
 
 import '@devoinc/genesys-base-styles/dist/css/styles.min.css';
