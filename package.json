@@ -6,8 +6,6 @@
   "private": true,
   "scripts": {
     "lint": "oxlint -c oxlintrc.json",
-    "test": "echo 0",
-    "build": "echo 0",
     "storybook": "storybook dev -p 6006",
     "start": "pnpm run storybook",
     "build-storybook": "storybook build --docs"
