@@ -7,6 +7,7 @@
   "scripts": {
     "lint": "oxlint -c oxlintrc.json",
     "test": "echo 0",
+    "build": "echo 0",
     "_storybook": "storybook dev -p 6006 --docs",
     "storybook": "storybook dev -p 6006",
     "start": "npm run storybook",
