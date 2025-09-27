@@ -6,9 +6,8 @@
   "private": true,
   "scripts": {
     "lint": "oxlint -c oxlintrc.json",
-    "storybook": "storybook dev -p 6006",
-    "start": "pnpm run storybook",
-    "build-storybook": "storybook build --docs"
+    "start": "storybook dev",
+    "deploy": "storybook build --docs -o public"
   },
   "author": "Devo, Inc. Quvis Team (https://github.com/orgs/DevoInc/teams/quvis)",
   "license": "MIT",
