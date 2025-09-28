@@ -9,12 +9,21 @@
     max-width: var(--dds-max-width-md);
   }
 
+  
   &--large .sbdocs-content {
     max-width: var(--dds-max-width-lg);
   }
-
+  
   &--wide .sbdocs-content {
     max-width: none;
+  }
+
+  .sbdocs-wrapper:has(.toc-wrapper:empty) {
+    flex-direction: row;
+
+    .sbdocs-content {
+      max-width: var(--dds-max-width-xl);
+    }
   }
 
   @media (min-width: 992px) {
@@ -57,7 +66,7 @@
 
 // TOC: HIDE TABLE OF CONTENTS WHEN IT'S EMPTY
 
-div:has(.toc-wrapper:empty) > p {
+.sbdocs-toc--custom:has(.toc-wrapper:empty) {
   display: none;
 }
 
