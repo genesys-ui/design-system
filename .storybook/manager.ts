@@ -6,7 +6,7 @@ addons.setConfig({
     base: 'light',
     brandTitle: 'Genesys Design System',
     brandUrl: '#',
-    brandImage: '',
+    brandImage: 'logo.png',
   }),
   sidebar: {
     showRoots: true,

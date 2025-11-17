@@ -3,6 +3,10 @@
   src: url(/fonts/poppins/poppins.woff2) format('woff2');
 }
 
+.sidebar-header img {
+  max-width: 130px !important;
+}
+
 .sidebar-container {
   font-family: 'Poppins', sans-serif;
   padding: 0;
