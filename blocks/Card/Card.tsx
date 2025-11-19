@@ -12,6 +12,7 @@ export interface CardProps {
   image?: string;
   imageAlt?: string;
   mediaColor?: string;
+  subtle?: boolean;
   target?: '_self' | '_blank';
   title?: string;
   url: string;
@@ -28,13 +29,14 @@ export const Card: React.FC<CardProps> = ({
   image,
   imageAlt,
   mediaColor = 'var(--dds-bg-raised)',
+  subtle,
   target,
   title,
   url = '#',
 }) => (
   <a
     href={url}
-    className={`card card--${direction} sb-unstyled`}
+    className={`card card--${direction} ${subtle && 'card--subtle'} sb-unstyled`}
     target={target}
     title={title}
     style={{ height: height || 'auto' }}

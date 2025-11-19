@@ -106,3 +106,9 @@
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+/* HIDE THE TOOLBAR */
+
+[data-test-id='sb-preview-toolbar'] {
+  display: none;
+}

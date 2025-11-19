@@ -8,7 +8,6 @@
   font-size: var(--dds-font-size-sm);
 
   thead tr {
-    background-color: #eee;
     border: none;
   }
 
@@ -29,7 +28,7 @@
   tr th,
   tr td {
     border: none;
-    padding: 1rem 1.6rem;
+    padding: 1.6rem;
     font-size: var(--dds-font-size-sm);
     line-height: var(--dds-line-height-sm);
     vertical-align: top;

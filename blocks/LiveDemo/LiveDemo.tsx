@@ -21,7 +21,7 @@ export const LiveDemo: React.FC<LiveDemoProps> = ({
   <>
     <Canvas of={story} story={{ height: canvasHeight }} />
     <Controls of={story} />
-    <p className="sbdocs sbdocs-p">
+    <p className="sbdocs sbdocs-p sbdocs-p--small">
       This live demo is only a simple preview of the component functionality and
       styles. View the full demo on our Genesys UI (React) or Genesys Styles
       (HTML & CSS) Storybook.

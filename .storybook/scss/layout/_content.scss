@@ -1,4 +1,4 @@
-@use "../utils/variables" as v;
+@use '../utils/variables' as v;
 
 // ---------------------- CONTENT - LAYOUT ---------------------- //
 
@@ -9,11 +9,10 @@
     max-width: var(--dds-max-width-md);
   }
 
-  
   &--large .sbdocs-content {
     max-width: var(--dds-max-width-lg);
   }
-  
+
   &--wide .sbdocs-content {
     max-width: none;
   }
@@ -36,7 +35,7 @@
   }
 
   // fix problem with the canvas wrapper for components live demo
-  [id*="story--components-"] {
+  [id*='story--components-'] {
     overflow: visible !important;
   }
 }
@@ -54,13 +53,13 @@
 }
 
 @media only screen and (max-width: v.$responsive-breakpoint-md) {
-  .col + [class*="col-md"]:not([class*="col-sm"]) {
+  .col + [class*='col-md']:not([class*='col-sm']) {
     margin-top: 16px;
   }
 }
 
 @media only screen and (max-width: v.$responsive-breakpoint-lg) {
-  .col + [class*="col-lg"]:not([class*="col-md"]) {
+  .col + [class*='col-lg']:not([class*='col-md']) {
     margin-top: 16px;
   }
 }
@@ -71,3 +70,11 @@
   display: none;
 }
 
+.docblock-argstable tbody {
+  filter: none !important;
+
+  > tr > td {
+    border-left: none !important;
+    border-right: none !important;
+  }
+}

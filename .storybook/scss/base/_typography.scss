@@ -32,7 +32,8 @@
 
 @font-face {
   font-family: 'Mono Font';
-  src: url(../../fonts/jet-brains-mono-font/JetBrainsMono-Regular.woff2),
+  src:
+    url(../../fonts/jet-brains-mono-font/JetBrainsMono-Regular.woff2),
     url(../../fonts/jet-brains-mono-font/JetBrainsMono-Regular.ttf)
       format('truetype');
   font-weight: 400;
@@ -41,7 +42,8 @@
 
 @font-face {
   font-family: 'Mono Font';
-  src: url(../../fonts/jet-brains-mono-font/JetBrainsMono-Medium.woff2),
+  src:
+    url(../../fonts/jet-brains-mono-font/JetBrainsMono-Medium.woff2),
     url(../../fonts/jet-brains-mono-font/JetBrainsMono-Medium.ttf)
       format('truetype');
   font-weight: 500;
@@ -50,7 +52,8 @@
 
 @font-face {
   font-family: 'Mono Font';
-  src: url(../../fonts/jet-brains-mono-font/JetBrainsMono-Bold.woff2),
+  src:
+    url(../../fonts/jet-brains-mono-font/JetBrainsMono-Bold.woff2),
     url(../../fonts/jet-brains-mono-font/JetBrainsMono-Bold.ttf)
       format('truetype');
   font-weight: 700;
@@ -64,7 +67,8 @@ $doc-base-class-name: sbdocs;
   line-height: v.$line-height-base;
 
   .sb-unstyled {
-    ul, ol {
+    ul,
+    ol {
       margin: initial;
       padding: initial;
     }
@@ -88,9 +92,10 @@ $doc-base-class-name: sbdocs;
     .#{$doc-base-class-name} {
       &-table,
       &-pre,
-      &-p {
+      &-p,
+      &-li {
         font-size: var(--dds-font-size-base);
-        line-height: 2.8rem;
+        line-height: var(--dds-line-height-base);
       }
 
       &-p,
@@ -98,31 +103,37 @@ $doc-base-class-name: sbdocs;
       &-ol {
         margin-top: 0;
         margin-bottom: 0;
+        max-width: 65ch;
+
+        &--small {
+          font-size: var(--dds-font-size-sm);
+          line-height: var(--dds-line-height-sm);
+          color: var(--dds-color-body-weak);
+        }
       }
 
       &-ol {
         list-style-type: decimal;
       }
 
-      &-li {
-        font-size: v.$font-size-base;
-        line-height: 2.8rem;
-      }
-
       &-h1 {
         margin-bottom: 4rem;
-        font-size: 3.2rem;
+        font-size: 4.2rem;
 
         + .#{$doc-base-class-name}-p {
-          font-size: 2rem;
-          line-height: 2.8rem;
+          font-size: 2.2rem;
+          line-height: var(--dds-line-height-base);
           font-weight: 300;
-          margin-top: -2.4rem;
+          margin-top: -1rem;
           margin-bottom: 4rem;
         }
 
         + .#{$doc-base-class-name}-p + .#{$doc-base-class-name}-h2 {
           margin-top: 5.2rem;
+        }
+
+        &--featured {
+          font-size: 4.8rem;
         }
       }
 
@@ -201,10 +212,13 @@ $doc-base-class-name: sbdocs;
       }
     }
 
-    * + .#{$doc-base-class-name}-p,
+    * + .#{$doc-base-class-name}-p {
+      margin-top: v.$spacing-md;
+    }
+
     * + .#{$doc-base-class-name}-ul,
     * + .#{$doc-base-class-name}-ol {
-      margin-top: v.$spacing-md;
+      margin-top: v.$spacing-sm;
     }
 
     code,

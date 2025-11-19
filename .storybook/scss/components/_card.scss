@@ -39,6 +39,10 @@
       flex: 0 0 30%;
     }
 
+    #{$parent}--subtle & {
+      flex: 0 0 18%;
+    }
+
     &-img,
     &-icon {
       transition: transform 0.1s ease-out;
@@ -108,7 +112,7 @@
   }
 
   @media (min-width: 768px) {
-    &__media-img {
+    &--vertical #{$parent}__media-img {
       height: 22.4rem;
       object-fit: cover;
     }

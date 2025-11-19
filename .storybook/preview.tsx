@@ -22,7 +22,11 @@ export const createCustomComponents = (tagsList: (keyof React.ReactHTML)[]) => {
 
 const preview: Preview = {
   decorators: themeDecorator,
+  globalTypes: {
+    // dejamos globalTypes como un objeto vacío
+  },
   parameters: {
+    layout: 'fullscreen',
     docs: {
       theme: PREFER_UI_THEME,
       container: DocContainer,

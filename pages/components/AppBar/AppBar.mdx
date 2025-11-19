@@ -8,13 +8,11 @@ import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
 
 # App bar
 
-(PENDING)
+The App Bar provides users with quick access to the most important actions, navigation items, 
+and contextual information within an application. It helps orient users, supports task efficiency, 
+and ensures a consistent entry point across all product experiences.
 
 ## Overview
-
-(PENDING) Variants, sizes, alignment, location... etc.
-
-## Live demo
 
 <LiveDemo
   story={Stories.Example}
@@ -22,7 +20,18 @@ import { DesignTokensList, Figma, Figure, LiveDemo } from '../../../blocks';
   urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-navigation-appbar--docs"
 />
 
-## Anatomy
+The App Bar is a persistent interface element that anchors section name, key actions and global navigation 
+at the top of the screen. It adapts to different layouts and device sizes, ensuring clear hierarchy 
+and predictable behavior across the product ecosystem.
+
+Designed to be flexible yet consistent, the App Bar can display a combination of elements—such 
+as branding, page titles, search, user actions, or system status indicators—depending on the needs of each experience.
+
+Use the App Bar to reinforce structure, improve discoverability, and provide users with a reliable 
+starting point for interacting with your application.
+
+
+### Anatomy
 
 The App Bar is composed by three areas:
 
@@ -30,17 +39,57 @@ The App Bar is composed by three areas:
 - The next area o the left, separated with a divider, is the main navigation with the subsections of the page.
 - On the right of the App Bar there are some main actions and the user options separated with another divider.
 
-<Figure caption="The internal structure and specs of the IconButton component.">
-  <Figma url="https://www.figma.com/design/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?node-id=14132-64784&t=RQb9FPEqsJrvQIC5-1" />
+<Figure caption="The internal structure and specs of the AppBar component.">
+  <Figma url="https://www.figma.com/file/jnaeLlECvyRS5DCwH99Tie/GDS---Web-Previews?node-id=18176-33981&t=hfNmzKMQY6gEd3Td-1" />
+</Figure>
+
+### Variants
+
+The App Bar has four variants to accommodate different use cases:
+
+- Compact: if the component has a lower height or not.
+- Bordered: if the component has a border-bottom or not.
+
+<Figure caption="The variants of the AppBar component.">
+  <Figma aspectRatio="21x9" url="https://www.figma.com/file/jnaeLlECvyRS5DCwH99Tie/GDS---Web-Previews?node-id=18176-44628&t=hfNmzKMQY6gEd3Td-1" />
 </Figure>
 
 ## Accessibility
 
-(PENDING)
+### Keyboard navigation
+
+The App Bar must be fully operable using a keyboard.
+- All interactive elements (menu triggers, search fields, buttons, profile actions, etc.) must be included in a logical tab order.
+- Use clear focus indicators that meet the minimum contrast ratio and remain visible against all App Bar backgrounds.
+- Avoid trapping focus inside menus or overlays triggered from the App Bar.
+
+### Screen reader support
+
+The App Bar content must be accessible for screen readers.
+- Provide descriptive labels (aria-label, aria-labelledby, or accessible names) for all controls and actions, especially when displayed without text.
+- Use nav landmarks or appropriate roles to communicate the App Bar as a primary navigation region.
+- Expandable sections or menus must announce their state (expanded/collapsed) to assistive technologies.
+
+### Focus management
+
+When triggering a menu, search field, or other overlay from the App Bar:
+- Move focus into the opened element.
+- Return focus to the trigger when it closes.
+- Avoid auto-focus on page load unless explicitly required.
 
 ## Design tokens
 
-(PENDING)
+| Element &nbsp; &nbsp; &nbsp; | Property &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; | Token                                                                                                               |
+| ---------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Container                    | background-color                                                      | `cmp-appBar-color-background`                                                                                       |
+| Container                    | border-color                                                          | `cmp-appBar-color-border`                                                                                       |
+| Container                    | height                                                                | `cmp-appBar-size-height-base`<br/>`cmp-appBar-size-height-compact`                        |
+| Container                    | border-size                                                           | `cmp-appBar-shape-borderSize	`                        |
+| Container                    | box-shadow                                                            | `cmp-appBar-elevation-boxShadow`                 |
+| Divider                      | height                                                                | `cmp-appBar-divider-size-height` |
+| Divider                      | margin                                                                | `cmp-appBar-divider-space-margin`    |
+| Divider                      | border-color                                                          | `cmp-appBar-divider-color-border`    |
+| Divider                      | background-color                                                      | `cmp-appBar-divider-color-background`    |
 
 ### Complete list
 
