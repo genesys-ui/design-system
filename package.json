@@ -9,7 +9,7 @@
     "start": "storybook dev",
     "deploy": "storybook build --docs -o public"
   },
-  "author": "Devo, Inc. Quvis Team (https://github.com/orgs/DevoInc/teams/quvis)",
+  "author": "Genesys team",
   "license": "MIT",
   "dependencies": {
     "@devoinc/genesys-base-styles": "^2.1.0",
