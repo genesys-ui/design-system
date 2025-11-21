@@ -12,8 +12,9 @@ $spacing-xl: 4rem;
 $spacing-xxl: 4.8rem;
 $spacing-xxxl: 6.4rem;
 $spacing-xxxxl: 9.6rem;
+$spacing-xxxxxl: 12.6rem;
 
-$spacing-size-list: xxs, xs, sm, md, lg, xl, xxl, xxxl;
+$spacing-size-list: xxs, xs, sm, md, lg, xl, xxl, xxxl, xxxxl, xxxxxl;
 $spacing-props: padding, margin, gap;
 $directions: top, right, bottom, left;
 
@@ -32,9 +33,17 @@ $spacing-size-map: (
 
 // RESPONSIVE - BREAKPOINTS ------------------------------------ //
 
+$responsive-variants: sm, md, lg;
+
 $responsive-breakpoint-sm: 576px;
 $responsive-breakpoint-md: 768px;
 $responsive-breakpoint-lg: 992px;
+
+$responsive-breakpoints-map: (
+  sm: $responsive-breakpoint-sm,
+  md: $responsive-breakpoint-md,
+  lg: $responsive-breakpoint-lg,
+);
 
 // TEXT - VARIABLES ------------------------------------ //
 

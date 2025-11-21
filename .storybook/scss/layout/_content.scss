@@ -64,6 +64,51 @@
   }
 }
 
+.flex {
+  display: flex;
+}
+
+.gap {
+  @each $size in v.$spacing-size-list {
+    $value: map-get(v.$spacing-size-map, $size);
+    @if $value {
+      &--#{$size} {
+        gap: $value;
+      }
+    }
+  }
+}
+
+.flex-row {
+  flex-direction: row;
+
+  @each $size in v.$responsive-variants {
+    $value: map-get(v.$responsive-breakpoints-map, $size);
+    @if $value {
+      &--#{$size} {
+        @media only screen and (min-width: $value) {
+          flex-direction: row !important;
+        }
+      }
+    }
+  }
+}
+
+.flex-column {
+  flex-direction: column;
+
+  @each $size in v.$responsive-variants {
+    $value: map-get(v.$responsive-breakpoints-map, $size);
+    @if $value {
+      &--#{$size} {
+        @media only screen and (min-width: $value) {
+          flex-direction: column !important;
+        }
+      }
+    }
+  }
+}
+
 // TOC: HIDE TABLE OF CONTENTS WHEN IT'S EMPTY
 
 .sbdocs-toc--custom:has(.toc-wrapper:empty) {
