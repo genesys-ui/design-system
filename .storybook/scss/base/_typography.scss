@@ -202,7 +202,8 @@ $doc-base-class-name: sbdocs;
         font-size: 1em;
       }
 
-      &-ul .#{$doc-base-class-name}-li + .#{$doc-base-class-name}-li {
+      &-ul .#{$doc-base-class-name}-li + .#{$doc-base-class-name}-li,
+      &-ol .#{$doc-base-class-name}-li + .#{$doc-base-class-name}-li {
         margin-top: 0.8rem;
       }
 

@@ -69,11 +69,24 @@
 }
 
 .gap {
-  @each $size in v.$spacing-size-list {
-    $value: map-get(v.$spacing-size-map, $size);
-    @if $value {
-      &--#{$size} {
-        gap: $value;
+  @each $spacing in v.$spacing-size-list {
+    $gap-value: map-get(v.$spacing-size-map, $spacing);
+
+    @if $gap-value {
+      &--#{$spacing} {
+        gap: $gap-value;
+      }
+
+      @each $breakpoint in v.$responsive-variants {
+        $value: map-get(v.$responsive-breakpoints-map, $breakpoint);
+
+        @if $value {
+          &--#{$spacing}-#{$breakpoint} {
+            @media only screen and (min-width: $value) {
+              gap: $gap-value !important;
+            }
+          }
+        }
       }
     }
   }

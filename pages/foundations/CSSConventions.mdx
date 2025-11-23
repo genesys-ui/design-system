@@ -7,38 +7,27 @@ import { Figure } from '../../blocks';
 
 # CSS naming conventions
 
-<Row>
-  <Col sm={6}>
-    The goal is to understand the essence of the styles by reading few
-    declarations. Most of the time, the essence is how the element is laid out
-    and its size is determined.
+The goal is to understand the essence of the styles by reading few
+declarations. Most of the time, the essence is how the element is laid out
+and its size is determined.
 
-    A proper ordering of rules allows to “scan” the declaration block for properties quickly.
-
-  </Col>
-  <Col sm={6}>
-    <Figure>
-      <img
-        alt="Location of the 'status' icon button in a widget header"
-        src="img/css-conventions-15x.png"
-      />
-    </Figure>
-  </Col>
-</Row>
+A proper ordering of rules allows to “scan” the declaration block for properties quickly.
 
 ## General Rules
 
 From most important to less important\*:
 
-1 - Rules that affect the layout and the box size. What happens inside of the box and does not affect the layout/size is less important.
-2 - Group properties that belong together in terms of the CSS specification: Positioning, `float/clear, font-*, text-*`
-3 - Order of CSS layouting as defined in the CSS specification:
+1. Rules that affect the layout and the box size. What happens inside of the box and does not affect the layout/size is less important.
+2. Group properties that belong together in terms of the CSS specification: Positioning, `float/clear, font-*, text-*`
+3. Order of CSS layouting as defined in the CSS specification:
 `position: absolute` may override `float: left/right. float: left/right` may override `display`, with the exception of `display: none`. So the order is: `position, float, display.`
 Text is laid out in line boxes, then words, then glyphs. So properties for font-size and line-height come first, then text-_, then word-_.
-4 - Order by box model, start at the outer edge and move inward
-5 - Clockwise longhand order: `*-top, *-right, *-bottom, *-left`
+4. Order by box model, start at the outer edge and move inward
+5. Clockwise longhand order: `*-top, *-right, *-bottom, *-left`
 
 \*Source: **9elements**
+
+## Ordering
 
 ### Sass inheritance
 
