@@ -92,6 +92,7 @@ type Props = {
   children: React.ReactNode;
   caption?: string;
   spaceToTop?: boolean;
+  noBorder?: boolean;
 };
 
 export const Figure: React.FC<Props> = ({
@@ -99,6 +100,7 @@ export const Figure: React.FC<Props> = ({
   children,
   caption,
   spaceToTop,
+  noBorder,
 }) => {
   const IconName =
     type === 'do'
@@ -111,7 +113,9 @@ export const Figure: React.FC<Props> = ({
       className={`example example--${type}`}
       spaceToTop={spaceToTop}
     >
-      <div className="example__box">
+      <div
+        className={`example__box${noBorder ? ' example__box--no-border' : ''}`}
+      >
         {IconName && (
           <div className="example__icon-wrapper">
             <IconName className="example__icon-svg" />

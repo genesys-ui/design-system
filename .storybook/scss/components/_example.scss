@@ -15,6 +15,10 @@
     overflow: hidden;
     border: solid 0.1rem var(--dds-color-border-base);
 
+    &--no-border {
+      border: none;
+    }
+
     // to hide Figma embed footer
     .ratio {
       margin-bottom: -4.8rem;

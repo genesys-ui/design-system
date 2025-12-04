@@ -10,7 +10,7 @@ const config: StorybookConfig = {
     // '../pages/overview/*.@(mdx|stories.tsx)',
     '../pages/components/**/*.@(mdx|stories.tsx)',
     '../pages/foundations/*.@(mdx|stories.tsx)',
-    '../pages/patterns/*.@(mdx|stories.tsx)',
+    '../pages/patterns/**/*.@(mdx|stories.tsx)',
   ],
   framework: getAbsolutePath('@storybook/react-vite'),
   core: {

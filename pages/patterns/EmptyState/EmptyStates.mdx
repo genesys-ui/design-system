@@ -1,0 +1,152 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import * as Stories from './EmptyStates.stories';
+import * as StatusStories from './StatusMessage.stories';
+
+import {
+  CardHtml,
+  CardReact,
+  DesignTokensList,
+  Figma,
+  Figure,
+  LiveDemo,
+} from '../../../blocks';
+
+<Meta title="Patterns/Empty states" /> 
+
+# Empty states
+
+Empty states appear when there is no data to display in a particular area of the interface. 
+They play a crucial role in providing clarity, guiding users, and preventing confusion when 
+a view cannot show its usual content.
+
+<Figure noBorder>
+  <img
+    alt="Empty state symbol"
+    src="img/patterns-empty-state.png"
+  />
+</Figure>
+
+An empty state should:
+
+- Explain what is happening
+- Help users understand why there is no content
+- Provide a clear path forward when relevant such as adding new content or refreshing data. 
+
+## Types of empty states
+
+### First-time use
+
+<Figure>
+  <img
+    alt="Empty state for a dashboard with no widgets"
+    src="img/empty-status-1x.jpg"
+  />
+</Figure>
+
+Shown when users access a feature for the first time and haven't created or added any content yet.
+The purpose is to introduce the feature, set expectations and encourage users to take their first action.
+
+### No results
+
+<Figure>
+  <img
+    alt="Empty state for a dashboard with no widgets"
+    src="img/pattern-empty-no-results.png"
+  />
+</Figure>
+
+Displayed when a search or filtered view returns no matches. It should inform users that 
+no results were found  and suggest ways to modify their search or filters to find 
+relevant content. 
+
+In this case, the format is extremely simple, usually just a text message 
+without any additional graphics, because the user has already interacted with the system, 
+and the context usually has not enough space to show more information.
+
+### Errors
+
+<Figure>
+  <img
+    alt="Empty state for a dashboard with no widgets"
+    src="img/pattern-empty-error.png"
+  />
+</Figure>
+
+Shown when a technical problem prevents data from being loaded. It should inform users about 
+the issue and provide options to retry, seek help, or report the problem.
+
+## Content guidelines
+
+### Tone
+
+Be clear, concise, and supportive, without unnecessary technical jargon. Obviously, 
+avoid blaming the user and keep the message actionable.
+
+### Structure
+
+A good empty state usually includes:
+
+- **A short title**: what's happening.
+- **A brief description**: why or what it means.
+- **A recommended action**: what the user can do next.
+
+## Visual guidelines
+
+### Iconography
+
+- Use simple, meaningful icons.
+- Avoid overly decorative illustrations.
+- Maintain consistent sizing and style across the system.
+
+### Layout
+
+- Provide generous spacing to reduce visual clutter.
+- Center or align according to your design system's patterns.
+- Keep content in a compact group (title, description, action).
+
+### Colors
+
+- Use neutral colors for default empty states.
+- Only use critical colors (such as red) for true system errors.
+- Ensure accessibility contrast levels.
+
+### Actions
+
+- Use a primary CTA only when a direct next step is available.
+- Use secondary CTAs or links when actions are optional.
+- Avoid offering multiple competing options.
+
+## Interaction guidelines
+
+- Empty states should update automatically when content becomes available.
+- Retry actions should provide immediate feedback.
+- Keep transitions smooth and avoid abrupt changes.
+
+## Accessibility guidelines
+
+- Provide alternative text for icons and visuals.
+- Ensure readable contrast ratios.
+- Do not rely only on color to communicate meaning.
+- Keep the reading order logical for screen readers.
+
+## Code usage
+
+To create empty states you should use the `EmptyState` or `StatusMessage` component from Genesys UI. 
+The second one is used for the 'error type' emoty state. 
+If you need some help using it, [read the docs](https://devoinc.github.io/genesys-ui/?path=/docs/getting-started-installation--overview).
+
+### EmptyState
+
+<LiveDemo
+  story={Stories.Example}
+  urlHtml="https://devoinc.github.io/genesys-styles"
+  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-feedback-emptystate--overview"
+/> 
+
+### StatusMessage
+
+<LiveDemo
+  story={StatusStories.Example}
+  urlHtml="https://devoinc.github.io/genesys-styles"
+  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-feedback-statusmessage--overview"
+/> 

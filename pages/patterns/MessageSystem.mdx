@@ -6,7 +6,7 @@ import { Figure, Row, Col } from '../../blocks';
 
 # Message system
 
-Definition of Devo's message system usage patterns.
+Definition of the usage patterns for Devo's message system, specifying which type of message should be used within the interface depending on the context.
 
 ## Intrusiveness
 
@@ -65,199 +65,153 @@ They can use icons, titles, content and additional actions. Text labels should b
 
 ### Floating message
 
-<Row>
-  <Col sm={6}>
-    They appear **after user interaction right where it happened**. Barely disruptive, they should be used mainly
-    for low-importance action confirmations, such as "Query was copied to clipboard successfully".
+<Figure>
+  <img alt="Toast messages/Dragable" src="img/pattern-messages-contextual.png" />
+</Figure>
 
-    They should not be used if there is a context change, for example if the
-    action performed closes a modal window and we return to the previous page.
+They appear **after user interaction right where it happened**. Barely disruptive, they should be used mainly
+for low-importance action confirmations, such as "Query was copied to clipboard successfully".
 
-  </Col>
-  <Col sm={6}>
-    <Figure>
-      <img alt="Inline messages/Dragable" src="img/Contextual.png" />
-    </Figure>
-  </Col>
-</Row>
+They should not be used if there is a context change, for example if the
+action performed closes a modal window and we return to the previous page.
+
+
 
 ### Standard
 
-<Row>
-  <Col sm={6}>
-    They can be used for confirmations, warnings, errors, help or information with **low-medium priority,
-    overlayed at the bottom left of the screen**.
+<Figure>
+  <img
+    alt="Toast messages/Standard"
+    src="img/pattern-messages-standard.png"
+  />
+</Figure>
 
-    These messages are generated as a consequence of user actions (event-driven messages). They have a progress bar
-    and **will disappear after 'n' seconds but can also be closed by clicking the 'x'**.
+They can be used for confirmations, warnings, errors, help or information with **low-medium priority,
+overlayed at the top right of the screen**.
 
-    The user can pause automatic closing by hovering over the message. **They may include additional actions**.
+These messages are generated as a consequence of user actions (event-driven messages). They have a progress bar
+and **will disappear after 'n' seconds but can also be closed by clicking the 'x'**.
 
-  </Col>
-  <Col sm={6}>
-    <Figure>
-      <img
-        alt="Inline messages/Dragable"
-        src="img/Standard-15x.png"
-      />
-    </Figure>
-  </Col>
-</Row>
+The user can pause automatic closing by hovering over the message. **They may include additional actions**.
+
+
+
 
 ### Bold
 
-<Row>
-  <Col sm={6}>
-    Unlike Standard toast Messages, they can **also contain system generated messages**.
+<Figure>
+  <img
+    alt="Toast messages/Bold"
+    src="img/pattern-messages-bold.png"
+  />
+</Figure>
 
-    They are **used to reinforce the importance of a message**. They do **not close automatically and they will persist
-    until the problem is solved or until the user closes it using the 'x'**.
+Unlike Standard toast Messages, they can **also contain system generated messages**.
 
-    They may also include additional actions.
+They are **used to reinforce the importance of a message**. They do **not close automatically and they will persist
+until the problem is solved or until the user closes it using the 'x'**.
 
-  </Col>
-  <Col sm={6}>
-    <Figure>
-      <img
-        alt="Bold"
-        src="img/Bold-15x.png"
-      />
-    </Figure>
-  </Col>
-</Row>
+They may also include additional actions.
 
 ## Notifications
 
-<Row>
-  <Col sm={6}>
-    System generated messages that are **stored within the app notification center**. Like Standard Toast messages,
-    they can be closed by clicking the 'x' or they will disappear after 'n' seconds.
+System generated messages that are **stored within the app notification center**. Like Standard Toast messages,
+they can be closed by clicking the 'x' or they will disappear after 'n' seconds.
 
-    Their most frequent use is to notify when new tables, lookups, relays, or uploaded files are available
-    in the domain and also when they are deleted. We may as well use it to notify new users in the domain,
-    Activeboards shared with you, generated alerts and, ultimately, any message that needs to be stored
-    for later consultation / storage.
+Their most frequent use is to notify when new tables, lookups, relays, or uploaded files are available
+in the domain and also when they are deleted. We may as well use it to notify new users in the domain,
+Activeboards shared with you, generated alerts and, ultimately, any message that needs to be stored
+for later consultation / storage.
 
-    **Their position on the screen is bound to the notifications icon**, which is part of the side menu.
+**Their position on the screen is bound to the notifications icon**, which is part of the side menu.
 
-  </Col>
-  <Col sm={6}>
-    <Figure>
-      <img
-        alt="Notifications"
-        src="img/Notifications-1.5x.png"
-      />
-    </Figure>
-  </Col>
-</Row>
+<Figure>
+  <img
+    alt="Notifications"
+    src="img/pattern-messages-notification.png"
+  />
+</Figure>
+
 
 ## Field helpers
 
-<Row>
-  <Col sm={6}>
-    They appear **below the field they are accompanying**. Their mission is to provide users with valuable information
-    to help them complete the action they are performing. Whenever possible, include an example
-    of how the field should be completed.
+<Figure>
+  <img
+    alt="Field helpers"
+    src="img/pattern-messages-helper.png"
+  />
+</Figure>
 
-    Do not use them abusively, only when clarification is required.
+They appear **below the field they are accompanying**. Their mission is to provide users with valuable information
+to help them complete the action they are performing. Whenever possible, include an example
+of how the field should be completed.
 
-  </Col>
-  <Col sm={6}>
-    <Figure>
-      <img
-        alt="Notifications"
-        src="img/Field-Helpers-15x.png"
-      />
-    </Figure>
-  </Col>
-</Row>
+Do not use them abusively, only when clarification is required.
 
 ## Validation messages
 
-<Row>
-  <Col sm={6}>
-    They appear **below the field that presents the error, warning, success, etc**. They inform the user
-    of the problem/situation and advise on possible solutions. They must be a **consequence of real-time validation**,
-    when the field loses focus (server-side).
+<Figure>
+  <img
+    alt="Validation Messages"
+    src="img/pattern-messages-validation.png"
+  />
+</Figure>
 
-    In the event that the error comes from the server side (once a summit is done),
-    an Inline Banner will be conveniently used.
+They appear **below the field that presents the error, warning, success, etc**. They inform the user
+of the problem/situation and advise on possible solutions. They must be a **consequence of real-time validation**,
+when the field loses focus (server-side).
 
-  </Col>
-  <Col sm={6}>
-    <Figure>
-      <img
-        alt="Validation Messages"
-        src="img/Validation-messages-15x.png"
-      />
-    </Figure>
-  </Col>
-</Row>
+In the event that the error comes from the server side (once a summit is done),
+an Inline Banner will be conveniently used.
+
 
 ## Inline and section banners
+
+<Figure>
+  <img
+    alt="Inline and Section Banners"
+    src="img/pattern-messages-banner.png"
+  />
+</Figure>
 
 Banners provide users with **messages generated either by**:
 
 - The need for **explicit information** (info, help, warning, etc) to complete a certain configuration or proccess.
 - **The validation of a group of fields within a form (server-side).**
 
-<Row>
-  <Col sm={6}>
-    Their **type** can be **inline** (address the issues inside the content area) or **section** (placed on
-    a particular area of a page or at the top of the component they correspond to).
+Their **type** can be **inline** (address the issues inside the content area) or **section** (placed on
+a particular area of a page or at the top of the component they correspond to).
 
-    They persist until the user closes them or until the problem described is solved.
+They persist until the user closes them or until the problem described is solved.
 
-    Banners can contain several messages on the same banner (for example a summary of errors within a form).
-    In addition, they can include further actions.
-
-  </Col>
-  <Col sm={6}>
-    <Figure>
-      <img
-        alt="Inline and Section Banners"
-        src="img/Inline-section-banners-15x.png"
-      />
-    </Figure>
-  </Col>
-</Row>
+Banners can contain several messages on the same banner (for example a summary of errors within a form).
+In addition, they can include further actions.
 
 ## Global banners
 
-<Row>
-  <Col sm={6}>
-    Usually, they are placed at the top of a page above everything else.
+<Figure>
+  <img
+    alt="Global Banners"
+    src="img/pattern-messages-global.png"
+  />
+</Figure>
 
-    They should **only be used for critical system-level messages** (warnings and errors) about loss of data or functionality.
+Usually, they are placed at the top of a page above everything else.
 
-    They **persist until the user closes them or until the problem is solved and may include additional actions**.
+They should **only be used for critical system-level messages** (warnings and errors) about loss of data or functionality.
 
-  </Col>
-  <Col sm={6}>
-    <Figure>
-      <img
-        alt="Inline and Section Banners"
-        src="img/Inline-section-banner-1.5x.png"
-      />
-    </Figure>
-  </Col>
-</Row>
+They **persist until the user closes them or until the problem is solved and may include additional actions**.
+
 
 ## Modal dialogs
 
-<Row>
-  <Col sm={6}>
-    They are **highly disruptive** and provide users with **critical information** that needs their attention **BEFORE proceeding action**.
+<Figure>
+  <img
+    alt="Modal Dialog"
+    src="img/Modal-dialogs-15x.jpg"
+  />
+</Figure>
 
-    They are generally used for critical processes in which confirmation is needed. They persist and block tasks until the user accepts or cancels them.
+They are **highly disruptive** and provide users with **critical information** that needs their attention **BEFORE proceeding action**.
 
-  </Col>
-  <Col sm={6}>
-    <Figure>
-      <img
-        alt="Modal Dialog"
-        src="img/Modal-dialogs-15x.jpg"
-      />
-    </Figure>
-  </Col>
-</Row>
+They are generally used for critical processes in which confirmation is needed. They persist and block tasks until the user accepts or cancels them.
