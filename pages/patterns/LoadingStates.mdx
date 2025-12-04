@@ -6,18 +6,18 @@ import * as Stories from "./LoadingStates.stories";
 
 # Loading states
 
-Nos podemos encontrar con diferentes situaciones en las que la página en la que
-nos encontramos, un componente o un área concreta puede pasar a un ‘loading
-state’ mientras se devuelven los datos o se realizan cambios en base de datos.
+We may encounter different situations in which the page we are on, a component, 
+or a specific area can enter a loading state while data is being returned or 
+changes are being made in the database.
 
-En cada caso particular se informará al usuario de que esto está sucediendo y al
-mismo tiempo se evitará que interactúe con los elementos que estén implicados en
-el ‘loading state’.
+In each particular case, the user will be informed that this is happening, 
+and at the same time they will be prevented from interacting with the elements 
+involved in the loading state.
 
 ## Page
 
-Si el elemento que pasa a ‘loading’ es la página completa entonces se recurrirá
-a una capa de overlay semitransparente con el símbolo de ‘loading’ tipo ‘Brand’:
+If the element entering the loading state is the entire page, a semi-transparent 
+overlay layer will be used with the 'brand' type loading symbol:
 
 {/*<img src='img/pattern-loading-page.jpg' alt='Page Loading behavior example'/>*/}
 
@@ -30,10 +30,10 @@ a una capa de overlay semitransparente con el símbolo de ‘loading’ tipo ‘
   />
 </video>
 
-## Area or container type component
+## Area or container
 
-Para este caso también se recurrirá a una capa de overlay semi-transparente pero
-con base de color blanco y usando el símbolo de ‘loading’ tipo ‘spinner’:
+For this case, a semi-transparent overlay layer will also be used, but with a white-colored 
+background and using the 'spinner' type loading symbol:
 
 {/*<img src='img/pattern-loading-container.jpg' alt='Container Loading behavior example'/>*/}
 
@@ -48,31 +48,35 @@ con base de color blanco y usando el símbolo de ‘loading’ tipo ‘spinner�
 
 ## Interactive elements
 
-Cuando se trate de un botón, chip... etc. el que pase a ‘loading state’ mientras
-se realiza su acción asociada, el button dejará de permitir el click y el cursor
-pasará a ‘not-allowed’, además se modificará su contenido en función de su tipo
-y acción asociada. El loading state implica también el blocked state.
+When the element entering the loading state is a button, chip, etc., while 
+its associated action is being executed, the button will no longer allow 
+clicking and the cursor will change to not-allowed. In addition, its content 
+will be modified depending on its type and associated action. The loading 
+state also implies the blocked state.
 
-### Solo icono
+### Icon only
 
-Cuando el button sólo tenga como contenido un icono, mientras dure el ‘loading
-state’, se sustituirá por el svg animado tipo ‘spinner’.
+Cuando el button sólo tenga como contenido un icono, mientras dure el 'loading
+state', se sustituirá por el svg animado tipo 'spinner'.
+
+When the button's only content is an icon, during the loading state, it will be
+replaced with the animated spinner-type SVG.
 
 <Canvas of={Stories.IconButtonLoading} />
 
-### Solo texto
+### Text only
 
-Se añadirá siempre el svg con el spinner animado a la izquierda del texto. Se
-sustituirá el texto por la acción que se está realizando y puntos suspensivos.
-Siempre que sea posible se intentará mantener el ancho previo del button.
+The SVG with the animated spinner will always be added to the left of the text. 
+The text will be replaced with the action being performed plus ellipsis. 
+Whenever possible, the button's previous width will be preserved.
 
 <Canvas of={Stories.ButtonTextLoading} />
 
-### Texto e icono
+### Text & icon
 
-En este caso se sustituye el icono por el svg con el spinner animado. Se
-sustituirá el texto por la acción que se está realizando y puntos suspensivos.
-Siempre que sea posible se intentará mantener el ancho previo del button.
+In this case, the icon is replaced with the SVG containing the animated spinner. 
+The text will be replaced with the action being performed plus ellipsis. 
+Whenever possible, the butto's previous width will be preserved.
 
 <Canvas of={Stories.ButtonIconTextLoading} />
 

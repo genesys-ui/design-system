@@ -8,22 +8,17 @@ import { Figma, Figure, Col, Row } from '../../blocks';
 
 The definition of spacing and sizing patterns to distribute and group form fields
 
-<Row>
-  <Col md={6} lg={7}>
-    How the form fields are grouped and distributed is especially important for
-    users to understand the relations and dependencies between those fields. In
-    addition, the size of each form control helps users to realize the nature
-    and length of the expected data.
-  </Col>
-  <Col md={6} lg={5}>
-    <Figure>
-      <img
-        alt="Location of the 'status' icon button in a widget header"
-        src="img/Illustration-1.png"
-      />
-    </Figure>
-  </Col>
-</Row>
+<Figure>
+  <img
+    alt="Symbol of form layout pattern"
+    src="img/patterns-form-layout.png"
+  />
+</Figure>
+
+How the form fields are grouped and distributed is especially important for
+users to understand the relations and dependencies between those fields. In
+addition, the size of each form control helps users to realize the nature
+and length of the expected data.
 
 ## Distribution
 
@@ -51,7 +46,7 @@ In this way, it is easier to complete each of the fields.
 </Row>
 
 The exception for using horizontal distribution with only one field for each row
-is when we are working with related fields, and they don’t need too much space
+is when we are working with related fields, and they don't need too much space
 to get their data filled, when we are working with the definition of entities
 with a limited number of fields or with combined fields:
 
@@ -137,11 +132,11 @@ In the second case, the width of each field is only defined by the nature and
 length of its expected data. There are several predefined widths based in a
 minimum 60px width column and a 16px gutter.
 
-The exception is when we expect a large length for the data, or we don’t know
+The exception is when we expect a large length for the data, or we don't know
 what it will be; then we use a 100% size for the field.
 
 <Figure caption="Predefined widths for field controls to use when we know the expected data.">
-  <Figma url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Dali-examples?node-id=15%3A6226" />
+  <Figma aspectRatio="3x4" url="https://www.figma.com/file/jnaeLlECvyRS5DCwH99Tie/GDS---Web-Previews?node-id=15-6226&t=Rfn4QWfxovBW8dEZ-1" />
 </Figure>
 
 <Row>
@@ -160,12 +155,12 @@ what it will be; then we use a 100% size for the field.
 
 ## Spacing
 
-The form spacing system is oriented towards simplicity. It’s based in the strength
+The form spacing system is oriented towards simplicity. It's based in the strength
 of the relation between the elements and the type of distribution applied to them.
 
 ### Space between fields
 
-The space between fields will be in almost any case ‘cmp-md’ (16px or 1.6rem).
+The space between fields will be in almost any case 'cmp-md' (16px or 1.6rem).
 
 <Figure caption="Use of sub-groups instead another form groups.">
   <img
@@ -174,7 +169,7 @@ The space between fields will be in almost any case ‘cmp-md’ (16px or 1.6rem
   />
 </Figure>
 
-But when we are working with an horizontal distribution and the relation between the fields is very strong we can use ‘cmp-sm’ (12px ).
+But when we are working with an horizontal distribution and the relation between the fields is very strong we can use 'cmp-sm' (12px ).
 
 <Figure>
   <img
@@ -183,13 +178,13 @@ But when we are working with an horizontal distribution and the relation between
   />
 </Figure>
 
-Don’t use arbitrary spaces to separate the fields.
+Don't use arbitrary spaces to separate the fields.
 
 <Figure type="dont">
   <img src="img/spacing-1-15x.png" alt="Form groups with only one field" />
 </Figure>
 
-Don’t use more space to separate fields than to separate groups:
+Don't use more space to separate fields than to separate groups:
 
 <Figure type="dont">
   <img src="img/spacing-2-15x.jpg" alt="Form groups with only one field" />
@@ -197,11 +192,11 @@ Don’t use more space to separate fields than to separate groups:
 
 ### Spacing with groups
 
-The spacing with form groups is always ‘cmp-lg’ (24px, 1.5rem or 2.4rem in base 10).
-We’re talking about the space between groups (nested or not) and between fields and
+The spacing with form groups is always 'cmp-lg' (24px, 1.5rem or 2.4rem in base 10).
+We're talking about the space between groups (nested or not) and between fields and
 groups. The spacing between the form and the buttons block is the same.
 
-The spacing between the form group heading and the group (or the field) is always ‘cmp-xs’ (8px).
+The spacing between the form group heading and the group (or the field) is always 'cmp-xs' (8px).
 
 <Figure>
   <img

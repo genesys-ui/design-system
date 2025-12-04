@@ -1,7 +1,7 @@
 // ---------------------- MEDIA - BASE ---------------------- //
 
-
-img, video {
+img,
+video {
   width: 100%;
 }
 
@@ -21,15 +21,14 @@ img {
 
 .ratio {
   &-6x5::before {
-    padding-top: 84%;
+    padding-top: 84% !important;
   }
 
   &-1x2::before {
-    padding-top: 200%;
+    padding-top: 200% !important;
   }
 
   &-3x4::before {
-    padding-top: 133%;
+    padding-top: 133% !important;
   }
 }
-

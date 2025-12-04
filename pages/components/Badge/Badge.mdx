@@ -12,6 +12,13 @@ The Badge component is used to highlight an information relevant for the user or
 
 ## Overview
 
+<LiveDemo
+  story={Stories.Example}
+  urlHtml="https://devoinc.github.io/genesys-styles/?path=/docs/components-badge--docs"
+  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-feedback-badge--docs"
+/>
+
+
 The Badge Component used to display a small piece of information, either as icon or text. It should be always appended to other components like Buttons, Actions, or Labels. In the case of Buttons and Actions, the Badge is located in the upper right corner, putting the center of the Badge in the main component vertice. In the case of isolates texts like Labels or Links Components, the Badge will be appended on the left aligned with the vertical center.
 
 Badges always should have an icon or a number, occasionally could have one or two letters, for example for the user initials. The unique exception that allows an empty Badge is to put the focus on a button for a miscellaneous reason not measurable.
@@ -29,23 +36,9 @@ There are three variants available:
 <Figure>
   <Figma
     aspectRatio="4x3"
-    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/GDS---Web-Previews?node-id=14907-65949&t=mhGpLge3NLmaMvDj-1"
+    url="https://www.figma.com/file/jnaeLlECvyRS5DCwH99Tie/GDS---Web-Previews?node-id=14907-65949&t=hfNmzKMQY6gEd3Td-1"
   />
 </Figure>
-
-### Emphasis
-
-<Figure spaceToTop>
-  <Figma url="https://www.figma.com/file/wKTuF8eVSqEJWjsQarKydC/GDS---UI-Kit----v2.0.0?node-id=1445%3A5200&mode=design&t=w2L6EPXjlqcjNbrV-1" />
-</Figure>
-
-## Live demo
-
-<LiveDemo
-  story={Stories.Example}
-  urlHtml="https://devoinc.github.io/genesys-styles/?path=/docs/components-badge--docs"
-  urlReact="https://devoinc.github.io/genesys-ui/?path=/docs/components-core-feedback-badge--docs"
-/>
 
 ## Anatomy
 
@@ -54,7 +47,7 @@ The badge component is a very basic component composed of a rounded container an
 <Figure caption="The internal structure and specs of the Badge component.">
   <Figma
     aspectRatio="4x3"
-    url="https://www.figma.com/file/4f9wa0fKYIwMue6yo6nrJL/Genesys-Design-System---Web-Previews?type=design&node-id=14907%3A66980&mode=design&t=Dw2xOfqO2VoLFeWs-1"
+    url="https://www.figma.com/file/jnaeLlECvyRS5DCwH99Tie/GDS---Web-Previews?node-id=14907-66980&t=hfNmzKMQY6gEd3Td-1"
   />
 </Figure>
 1. **Container**: This element manages sizing and spacing. 2. **Icon**/**Tex**: Icon
@@ -102,11 +95,5 @@ The status role defines an advisory that is not important enough to be an alert.
 <Canvas of={Stories.Role} />
 
 ## Design tokens
-
-### Size, space and typographic design tokens
-
-### Color design tokens
-
-### Complete list
 
 <DesignTokensList componentName="badge" />
